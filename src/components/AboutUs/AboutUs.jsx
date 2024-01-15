@@ -10,7 +10,7 @@ import Footer from '../Common/Footer/Footer';
 
 function AboutUs() {
   return (
-    <div className="App">
+    <div className="App font-['ClashDisplay']">
      <div><NavbarDefault /></div><br></br><br></br>
      <div>
 
@@ -27,10 +27,7 @@ function AboutUs() {
           About Us
         </h5>
         <p className="mb-4 text-xs leading-tight text-[#8AA6AA]">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
-
-culpa qui officia deserunt mollit anim id est laborum.If you are a Hookah business, please join us and help us defend and protect your business, our culture and community.
-
+        MicroFab is the result of a collaboration between industry leaders MicroTools and FabLab, combining expertise in BFS and FFS machine manufacturing and EPC contracting. Specializing in advanced packaging and industrial solutions, MicroFab is committed to quality, innovation, and seamless project execution. The company aims to revolutionize packaging and project execution, serving as a unified source for cutting-edge technologies and turnkey solutions across various industries.
         </p>
         
       </div>
@@ -59,8 +56,8 @@ culpa qui officia deserunt mollit anim id est laborum.If you are a Hookah busine
       Lorem ipsum
         </p>
         <br></br><br></br>
-        {/* <div class="lg:grid-grid-cols-3 md:grid-cols-3 gap-8 gh bg-[#8AA6AA]"> */}
-        <div class="grid grid-rows-3 grid-flow-col gap-10">
+        {/* <div className="lg:grid-grid-cols-3 md:grid-cols-3 gap-8 gh bg-[#8AA6AA]"> */}
+        <div className="grid grid-rows-3 grid-flow-col gap-10">
       {/* <div><span className="text-7xl h-full">1</span><spacer></spacer>
       <span>
       <span className="text-3xl n"> Lorem ipsum tgrtg rgtg referfrgf</span>

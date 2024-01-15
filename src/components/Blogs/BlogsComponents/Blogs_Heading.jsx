@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import img1 from "../../../assets/Home_article/article1.svg";
 import img2 from "../../../assets/Home_article/article2.svg";
 import img3 from "../../../assets/Home_article/article3.svg";
@@ -6,68 +5,9 @@ import arrow_right from "../../../assets/Home_article/ArrowRight.svg";
 import homeArticles from "../../../assets/Articles/Heading.svg";
 import ArticleCard from "../../Home/Home_articles/ArticleCard";
 
-export default function Article_Heading() {
-  const articles1 = [
-    {
-      content: "Blow-Fill-Seal Expands in Aseptic Filling, Vaccines",
-      sub: "Blow-Fill-Seal, Technology ",
-      img: img1,
-    },
-    {
-      content: "Investing in Form-Fill-Seal Technology",
-      sub: "Blow-Fill-Seal, Technology ",
-      img: img2,
-      date: "April 12, 2023 PAP-Q1-2023",
-    },
-    {
-      content: "Investing in Form-Fill-Seal Technology ",
-      sub: "Blow-Fill-Seal, Technology ",
-      img: img3,
-      date: "April 12, 2023 PAP-Q1-2023",
-    },
-    {
-      content:
-        "Where do COVID-19 vaccine players stand on pricing? So far, it's no profit, slight profit or undecided",
-      sub: "Covid - 19 Vaccine",
-      img: homeArticles,
-      date: false,
-    },
-  ];
+import Blogs_Heading from "../Blog_heading_content.json";
 
-  const articles2 = [
-    {
-      content: "Investing in Form-Fill-Seal Technology ",
-      sub: "Blow-Fill-Seal, Technology ",
-      img: homeArticles,
-      date: "April 12, 2023 PAP-Q1-2023",
-    },
-    {
-      content: "Blow-Fill-Seal Expands in Aseptic Filling, Vaccines",
-      sub: "Blow-Fill-Seal, Technology ",
-      img: homeArticles,
-      date: "April 12, 2023 PAP-Q1-2023",
-    },
-    {
-      content:
-        "Where do COVID-19 vaccine players stand on pricing? So far, it's no profit, slight profit or undecided",
-      sub: "Covid - 19 Vaccine",
-      img: homeArticles,
-      date: "April 12, 2023 PAP-Q1-2023",
-    },
-    {
-      content: "Investing in Form-Fill-Seal Technology",
-      sub: "Blow-Fill-Seal, Technology ",
-      img: homeArticles,
-      date: "April 12, 2023 PAP-Q1-2023",
-    },
-    {
-      content: "Investing in Form-Fill-Seal Technology",
-      sub: "Blow-Fill-Seal, Technology ",
-      img: homeArticles,
-      date: "April 12, 2023 PAP-Q1-2023",
-    },
-  ];
-
+export default function Heading() {
   return (
     <div className="font-['ClashDisplay']">
       {/* set of headings */}
@@ -76,41 +16,22 @@ export default function Article_Heading() {
           Heading
         </p>
         {/* desktop view */}
-        <div className="w-full p-10 hidden md:block">
-          {/* 3 cards */}
-          <div className="w-full md:h-[380px] flex flex-row overflow-x-auto md:flex-row md:gap-3">
-            {/* <div className="w-1 h-1 md:w-1/2 md:h-full flex flex-row md:flex-row md:gap-3 overflow-x-auto"> */}
-            <div className="md:w-full w-full h-full  md:h-full rounded-lg shadow-md">
-              <ArticleCard
-                content={articles1[3].content}
-                sub={articles1[3].sub}
-                img={articles1[3].img}
-                date={articles1[3].date}
-              />
-            </div>
-            <div className="w-full md:h-full md:w-full rounded-lg shadow-md">
-              <ArticleCard
-                content={articles1[3].content}
-                sub={articles1[3].sub}
-                img={articles1[3].img}
-                date={articles1[3].date}
-              />
-            </div>
-            <div className="w-full md:h-full md:w-full rounded-lg shadow-md">
-              <ArticleCard
-                content={articles1[3].content}
-                sub={articles1[3].sub}
-                img={articles1[3].img}
-                date={articles1[3].date}
-              />
-            </div>
-            <div className="w-full md:h-full md:w-full rounded-lg shadow-md">
-              <ArticleCard
-                content={articles1[3].content}
-                sub={articles1[3].sub}
-                img={articles1[3].img}
-              />
-            </div>
+        <div className="w-screen p-10 hidden md:block overflow-x-auto">
+          {/* Cards */}
+          <div className="flex flex-row gap-3">
+            {Blogs_Heading.slice(0, 4).map((blog, index) => (
+              <div
+                key={index}
+                className="w-[50%] md:w-full md:max-w-[30%] rounded-lg shadow-md overflow-hidden"
+              >
+                <ArticleCard
+                  content={blog.content}
+                  sub={blog.sub}
+                  img={blog.img}
+                  date={blog.date}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -123,7 +44,7 @@ export default function Article_Heading() {
           className="w-full h-[41vh] flex overflow-x-scroll gap-4 "
           style={{ scrollSnapType: "x mandatory" }}
         >
-          {articles2.map((article, index) => (
+          {Blogs_Heading.map((article, index) => (
             <div
               key={index}
               className="w-full flex-shrink-0 scroll-snap-align-start rounded-lg shadow-md"

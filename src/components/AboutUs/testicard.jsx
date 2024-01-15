@@ -22,7 +22,7 @@ const TestimonialCard = props => {
       <div className ="mt-2 text-gray-600flex justify-end mt-4 pyu text-[#8AA6AA]">Blow-Fill-Seal, Technology </div>
       <div className="flex justify-end mt-4 mt-2">
         <a href="www.google.com" className="text-1xl leading-tight text-[#8AA6AA]">
-         <div><b>Read More -></b>
+         <div><b>Read More <Icon icon="ph:arrow-right-light" /></b>
         
         </div>
         </a> 

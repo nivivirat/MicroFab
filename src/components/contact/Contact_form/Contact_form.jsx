@@ -41,7 +41,7 @@ const ContactForm = () => {
   ];
 
   return (
-    <div className="md:ml-0 md:w-[60%] max-w-lg mx-auto w-full flex justify-center place-items-center custom-font md:m-10 m-10 md:rounded-[33px] md:border md:p-10 md:border-[#8AA6AA] md:my-4 md:mt-10 md:mb-10 p-4 rounded-md">
+    <div className="md:ml-0 md:w-[80%] max-w-lg mx-auto w-full flex justify-center place-items-center custom-font md:m-10 m-10 md:rounded-[33px] md:border md:border-[#8AA6AA] md:my-4 md:mt-10 md:mb-10 p-4 rounded-md">
       <form
         onSubmit={handleSubmit}
         className="border-2 md:border-0 space-y-4 text-left md:w-[100%] w-[90%] md:rounded-none rounded-[30px] p-6"
@@ -56,8 +56,8 @@ const ContactForm = () => {
               placeholder="First Name"
               value={formData.firstName}
               onChange={handleInputChange}
-              className="w-full border border-black rounded-md p-2"
-            />
+              className="w-full border border-black rounded-md px-2 py-1"
+            /> 
           </div>
           <div className="md:w-1/2 w-full">
             <label htmlFor="lastName">Last Name</label>
@@ -68,7 +68,7 @@ const ContactForm = () => {
               placeholder="Last Name"
               value={formData.lastName}
               onChange={handleInputChange}
-              className="w-full border border-black rounded-md p-2"
+              className="w-full border border-black rounded px-2 py-1"
             />
           </div>
         </div>
@@ -82,7 +82,7 @@ const ContactForm = () => {
               placeholder="Phone Number"
               value={formData.phoneNumber}
               onChange={handleInputChange}
-              className="w-full border border-black rounded-md p-2"
+              className="w-full border border-black rounded px-2 py-1"
             />
           </div>
           <div className="md:w-1/2 w-full">
@@ -96,7 +96,7 @@ const ContactForm = () => {
               placeholder="Email Address"
               value={formData.email}
               onChange={handleInputChange}
-              className="w-full md:block hidden border border-black rounded-md p-2"
+              className="w-full md:block hidden border border-black rounded px-2 py-1"
             />
           </div>
         </div>
@@ -109,7 +109,7 @@ const ContactForm = () => {
             name="serviceInterestedIn"
             value={formData.serviceInterestedIn}
             onChange={handleInputChange}
-            className="md:w-full w-full border border-black rounded-md p-2"
+            className="md:w-full w-full border border-black rounded px-2 py-1"
           >
             <option value="" disabled>
               Select a service
@@ -132,7 +132,7 @@ const ContactForm = () => {
             value={formData.message}
             onChange={handleInputChange}
             rows="5"
-            className="md:w-full w-full border border-black rounded-md p-2"
+            className="md:w-full w-full border border-black rounded px-2 py-1"
           ></textarea>
         </div>
 
@@ -147,12 +147,12 @@ const ContactForm = () => {
             placeholder="Email Address"
             value={formData.email}
             onChange={handleInputChange}
-            className="w-full md:hidden border border-black rounded-md p-2"
+            className="w-full md:hidden border border-black rounded px-2 py-1"
           />
         </div>
         <button
           type="submit"
-          className="bg-[#8AA6AA] text-white px-4 py-2 w-full md:w-full rounded-md hover:bg-[#8AA6AA]"
+          className="bg-[#8AA6AA] text-white hover:h-auto px-4 py-2 hover:py-2 hover:px-4 w-full md:w-full hover:md:w-full rounded-md hover:bg-[#8AA6AA]"
         >
           Submit
         </button>

@@ -1,18 +1,93 @@
 .Application{
-  text-align: center;
+  text-align: left;
 }
-
+.qwe{
+  text-align:left;
+}
 .Application-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
+@media (min-width: 769px){
+  .qwe{
+   margin:auto 5%;
+   text-align:center;
+  }}
 @media (prefers-reduced-motion: no-preference) {
   .Application-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.h{
+  position:relative;
+  left:20%;
+  top:-20%;
+}
+.j{
+margin-top:20%;
+margin: 0 -30%;
+}
+/* @media screen and (min-width: 1200px) and (max-width: 1350px) {
+.qwea{
+  height:10%;
+  width:10%;
+  z-index:-1;
+  position:absolute;
+  top:1266px;
+  left:4%;
+  /* margin-top:-15%; */
 
+@media screen (max-width: 1100px) {
+  .qwea{
+    height:5%;
+    width:5%;
+    z-index:-1;
+    position:absolute;
+    top:444%;
+    left:4%;
+    /* margin-top:-15%; */
+  }
+  
+  
+}
+.xcc {
+  
+  /* Other styles for .xcc */
+  display: none; /* Set default display property to none */
+}
+
+.fd {
+  
+  display: none;
+}
+
+/* Apply styles only when the screen width is 900 pixels or more */
+@media screen and (min-width: 1100px) {
+  .xcc {
+    display: block; /* Show .xcc when screen width is 900 pixels or more */
+  }
+
+  .fd {
+    display: block; /* or any other styles you want to apply */
+  }
+}
+
+/* }
+@media screen and (min-width: 1200px) and (max-width: 1350px) {
+  .qwea{
+    height:10vh;
+    width:10vh;
+    z-index:-1;
+    position:absolute;
+    top:1266px;
+    left:4%;
+    /* margin-top:-15%; */
+  
+
+    .klp{
+      margin:2%;
+    }
+ 
 .Application-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -51,11 +126,12 @@
   margin-left:25%;
   text-align:center;
 }
- .kl{
+ .kll{
   /* margin:0 4%; */
-  width:50%;
+  width:60%;
   text-align:left;
   padding:0;
+  margin:0 -10%;
   /* justify-content:center; */
 }
  .kp{
@@ -69,29 +145,90 @@
 
 .df{
   text-align:left;
-  margin-right:35%;
+  margin-right:-45%;
+  /* margin-left:80%; */
+  /* padding-left:10%; */
   position:relative;
-  top:10px;
-  margin-top:13%;
+  top:-110px;
+  margin-top:-10%;
   margin-left:1%;
   
 }
+.bvc{
+  background-image:url('./image 8.jpg');
+}
+.bnvf{
+  margin-left:20%;
+  margin-right:20%;
+}
+/* .vbn{
+  margin-right:10%;
+} */
+.vbn{
+
+  
+  margin-top:-4%;
+  /* display:inline; */
+  width:100%;
+  display:flex;
+  /* margin-left:4%;
+  margin-right:40%;
+  width: 320px; */
+  /* padding-right:10%; */
+  /* display: inline; */
+
+}
 .navbar {
   display: flex;
-  background-color: #F3F2EE;
+  background-color: #E8E8E9;
   margin-left:4%;
-  width:360px;
+  width:370px;
   height:60px;
   padding: 0 1%;
-  
-  border: 8px solid #F3F2EE;
-  border-color:#F3F2EE;
+  border-radius: 15px;
+  border: 8px solid #E8E8E9;
+  border-color:#E8E8E9;
 
   /* font-size:35%; */
+}
+.navbar1{
+  display: flex;
+  background-color: #E8E8E9;
+  margin-left:4%;
+  width:300px;
+  height:60px;
+  padding: 0 1%;
+  border-radius: 15px;
+  border: 8px solid #E8E8E9;
+  border-color:#E8E8E9;
+}
+.navbar2{
+  display: flex;
+  background-color: #E8E8E9;
+  margin-left:4%;
+  width:470px;
+  height:60px;
+  padding: 0 1%;
+  border-radius: 15px;
+  border: 8px solid #E8E8E9;
+  border-color:#E8E8E9;
+}
+.navbar3{
+  display: flex;
+  background-color: #E8E8E9;
+  margin-left:4%;
+  width:470px;
+  height:60px;
+  padding: 0 1%;
+  border-radius: 15px;
+  border: 8px solid #E8E8E9;
+  border-color:#E8E8E9;
 }
 button:hover{
   background-color:white;
   font-weight: 900;
+  border-radius: 10px;
+  padding: 0 1%;
 }
 
 .navbar a {
@@ -113,19 +250,111 @@ button:hover{
 .opl{
   margin-left:1%;
 }
+.uuu{
+  /* margin-left:70%; */
+  /* margin-right:15%;
+  margin-top:10%;width:110%; */
+  position:relative;
+  left:-55%;
+  top:40%;
+}
+@media only screen and (min-width: 421px) {
+.vbnn{
+  margin-top:1%;
+  display:inline;
+  width:200%;
+}
+}
+@media only screen and (min-width: 421px) {
+  .vbnn{
+    margin-top:1%;
+    display:inline;
+    width:100%;
+  }
+  }
+.mm{
+width:90%;  position:relative;
+}
+.kkk{
+  margin-left:4%;
+  padding-right:5%;
+}
 .sd{
   text-align:left;
-  /* margin-left:-80%; */
+  margin-left:30%;
+  /* margin-bottom:3%; */
+  /* margin-bottom:-4%; */
   position:relative;
+
   /* margin-top:-90%; */
-  top:40%
+  top:25%;
 
 }
+/* .ee{
+  position:absolute;
+  top:44vh;
+  left:-68%;
+} */
+.poi{
+  margin-top:-10%;
+}
+
+@media only screen and (max-width: 1000px) {
+
+.sd{
+  position:absolute;
+  display:none;
+}
+.ee{
+  position:absolute;
+  top:35%;
+  left:-68%;
+}
+}
+@media only screen and (max-width: 650px) {
+
+  .ee{
+    position:absolute;
+    top:60%;
+    left:-68%;
+  }
+}
+
 @media only screen and (max-width: 900px) {
-  .sd {
-      display: none;
+
+  .poi{
+    margin-top:0%;
+  }
+  .uuu{
+    position:absolute;
+    display:none;
+
+  }
+  .kll{
+    margin:0 -15%;
+  }
+  .qaz{
+    margin-bottom:-4%;
   }
   
+}
+@media only screen and (max-width: 600px) {
+.sd {
+  display: none;
+}
+.navbar {
+  display: flex;
+  background-color: #E8E8E9;
+  margin-left:4%;
+  width:290px;
+  height:60px;
+  padding: 0 1%;
+  border-radius: 15px;
+  border: 8px solid #E8E8E9;
+  border-color:#E8E8E9;
+
+  /* font-size:35%; */
+}
 }
 .kp{
 width:310px;
@@ -134,12 +363,38 @@ margin:auto;
 /* background:cover;
 background-repeat:no-repeat; */
 }
+.bbb{
+  margin-left:-580px;
+}
 .dc{
   margin-left:3%
 }
+@media only screen and (min-width: 1350px) {
+.awsw{
+  /* margin-top:5%;
+  margin-bottom:5%;
+  margin-right:-15%; */
+  margin-left:75%;
+  padding:10px;
+  
+}
+@media only screen and (min-width: 1149px and max-width:1349px) {
+  .awsw{
+    margin-left:85%;
+  }
+  .es{
+    margin:-10%;
+  }
+}
+
+}
  .qaz{
- 
-  margin-top:-15px;
+  position:relative;
+
+  /* margin-top:-90%; */
+  top:-35%;
+  
+  /* margin-top:-95px; */
 }
 .asdf{
   display: flex;
@@ -153,7 +408,23 @@ background-repeat:no-repeat; */
   align-items:left;
   image:cover;
 } */
-.kl{
-  margin:0 10%;
+.kll{
+  margin:0 -10%;
   /* padding:20%; */
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1350px) {
+  .ee{
+    position:absolute;
+    left:-69%;
+    top:45%;
+  }
+}
+
+@media screen and (min-width: 1351px) {
+  .ee{
+    position:absolute;
+    left:-69%;
+    top:41.5%;
+  }
 }

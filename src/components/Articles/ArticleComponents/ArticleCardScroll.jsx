@@ -3,123 +3,84 @@ import img1 from "../../../assets/Home_article/article1.svg";
 import img2 from "../../../assets/Home_article/article2.svg";
 import img3 from "../../../assets/Home_article/article3.svg";
 import img4 from "../../../assets/Articles/article4.svg";
-import arrow_right from "../../../assets/Home_article/ArrowRight.svg";
 import ArticleCard from "../../Home/Home_articles/ArticleCard";
+
+import arrow_right from "../../../assets/Home_article/ArrowRight.svg";
 import Article4 from "../../Home/Home_articles/Article4";
+import Article_content from "../../Articles/Article_content.json";
+import Article_heading from "../../Articles/Article_heading.json";
+
+// const contentClass = num ? "font-black md:text-[18px]" : "";
 
 export default function ArticleCardScrollMobile() {
-  const articles1 = [
-    {
-      content: "Blow-Fill-Seal Expands in Aseptic Filling, Vaccines",
-      sub: "Blow-Fill-Seal, Technology ",
-      img: img1,
-    },
-    {
-      content: "Investing in Form-Fill-Seal Technology",
-      sub: "Blow-Fill-Seal, Technology ",
-      img: img2,
-      date: "April 12, 2023 PAP-Q1-2023",
-    },
-    {
-      content: "Investing in Form-Fill-Seal Technology ",
-      sub: "Blow-Fill-Seal, Technology ",
-      img: img3,
-      date: "April 12, 2023 PAP-Q1-2023",
-    },
-    {
-      content:
-        "Where do COVID-19 vaccine players stand on pricing? So far, it's no profit, slight profit or undecided",
-      sub: "Covid - 19 Vaccine",
-      img: img4,
-      date: false,
-    },
-  ];
-
-  const articles2 = [
-      {
-        content:
-          "Where do COVID-19 vaccine players stand on pricing? So far, it's no profit, slight profit or undecided",
-        sub: "Covid - 19 Vaccine",
-        img: img4,
-        date: false,
-      },
-    {
-      content: "Blow-Fill-Seal Expands in Aseptic Filling, Vaccines",
-      sub: "Blow-Fill-Seal, Technology ",
-      img: img1,
-    },
-    {
-      content: "Investing in Form-Fill-Seal Technology",
-      sub: "Blow-Fill-Seal, Technology ",
-      img: img2,
-      date: "April 12, 2023 PAP-Q1-2023",
-    },
-    {
-      content: "Investing in Form-Fill-Seal Technology ",
-      sub: "Blow-Fill-Seal, Technology ",
-      img: img3,
-      date: "April 12, 2023 PAP-Q1-2023",
-    },
-  ];
-
   return (
     <div>
       {/* desktop view */}
       <div className="font-mono w-full p-10 hidden md:block">
         {/* 3 cards */}
-        <div className="w-full md:h-[330px] flex flex-row overflow-x-auto md:flex-row md:gap-3">
-          <div className="md:w-1/2 md:h-full w-full rounded-lg shadow-md">
-            <ArticleCard
-              content={articles1[0].content}
-              sub={articles1[0].sub}
-              img={articles1[0].img}
-              num={true}
-            />
-          </div>
-          <div className="w-1 h-1 md:w-1/2 md:h-full flex flex-row md:flex-row md:gap-3 overflow-x-auto">
-            <div className="md:w-full w-full h-full  md:h-full rounded-lg shadow-md">
+        <div className="w-full md:h-[350px] flex flex-row overflow-x-auto md:flex-row md:gap-3">
+          <div className="w-full md:h-[350px] flex flex-row overflow-x-auto md:flex-row md:gap-3">
+            <div className="md:w-1/2 md:h-full w-full rounded-lg shadow-md">
               <ArticleCard
-                content={articles1[1].content}
-                sub={articles1[1].sub}
-                img={articles1[1].img}
-                date={articles1[1].date}
+                content={Article_content[0].content}
+                sub={Article_content[0].sub}
+                // img={Article_content[0].img}
+                img={img1}
+                num={true}
               />
             </div>
-            <div className="w-full md:h-full md:w-full rounded-lg shadow-md">
-              <ArticleCard
-                content={articles1[2].content}
-                sub={articles1[2].sub}
-                img={articles1[2].img}
-                date={articles1[2].date}
-              />
+            <div className="md:w-1/2 md:h-full flex flex-row md:flex-row md:gap-3 overflow-x-auto">
+              <div className="md:w-full w-full h-full  md:h-full rounded-lg shadow-md">
+                <ArticleCard
+                  content={Article_content[1].content}
+                  sub={Article_content[1].sub}
+                  // img={Article_content[1].img}
+                  img={img3}
+                  date={Article_content[1].date}
+                />
+              </div>
+              <div className="w-full md:h-full md:w-full rounded-lg shadow-md">
+                <ArticleCard
+                  content={Article_content[2].content}
+                  sub={Article_content[2].sub}
+                  img={Article_content[2].img}
+                  date={Article_content[2].date}
+                />
+              </div>
             </div>
           </div>
         </div>
 
         {/* article 4 */}
-        <div className="w-full md:h-full md:w-full rounded-lg shadow-md">
-          <Article4
-            content={articles1[3].content}
-            sub={articles1[3].sub}
-            img={articles1[3].img}
-            date={articles1[3].date}
-          />
-        </div>
+        {Article_content[3] ? (
+          <div className="w-full md:h-full md:w-full rounded-lg shadow-md">
+            <Article4
+              content={Article_content[3].content}
+              sub={Article_content[3].sub}
+              img={Article_content[3].img}
+              date={Article_content[3].date}
+            />
+          </div>
+        ) : (
+          <div></div>
+        )}
       </div>
 
       {/* mobile */}
       <div className="custom-font p-10 md:hidden">
         {/* Carousel */}
+
+        {/* mobile scroll 1 */}
         <div
-          className="w-full h-[45vh] flex overflow-x-scroll gap-4 "
+          className="w-[300px] h-[400px] flex overflow-x-scroll gap-4 mb-4"
           style={{ scrollSnapType: "x mandatory" }}
         >
-          {articles1.map((article, index) => (
+          {Article_content.map((article, index) => (
             <div
               key={index}
-              className="w-full flex-shrink-0 scroll-snap-align-start rounded-lg shadow-md"
+              className="w-full h-full flex-shrink-0 scroll-snap-align-start border-2 rounded-xl shadow-md"
             >
-              <div className="border-2 w-full h-[40vh] flex flex-col place-items-center rounded-lg shadow-md">
+              <div className="w-full h-full md:h-[480px] flex flex-col place-items-center">
                 <img
                   src={article.img}
                   alt="Blog Thumbnail"
@@ -132,7 +93,7 @@ export default function ArticleCardScrollMobile() {
                       {article.sub}
                     </p>
                   </div>
-                  <p className="text-left text-black text-[18px] font-black line-clamp-3">
+                  <p className="text-left w-full text-black text-[18px] font-bold line-clamp-3">
                     {article.content}
                   </p>
                   <div className="flex flex-row place-items-center gap-3">
@@ -148,17 +109,17 @@ export default function ArticleCardScrollMobile() {
             </div>
           ))}
         </div>
-
+          {/* mobile scroll 2 */}
         <div
-          className="w-full h-[45vh] flex overflow-x-scroll gap-4 "
+          className="w-[300px] h-[400px] flex overflow-x-scroll gap-4 "
           style={{ scrollSnapType: "x mandatory" }}
         >
-          {articles2.map((article, index) => (
+          {Article_heading.map((article, index) => (
             <div
               key={index}
-              className="w-full flex-shrink-0 scroll-snap-align-start rounded-lg shadow-md"
+              className="w-full h-full flex-shrink-0 scroll-snap-align-start border-2 rounded-xl shadow-md"
             >
-              <div className="border-2 w-full h-[40vh] flex flex-col place-items-center rounded-lg shadow-md">
+              <div className="w-[300px] h-full md:h-[480px] flex flex-col place-items-center">
                 <img
                   src={article.img}
                   alt="Blog Thumbnail"

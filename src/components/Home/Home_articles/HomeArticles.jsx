@@ -1,93 +1,87 @@
-import React from "react";
-import ArticleCard from "./ArticleCard";
+import arrow_right from "../../../assets/Home_article/ArrowRight.svg";
 import img1 from "../../../assets/Home_article/article1.svg";
 import img2 from "../../../assets/Home_article/article2.svg";
 import img3 from "../../../assets/Home_article/article3.svg";
-import arrow_right from "../../../assets/Home_article/ArrowRight.svg";
-import { Link } from "react-router-dom";
+// import arrow_right from "../../../assets/Home_article/ArrowRight.svg";
+import homeArticles from "../../../assets/Articles/Heading.svg";
+import ArticleCard from "../../Home/Home_articles/ArticleCard";
+// import Blogs_Heading from "homeArticleData.json";
 
-export default function HomeArticle() {
-  const articles = [
+export default function HomeArticles() {
+  const Blogs_Heading = [
     {
-      content: "Blow-Fill-Seal Expands in Aseptic Filling, Vaccines",
-      sub: "Blow-Fill-Seal, Technology ",
-      img: img1,
+      content: "Latest Trends you could perceive with the BFS Technology",
+      sub: "Blow-Fill-Seal, Technology",
+      img: "https://res.cloudinary.com/dzhdarh4q/image/upload/v1700851990/articles/article1_lvcpq0.svg",
+      path: "article1",
     },
     {
-      content: "Investing in Form-Fill-Seal Technology",
-      sub: "Blow-Fill-Seal, Technology ",
-      img: img2,
+      content: "Factors you must consider while Purchasing an FFS Machine",
+      sub: "Blow-Fill-Seal, Technology",
+      img: "https://res.cloudinary.com/dzhdarh4q/image/upload/v1700851989/articles/article2_pqgsdx.svg",
       date: "April 12, 2023 PAP-Q1-2023",
+      path: "article2",
     },
     {
-      content: "Investing in Form-Fill-Seal Technology ",
-      sub: "Blow-Fill-Seal, Technology ",
-      img: img3,
+      content:
+        "Things to look for When Buying Medical Devices for your Hospital",
+      sub: "Blow-Fill-Seal, Technology",
+      img: "https://res.cloudinary.com/dzhdarh4q/image/upload/v1700851989/articles/article3_hwh8vw.svg",
       date: "April 12, 2023 PAP-Q1-2023",
+      path: "article3",
+    },
+    {
+      content: "Benefits of Approaching a Contract Manufacturer",
+      sub: "Blow-Fill-Seal, Technology",
+      img: "https://res.cloudinary.com/dzhdarh4q/image/upload/v1700851989/articles/article4_i8chpp.svg",
+      date: false,
+      path: "article4",
     },
   ];
 
   return (
-    <div>
-      {/* desktop view */}
-      <div className="font-['ClashDisplay'] w-full p-10 hidden md:block">
-        <div className="flex flex-row justify-between pb-10 ">
-          <p className="md:text-[25px] font-extrabold">Articles</p>
-          <Link to="/articles">
-            <p className="md:block hidden text-[#8AA6AA] cursor-pointer">
-              View all
-            </p>
-          </Link>
-        </div>
-
-        <div className="w-full md:h-[330px] flex flex-row overflow-x-auto md:flex-row md:gap-3">
-          <div className="md:w-1/2 md:h-full w-full rounded-lg shadow-md">
-            <ArticleCard
-              content={articles[0].content}
-              sub={articles[0].sub}
-              img={articles[0].img}
-              num={true}
-            />
-          </div>
-          <div className="w-1 h-1 md:w-1/2 md:h-full flex flex-row md:flex-row md:gap-3 overflow-x-auto">
-            <div className="md:w-full w-full h-full  md:h-full rounded-lg shadow-md">
-              <ArticleCard
-                content={articles[1].content}
-                sub={articles[1].sub}
-                img={articles[1].img}
-                date={articles[1].date}
-              />
-            </div>
-            <div className="w-full md:h-full md:w-full rounded-lg shadow-md">
-              <ArticleCard
-                content={articles[2].content}
-                sub={articles[2].sub}
-                img={articles[2].img}
-                date={articles[2].date}
-              />
-            </div>
+    <div className="font-['ClashDisplay']">
+      {/* set of headings */}
+      <div>
+        <p className="text-black md:text-[25px] text-[30px] md:block hidden font-bold pl-10">
+          Our latest Articles
+        </p>
+        {/* desktop view */}
+        {/* desktop view */}
+        <div className="w-screen p-10 hidden md:block overflow-x-auto">
+          {/* Cards */}
+          <div className="flex flex-row gap-3">
+            {Blogs_Heading.slice(0, 4).map((blog, index) => (
+              <a
+                href={blog.path}
+                key={index}
+                className="w-[50%] md:w-full md:max-w-[30%] rounded-lg shadow-md overflow-hidden"
+              >
+                <ArticleCard
+                  content={blog.content}
+                  sub={blog.sub}
+                  img={blog.img}
+                  date={blog.date}
+                />
+              </a>
+            ))}
           </div>
         </div>
-        <button className="mt-4 text-white bg-[#8AA6AA] w-full md:hidden p-4 rounded-lg flex flex-row justify-center place-items-center">
-          <p className="">View all</p>
-          <img src={arrow_right} className="bg-[#8AA6AA] h-6 rounded-lg"></img>
-        </button>
       </div>
 
-      {/* mobile view */}
+      {/* mobile */}
       <div className="font-['ClashDisplay'] p-10 md:hidden">
-        {/* Header */}
-        <div className="flex flex-row justify-between pb-10">
-          <p className="md:text-[25px] font-extrabold">Articles</p>
-        </div>
+        <p className="text-primary md:text-[25px] text-[30px] font-bold mb-4">
+          Article and Blogs
+        </p>
 
-        {/* Carousel */}
         <div
-          className="w-full h-[45vh] flex overflow-x-scroll gap-4 "
+          className="w-full h-[43vh] flex overflow-x-scroll gap-4"
           style={{ scrollSnapType: "x mandatory" }}
         >
-          {articles.map((article, index) => (
-            <div
+          {Blogs_Heading.map((article, index) => (
+            <a
+              href={article.path}
               key={index}
               className="w-full flex-shrink-0 scroll-snap-align-start rounded-lg shadow-md"
             >
@@ -104,7 +98,7 @@ export default function HomeArticle() {
                       {article.sub}
                     </p>
                   </div>
-                  <p className="text-left text-black text-[18px] font-black">
+                  <p className="text-left text-black text-[18px] font-bold line-clamp-3">
                     {article.content}
                   </p>
                   <div className="flex flex-row place-items-center gap-3">
@@ -117,21 +111,9 @@ export default function HomeArticle() {
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
-
-        {/* View All Button */}
-        <button className="mt-4 text-white bg-[#8AA6AA] w-full p-4 rounded-lg flex flex-row justify-center place-items-center">
-          <Link to={"/articles"}>
-            <p className="">View all</p>
-          </Link>
-          <img
-            src={arrow_right}
-            className="bg-[#8AA6AA] h-6 rounded-lg"
-            alt="View all"
-          />
-        </button>
       </div>
     </div>
   );

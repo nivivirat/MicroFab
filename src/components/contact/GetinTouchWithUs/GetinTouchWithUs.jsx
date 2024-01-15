@@ -9,11 +9,14 @@ export default function GetinTouchWithUs() {
       <div className="flex md:flex-col flex-col md:justify-start">
         <div className="flex flex-row mb-3">
           <p className="md:text-[30px] text-[25px] font-bold">Get in Touch</p>
-          <p className="md:text-[30px] text-[25px] text-[#8AA6AA] ml-2 md:ml-2.5"> With Us</p>
+          <p className="md:text-[30px] text-[25px] text-[#8AA6AA] ml-2 md:ml-2.5">
+            {" "}
+            With Us
+          </p>
         </div>
-        <p className="w-[90%] text-left">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit.
+        <p className="w-[90%] text-left font-semibold md:text-[18px]">
+          At MicroFab, your satisfaction is our priority. Contact us today and
+          experience the difference of working with us.
         </p>
       </div>
 
@@ -26,8 +29,10 @@ export default function GetinTouchWithUs() {
               <p className="md:text-[26px] text-[#8AA6AA]">Office</p>
             </div>
             <p className="md:text-[14px] text-left">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit.
+              <p>Office No. B107 First Floor,</p>
+              <p>Lodha Supremus II,</p>
+              <p>Wagle Estate, Thane West,</p>
+              <p>Thane Maharasthra -- 400604</p>
             </p>
           </div>
 
@@ -37,8 +42,8 @@ export default function GetinTouchWithUs() {
               <img src={business} alt="office" className=""></img>
               <p className="md:text-[26px] text-[#8AA6AA]">Open Hours</p>
             </div>
-            <p className="md:text-[14px] text-left">Monday - Friday</p>
-            <p className="md:text-[14px] text-left">9AM - 6 PM</p>
+            <p className="md:text-[14px] text-left">Monday - Saturday</p>
+            <p className="md:text-[14px] text-left">9 AM -  6:30 PM</p>
           </div>
         </div>
         <div className="flex md:flex-row md:justify-start flex-col gap-6">
@@ -48,8 +53,7 @@ export default function GetinTouchWithUs() {
               <img src={contact} alt="office" className=""></img>
               <p className="md:text-[26px] text-[#8AA6AA]">Contact</p>
             </div>
-            <p className="md:text-[14px] text-left">+91 676 787 68 78</p>
-            <p className="md:text-[14px] text-left">+91 676 787 68 78</p>
+            <p className="md:text-[14px] text-left">  +91 9323012344</p>
           </div>
 
           {/* email */}
@@ -58,8 +62,7 @@ export default function GetinTouchWithUs() {
               <img src={contact} alt="office" className=""></img>
               <p className="md:text-[26px] text-[#8AA6AA]">Email</p>
             </div>
-            <p className="md:text-[14px] text-left">+services@microfab.com</p>
-            <p className="md:text-[14px] text-left">sales@microfab.com</p>
+            <p className="md:text-[14px] text-left">info@microfabeng.com </p>
           </div>
         </div>
       </div>

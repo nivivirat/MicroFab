@@ -6,6 +6,7 @@ import {
     Button,
   } from "@material-tailwind/react";
    import one from "./one-bg.png";
+import { Icon } from "@iconify/react";
   export function HorizontalCard() {
     return (
       <Card className="w-full flex-row">
@@ -31,13 +32,13 @@ import {
           No matter what point you are at: With our experience and range of services, we are sure to get you ahead. Maybe so with these offers:
           </Typography>
           <a href="#" className="inline-block">
-          CONTRACT FILLING->
+          CONTRACT FILLING<Icon icon="ph:arrow-right-light" />
           </a><br></br>
           <a href="#" className="inline-block">
-          PHARMA-SUITE-SERVICE->
+          PHARMA-SUITE-SERVICE<Icon icon="ph:arrow-right-light" />
           </a><br></br>
           <a href="#" className="inline-block">
-          FACTORY PLANNING->
+          FACTORY PLANNING<Icon icon="ph:arrow-right-light" />
           </a> 
          
         </CardBody>

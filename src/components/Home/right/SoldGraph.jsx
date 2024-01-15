@@ -13,7 +13,7 @@ export default function SoldGraph() {
           <p>2019</p>
         </div>
         <div className="flex flex-col justify-center gap-2 place-items-center w-[13%] h-[90%] ">
-          <p className="text-center text-white bg-[#414141] w-[90%] px-2 rounded-[10px]">64</p>
+          <p className="text-center text-white bg-[#414141] w-[90%] px-2 rounded-[10px]">211</p>
           <div className="w-full h-[80%] rounded-[30px] bg-[#8AA6AA] text-white text-[12px] flex justify-center place-items-end pb-2">
             <p>2020</p>
           </div>

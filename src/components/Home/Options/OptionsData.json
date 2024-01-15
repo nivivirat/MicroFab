@@ -1,0 +1,53 @@
+[
+    {
+      "option": "B-F-S",
+      "question": "What is Blow-Fill-Seal?",
+      "explanation": "The BFS technology lets you fill and seal unbreakable containers, made from plastic, automatically in just a single operation. While the entire process is 100% aseptic, you can further expect flexibility in the overall container design. You can also expect an efficient production process with the automated nature of the technology.",
+      "steps": [
+        {
+          "step": "Blow",
+          "content": "Initially, a tube formed through plastic granules. The container is later blown to the desired shape using sterile air.",
+          "img": "blow"
+        },
+        {
+          "step": "Fill",
+          "content": "Once the container is formed, it is filled with the intended quantity of liquid under sterile conditions.",
+          "img": "https://via.placeholder.com/300"
+        },
+        {
+          "step": "Seal",
+          "content": "Lastly, the container is sealed to ensure that the liquid product remains uncontaminated and secure during storage.",
+          "img": "https://via.placeholder.com/300"
+        }
+      ]
+    },
+    {
+      "option": "F-F-S",
+      "question": "What is Form-Fill-Seal?",
+      "explanation": "Form-Fill-Seal is always considered as an efficient method of packaging various products. This technology is employed especially in the food and beverage, pharmaceutical, and chemical industries. The approach offers many benefits like increased production efficiency, and reduced packaging material waste. It also has the ability to maintain product freshness and integrity.",
+      "steps": [
+        {
+          "step": "Form",
+          "content": "Initially, the process commences with the formation of a package from a roll of plastic film. This film is then shaped to form a pouch or a bag.",
+          "img": "https://via.placeholder.com/300"
+        },
+        {
+          "step": "Fill",
+          "content": "After the package is formed, it is filled with the intended product through an automated filling system.",
+          "img": "https://via.placeholder.com/300"
+        },
+        {
+          "step": "Seal",
+          "content": "Lastly, the package is sealed to enclose the product for maintaining product freshness, and preventing contamination.",
+          "img": "https://via.placeholder.com/300"
+        }
+      ]
+    },
+    {
+      "option": "I-S-B-M / P-F-F-S",
+      "question": "What is Injection Stretch Blow Molding?",
+      "explanation": "The Injection Stretch Blow Molding (ISBM) process is a manufacturing technique for producing high-quality plastic bottles and containers. This process enables the production of lightweight, durable, and transparent containers. Organizations leverage the process particularly for water bottles, milk containers, shampoo bottles, and more.",
+      "steps": []
+    }
+  ]
+  

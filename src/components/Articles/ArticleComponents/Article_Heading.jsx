@@ -8,33 +8,9 @@ import homeArticles from "../../../assets/Articles/Heading.svg";
 import ArticleCard from "../../Home/Home_articles/ArticleCard";
 import Article4 from "../../Home/Home_articles/Article4";
 
+import article_heading from "../../Articles/Article_heading.json";
+
 export default function Article_Heading() {
-  const articles1 = [
-    {
-      content: "Blow-Fill-Seal Expands in Aseptic Filling, Vaccines",
-      sub: "Blow-Fill-Seal, Technology ",
-      img: img1,
-    },
-    {
-      content: "Investing in Form-Fill-Seal Technology",
-      sub: "Blow-Fill-Seal, Technology ",
-      img: img2,
-      date: "April 12, 2023 PAP-Q1-2023",
-    },
-    {
-      content: "Investing in Form-Fill-Seal Technology ",
-      sub: "Blow-Fill-Seal, Technology ",
-      img: img3,
-      date: "April 12, 2023 PAP-Q1-2023",
-    },
-    {
-      content:
-        "Where do COVID-19 vaccine players stand on pricing? So far, it's no profit, slight profit or undecided",
-      sub: "Covid - 19 Vaccine",
-      img: homeArticles,
-      date: false,
-    },
-  ];
 
   const articles2 = [
     {
@@ -84,26 +60,26 @@ export default function Article_Heading() {
             <div className="w-1 h-1 md:w-1/2 md:h-full flex flex-row md:flex-row md:gap-3 overflow-x-auto">
               <div className="md:w-full w-full h-full  md:h-full rounded-lg shadow-md">
                 <ArticleCard
-                  content={articles1[1].content}
-                  sub={articles1[1].sub}
-                  img={articles1[1].img}
-                  date={articles1[1].date}
+                  content={article_heading[0].content}
+                  sub={article_heading[0].sub}
+                  img={article_heading[0].img}
+                  date={article_heading[0].date}
                 />
               </div>
               <div className="w-full md:h-full md:w-full rounded-lg shadow-md">
                 <ArticleCard
-                  content={articles1[2].content}
-                  sub={articles1[2].sub}
-                  img={articles1[2].img}
-                  date={articles1[2].date}
+                  content={article_heading[1].content}
+                  sub={article_heading[1].sub}
+                  img={article_heading[1].img}
+                  date={article_heading[1].date}
                 />
               </div>
             </div>
             <div className="md:w-1/2 md:h-full w-full rounded-lg shadow-md">
               <ArticleCard
-                content={articles1[0].content}
-                sub={articles1[0].sub}
-                img={articles1[0].img}
+                content={article_heading[2].content}
+                sub={article_heading[2].sub}
+                img={article_heading[2].img}
                 num={true}
               />
             </div>
@@ -117,41 +93,27 @@ export default function Article_Heading() {
           Heading
         </p>
         {/* desktop view */}
-        <div className="font-mono w-full p-10 hidden md:block">
-          {/* 3 cards */}
-          <div className="w-full md:h-[380px] flex flex-row overflow-x-auto md:flex-row md:gap-3">
-            {/* <div className="w-1 h-1 md:w-1/2 md:h-full flex flex-row md:flex-row md:gap-3 overflow-x-auto"> */}
-            <div className="md:w-full w-full h-full  md:h-full rounded-lg shadow-md">
-              <ArticleCard
-                content={articles1[3].content}
-                sub={articles1[3].sub}
-                img={articles1[3].img}
-                date={articles1[3].date}
-              />
-            </div>
-            <div className="w-full md:h-full md:w-full rounded-lg shadow-md">
-              <ArticleCard
-                content={articles1[3].content}
-                sub={articles1[3].sub}
-                img={articles1[3].img}
-                date={articles1[3].date}
-              />
-            </div>
-            <div className="w-full md:h-full md:w-full rounded-lg shadow-md">
-              <ArticleCard
-                content={articles1[3].content}
-                sub={articles1[3].sub}
-                img={articles1[3].img}
-                date={articles1[3].date}
-              />
-            </div>
-            <div className="w-full md:h-full md:w-full rounded-lg shadow-md">
-              <ArticleCard
-                content={articles1[3].content}
-                sub={articles1[3].sub}
-                img={articles1[3].img}
-              />
-            </div>
+        {/* <div className="font-mono w-full p-10 hidden md:block"> */}
+        <div
+          className={`font-mono w-full p-10 hidden md:block ${
+            article_heading.length > 4 ? "overflow-x-auto" : ""
+          }`}
+          style={{ scrollSnapType: "x mandatory" }}
+        >
+          <div className="w-full md:h-[350px] flex flex-row overflow-x-auto md:flex-row md:gap-3">
+            {article_heading.map((article, index) => (
+              <div
+                key={index}
+                className="w-full md:h-full md:w-full rounded-lg shadow-md"
+              >
+                <ArticleCard
+                  content={article.content}
+                  sub={article.sub}
+                  img={article.img}
+                  date={article.date}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -165,7 +127,7 @@ export default function Article_Heading() {
           className="w-full h-[45vh] flex overflow-x-scroll gap-4 "
           style={{ scrollSnapType: "x mandatory" }}
         >
-          {articles1.map((article, index) => (
+          {article_heading.map((article, index) => (
             <div
               key={index}
               className="w-full flex-shrink-0 scroll-snap-align-start rounded-lg shadow-md"

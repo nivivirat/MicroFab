@@ -15,7 +15,7 @@ export default function Moulds() {
         <div className="w-[80%]">
           <div className="leading-5 h-full w-full bg-white rounded-[20px] flex flex-col justify-center place-items-center font-bold">
             <img src={bot} alt="bot" className="h-[20px] w-[60px]"></img>
-            <p className="text-[22px]">150+</p>
+            <p className="text-[22px]">200+</p>
             <p className="text-[12px]">Moulds</p>
           </div>
         </div>

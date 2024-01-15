@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function firsto() {
+export function firsto() {
   return (
     <div>
     

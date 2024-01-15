@@ -1,0 +1,26 @@
+[
+  {
+    "imgl" : "mac1",
+    "heading": "Water Purification System",
+    "content": "At MicroFab, we believe in providing comprehensive turnkey solutions to our clients, and our advanced water purification systems are an integral part of that commitment.",
+    "imgr":"mac2"
+  },
+  {
+    "imgl":"mac3",
+    "heading":"Water for Injection System",
+    "content":"MicroFab understands the critical role of water quality in IV plants. Our Water for Injection System is meticulously engineered to meet the exacting standards of purity and safety for the operational activities.",
+    "imgr":"mac4"
+  },
+  {
+    "imgl":"mac5",
+    "heading":"Sanitization System",
+    "content":"Our Sanitization System meets the stringent requirements of formulation lines within IV plants. Designed for seamless integration, the systems employ cutting-edge technology to effectively eliminate contaminants and maintain a sterile environment.",
+    "imgr":"mac6"
+  },
+  {
+    "imgl":"mac7",
+    "heading":"Ancillaries",
+    "content":"Our range of Ancillaries (Mixing Tanks, CIP Systems, System for formulation lines, and more) designed to complement and enhance the efficiency of the IV plant processes. As precision is paramount, each ancillary is intricately designed to meet stringent quality standards.",
+    "imgr":"mac8"
+  }
+]

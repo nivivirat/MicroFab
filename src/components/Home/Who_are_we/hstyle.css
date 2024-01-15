@@ -1,0 +1,260 @@
+@media only screen and (min-width: 760px) {
+  .atom {
+    position: relative;
+    left: 10%;
+    top: 180%;
+    /* border:2px solid #ccc;  */
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+  }
+  .electron {
+    position: absolute;
+    left: 20%;
+    top: 110%;
+    border: 10px solid #4bf0fc;
+    /* border:1px;
+      border-color: #4BF0FC; */
+    border-radius: 50%;
+    height: 200%;
+    width: 120%;
+    transform-style: preserve-3d;
+    transform: translate(-50%, -50%) rotateY(40deg) rotate(0deg);
+    animation: orbit 6s infinite linear;
+    transform-origin: 50% 50%;
+    /* transition: visibility 0s 2s, opacity 2s linear; */
+    /* z-index:0; */
+
+    &:before {
+      content: "";
+      width: 0.5%;
+      height: 7%;
+      padding-bottom: 20%;
+      background-color: transparent;
+      transform-origin: 50% 50%;
+      position: absolute;
+      border-radius: 50%;
+      top: 0;
+      left: 50%;
+      animation: rotateWithOrbit 6s;
+      /* z-index:-1 */
+      background-image: radial-gradient(
+        circle at top left,
+        #94ffaf,
+        darken(#94ffaf, 25%) 75%
+      );
+    }
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .atom {
+    position: relative;
+    left: 50%;
+    top: 300%;
+    /* border:2px solid #ccc;  */
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    transform-style: preserve-3d;
+    perspective: 10000px;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+  }
+  .electron {
+    position: absolute;
+    left: 50%;
+    top: 110%;
+    border: 10px solid #4bf0fc;
+    /* border:1px;
+      border-color: #4BF0FC; */
+    border-radius: 50%;
+    height: 105%;
+    width: 80%;
+    transform-style: preserve-3d;
+    transform: translate(-50%, -50%) rotateY(40deg) rotate(0deg);
+    animation: orbit 6s infinite linear;
+    transform-origin: 50% 50%;
+    /* transition: visibility 0s 2s, opacity 2s linear; */
+    /* z-index:0; */
+
+    &:before {
+      content: "";
+      width: 0.5%;
+      height: 7%;
+      padding-bottom: 20%;
+      background-color: transparent;
+      transform-origin: 50% 50%;
+      position: absolute;
+      border-radius: 50%;
+      top: 0;
+      left: 50%;
+      animation: rotateWithOrbit 6s;
+      /* z-index:-1 */
+      background-image: radial-gradient(
+        circle at top left,
+        #94ffaf,
+        darken(#94ffaf, 25%) 75%
+      );
+    }
+  }
+}
+
+/* .ty{
+  position:absolute;
+  top:110%;
+} */
+
+.electron:nth-of-type(2) {
+  animation: orbit2 6s infinite linear;
+
+  &:before {
+    animation: rotateWithOrbit2 6s;
+  }
+}
+
+.electron:nth-of-type(3) {
+  animation: orbit3 6s infinite linear;
+
+  &:before {
+    animation: rotateWithOrbit3 6s;
+  }
+}
+
+.nucleus {
+  content: "";
+  width: 40%;
+  height: 0;
+  padding-bottom: 40%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  transform-origin: 50% 50%;
+  position: absolute;
+  border-radius: 50%;
+  /* border:1px solid green;  */
+  top: 50%;
+  left: 50%;
+  animation: rotateWithOrbit 6s infinite linear;
+  z-index: 5;
+  background-image: radial-gradient(
+    circle at top left,
+    red,
+    darken(red, 15%) 75%
+  );
+}
+
+@keyframes orbit {
+  0% {
+    transform: translate(-50%, -50%) rotateY(60deg) rotateX(-30deg) rotate(0deg);
+  }
+  75% {
+    border-color: transparent;
+    /* animation-timeline: 2s; */
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateY(60deg) rotateX(-30deg)
+      rotate(360deg);
+  }
+}
+
+/* //orbit is rotated 40deg, so rotate ball -40deg to keep it inline */
+@keyframes rotateWithOrbit {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0deg) rotateX(30deg)
+      rotateY(-40deg) scale(0.8);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotateZ(-90deg) rotateX(30deg)
+      rotateY(-40deg) scale(0.6);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotateZ(-180deg) rotateX(30deg)
+      rotateY(-40deg) scale(0.8);
+  }
+  75% {
+    transform: translate(-50%, -50%) rotateZ(-270deg) rotateX(30deg)
+      rotateY(-40deg) scale(1);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(-360deg) rotateX(30deg)
+      rotateY(-40deg) scale(0.8);
+  }
+}
+
+@keyframes orbit2 {
+  0% {
+    transform: translate(-50%, -50%) rotateY(60deg) rotateX(30deg)
+      rotate(180deg);
+  }
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateY(60deg) rotateX(30deg)
+      rotate(540deg);
+  }
+}
+
+/* //orbit is rotated 40deg, so rotate ball -40deg to keep it inline */
+@keyframes rotateWithOrbit2 {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(-180deg) rotateX(-30deg)
+      rotateY(-40deg) scale(0.8);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotateZ(-270deg) rotateX(-30deg)
+      rotateY(-40deg) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotateZ(-360deg) rotateX(-30deg)
+      rotateY(-40deg) scale(0.8);
+  }
+  75% {
+    transform: translate(-50%, -50%) rotateZ(-450deg) rotateX(-30deg)
+      rotateY(-40deg) scale(0.6);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(-540deg) rotateX(-30deg)
+      rotateY(-40deg) scale(0.8);
+  }
+}
+
+@keyframes orbit3 {
+  0% {
+    transform: translate(-50%, -50%) rotateY(0deg) rotateX(75deg) rotate(180deg);
+  }
+  25% {
+    border-color: transparent;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateY(0deg) rotateX(75deg) rotate(540deg);
+  }
+}
+
+/* orbit is rotated 40deg, so rotate ball -40deg to keep it inline */
+@keyframes rotateWithOrbit3 {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(-180deg) rotateX(-80deg)
+      rotateY(0deg) scale(1);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotateZ(-270deg) rotateX(-80deg)
+      rotateY(0deg) scale(0.8);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotateZ(-360deg) rotateX(-80deg)
+      rotateY(0deg) scale(0.6);
+  }
+  75% {
+    transform: translate(-50%, -50%) rotateZ(-450deg) rotateX(-80deg)
+      rotateY(0deg) scale(0.8);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(-540deg) rotateX(-80deg)
+      rotateY(0deg) scale(1);
+  }
+}

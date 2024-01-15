@@ -1,0 +1,22 @@
+[
+    {
+        "img" : "fluidAdministration",
+        "heading" : "Fluid Administration",
+        "content" : "IV bags are used for the intravenous administration of fluids which include saline solutions, nutritional supplements, and more."
+    },
+    {
+        "img" : "bloodTransfusion",
+        "heading" : "Blood Transfusion",
+        "content" : "IV bags are usually used to efficiently administer blood products like blood platelets, and plasma to those who are in need of blood transfusion."
+    },
+    {
+        "img" : "electrolyteReplacement",
+        "heading" : "Electrolyte Replacement",
+        "content" : "IV bags help in restoring electrolyte balance when the imbalance is due to certain medical conditions, and dehydration."
+    },
+    {
+        "img" : "parenteralNutrition",
+        "heading" : "parenteralNutrition",
+        "content" : "IV bags are used to offer parenteral nutrition to those who are undergoing a treatment due to malnutrition."
+    }
+]

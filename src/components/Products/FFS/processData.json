@@ -1,0 +1,14 @@
+[
+    {
+        "process" : "Form",
+        "content" : "The machine molds the film to form the appropriate packaging structure, such as small containers, depending on the product requirements."
+    },
+    {
+        "process" : "Fill",
+        "content" : "The product to be packaged, such as liquids, is then dispensed into the formed packaging."
+    },
+    {
+        "process" : "Seal",
+        "content" : "Once the machine fills the product, it seals the packaging material hermetically."
+    }
+]

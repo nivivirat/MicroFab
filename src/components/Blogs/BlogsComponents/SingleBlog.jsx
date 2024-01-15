@@ -2,15 +2,9 @@ import img1 from "../../../assets/Home_blog/blog1.svg";
 import Article4 from "../../Home/Home_articles/Article4";
 import arrow_right from "../../../assets/Home_article/ArrowRight.svg";
 
+import Blogs_content from '../Blog_content.json';
+
 export default function SingleBlog() {
-  const blogs = [
-    {
-      sub: "Covid - 19 Vaccine",
-      content:
-        "Where do COVID-19 vaccine players stand on pricing? So far, it's no profit, slight profit or undecided", // Added content
-      img: img1,
-    },
-  ];
 
   return (
     <div className="font-['ClashDisplay']">
@@ -22,17 +16,17 @@ export default function SingleBlog() {
         <div className="w-full pl-10 pb-10 pr-10 hidden md:block">
           <div className="w-full md:h-full md:w-full rounded-lg shadow-md">
             <Article4
-              content={blogs[0].content}
-              sub={blogs[0].sub}
-              img={blogs[0].img}
-              date={blogs[0].date}
+              content={Blogs_content[0].content}
+              sub={Blogs_content[0].sub}
+              img={Blogs_content[0].img}
+              date={Blogs_content[0].date}
             />
           </div>
         </div>
 
         {/* mobile version */}
         <div className="md:hidden pl-10 pr-10">
-          {blogs.map((article, index) => (
+          {Blogs_content.slice(0,1).map((article, index) => (
             <div
               key={index}
               className="w-full md:hidden flex-shrink-0 scroll-snap-align-start rounded-lg shadow-md"

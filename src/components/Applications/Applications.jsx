@@ -1,10 +1,15 @@
 import logo from "./logo.svg";
 import drop from "./drops.png";
+import drop1 from "./drop1.svg";
 import hand from "./hand.png";
 import "./Style2.css";
+import React from "react";
+import { firsto } from "./first";
 import { NavbarDefault } from "./Navbar";
 import { Button } from "@material-tailwind/react";
 import { NavbarWithMegaMenu } from "./packnav";
+import { Card3Presentation } from "./cards";
+import { HorizontalCard } from "./one-stop";
 import Slider from "./slider";
 import TestimonialCard from "./tasticard";
 import testimonials from "./testimonials.json";
@@ -21,8 +26,8 @@ function App() {
           </h3>
 
           <h6 className="text-1xl leading-tight text-[#8AA6AA]" color="blue">
-            Unleashing the Power of BFS Technology: Aseptic Filling, Sterile
-            Containers, and Unbreakable Packaging in a Single Step
+            "Unleashing the Power of BFS Technology: Aseptic Filling, Sterile
+            Containers, and Unbreakable Packaging in a Single Step!"
           </h6>
           <br></br>
           <div>
@@ -44,8 +49,8 @@ function App() {
         <div>
           {" "}
           <h6 className="text-1xl leading-tight text-black" color="blue">
-            Unleashing the Power of BFS Technology: Aseptic Filling, Sterile
-            Containers, and Unbreakable Packaging in a Single Step
+            "Unleashing the Power of BFS Technology: Aseptic Filling, Sterile
+            Containers, and Unbreakable Packaging in a Single Step!"
           </h6>
           <br></br>
         </div>
@@ -71,8 +76,8 @@ function App() {
             pharmaceutical industry
           </h3>
           <h6 className="text-1xl leading-tight text-[#8AA6AA]" color="blue">
-            Our concepts are as individual as your requirements. See for
-            yourself
+            "Our concepts are as individual as your requirements. See for
+            yourself!"
           </h6>
           <br></br>
           {/* <Card3Presentation/> */}

@@ -1,0 +1,14 @@
+[
+    {
+        "process" : "Injection",
+        "content" : "The molten polymer flows across the injection cavity through the hot runner block to form the desired shape which is called the preform."
+    },
+    {
+        "process" : "Stretching & Blowing",
+        "content" : "After conditioning the preform to the right temperature, it is stretched longitudinally and it is blown circumferentially with two different levels of pressure."
+    },
+    {
+        "process" : "Filling & Capping",
+        "content" : "The blown bottle is then transferred through an air conveyor under Laminar Air Flow to the filling station. At this instance, it is first rinsed with water for injection and 0.2 micron air filled with the product and capped."
+    }
+]

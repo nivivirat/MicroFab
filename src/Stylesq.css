@@ -1,10 +1,34 @@
 .jk{
-  background-image:cover;
+  background-size:cover;
  background-repeat:repeat-x; 
- background-color:#8AA6AA;
+
+ 
 }
+
+.dd{
+  text-align:left;
+}
+.opp{
+  height:100%;
+  margin:-10% 0;
+  
+}
+.lp{
+  margin:-90px 0;
+  margin-left:4%
+
+}
+
+@media (min-width: 769px) {
+
+.kk{
+  margin:3% auto;
+}
+}
+
+@media (min-width: 968px) {
 .mm{
- width:90%;
+ /* width:90%; */
  color: var(--text, #111);
  font-family: Clash Display;
  font-size: 18px;
@@ -12,6 +36,97 @@
  font-weight: 400;
  line-height: 135.2%; /* 24.336px */
 }
+}
+
+@media (max-width: 967px) {
+  .mm{
+   /* width:90%; */
+   color: var(--text, #111);
+   font-family: Clash Display;
+   font-size: 18px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 135.2%; /* 24.336px */
+   margin-right:-5%;
+  }
+  }
+.xdf{
+  height:70%;
+}
+.gggg{
+  margin-top:-10%;
+}
+
+.fg{
+  position:relative;
+  left:6px;
+}
+@media (min-width: 750px) and (max-width:950px) {
+.jjjjj{
+height:15%;
+width:15%;
+margin-left:-20%;
+}
+
+
+
+
+}
+@media (min-width: 580px) and (max-width:900px) {
+
+.ll{
+  margin-right:40%;
+}
+.ty{
+  position:relative;
+  left:-30%;
+}
+
+}
+
+@media (min-width: 968px) {
+.cvfg{
+  position:absolute;
+  left:65%;
+   
+  /* top:-1%; */
+  z-index:-2;
+  opacity:0.3;
+}
+}
+
+@media (max-width: 967px) {
+
+
+.dfdf{
+  margin-bottom:10%;
+}
+
+}
+@media (max-width: 1167px) {
+
+.dfdf{
+  position:absolute;
+  display:none;
+  margin-bottom:-20%;
+  
+}
+}
+@media (max-width: 967px) {
+  .cvfg{
+    position:absolute;
+    display:none;
+  }
+
+  .jjjjj{
+    position:relative;
+    left:30%;
+  }
+ 
+  .gggg{
+    margin-top:-10%;
+  }
+  }
 .se{
   position:relative;
   /* margin-top:280%; */
@@ -38,6 +153,14 @@ font-size: 120px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
+}
+.as{
+  position:relative;
+  left:-300%;
+}
+.vvv{
+  position:relative;
+  left:50%;
 }
 /* @media (max-width: 1068px) {
   .se{
@@ -68,11 +191,20 @@ line-height: normal;
  .nn {
  background:white ;
  }
+ .ll{
+  margin-right:-5%;
+ }
+ .awsw{
+  margin:4%;
+  /* margin-left:30%; */
+ }
+
 }.
 .ll{
  margin-right:175%;
  
 }
+
 .io{
 width:120%;
 /* margin:auto; */
@@ -84,7 +216,9 @@ margin-left:-10%;
 
 }
 .uuu{
-  width:110%;
+  width:30%;
+  /* position:relative;
+  right:-20%; */
 }
 /* src/ResponsiveColumnsToRows.css */
 
@@ -106,11 +240,36 @@ margin-left:-10%;
    flex-direction: column;
    height:auto;
  }
-
+ .pot{
+  margin-top:8%;
+  margin-bottom:-48%;
+ }
+ .ggg{
+  margin:0 -10%;
+ }
+ /* .ddd{
+  margin-right:-40%;
+ } */
+.aws{
+  /* margin-right:-5%; */
+  margin: 0 -3%;
+}
+.pp{
+  text-align:left;
+  margin:3% 0%;
+}
  .column {
    flex: none;
    width: 100%;
  }
+ .jkhj{
+  display:flex;
+  flex-direction:column;
+}
+}
+
+.hrt{
+  margin-right:80%;
 }
 .faq-container {
  max-width: 800px;
@@ -120,7 +279,7 @@ margin-left:-10%;
  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .okl{
-  margin:0 2%;
+  margin-left:70%;
 }
 .faq-item {
  margin-bottom: 15px;
@@ -148,7 +307,12 @@ margin-left:-10%;
  padding-left: 30px;
  font-weight: bold;
 }
-
+@media (min-width: 768px) {
+.jkhj{
+  display:flex;
+  flex-direction:row;
+}
+}
 .vertical-bar-container {
  position: absolute;
  left: 0;
@@ -183,8 +347,13 @@ background-repeat:repeat-y;
  padding-left: 20px;
 }
 .cv{
-margin:0 20%;
+margin-right:-20%;
+text-align: left;
 }
+/* .aws{
+  margin-top:-2%;
+  margin-left:-2%;
+} */
 /* .answer.show {
  display: block;
 } */
@@ -205,10 +374,85 @@ margin:0 20%;
 .df{
   display:inline-block;
   margin-right:80%;
+  
+  /* margin-top:-%; */
 }
 .qa{
   display: flex; 
    justify-content: space-between;
+   
+}
+/* .qaz{
+  margin-top:-500%;
+} */
+
+@media (min-width: 750px) and (max-width: 920px)  {
+.hf{
+  font-size:15px;
 }
 
+}
+
+@media (max-width: 750px) {
+
+  .uo{
+  margin-right:5%;
+  width:50%;
+  margin-left:2%;
+  }
+  .aws{
+    margin-right:5%;
+    
+    margin-left:1%;
+    width:55%;
+  }
+}
+@media (min-width: 901px) {
+
+  .uo{
+    margin-right:5%;
+    width:90%;
+    }
+
+
+}
+@media (max-width: 900px) {
+
+  /* .uo{
+  margin-right:5%;
+  width:70%;
+  } */
+  /* .uo{
+    margin-right:-5%;
+    width:70%;
+    } */
+    .aws{
+      margin-right:-5%;
+      
+    }
+}
+@media (max-width: 390px){
+  .fgg{
+    /* margin:0 -50%; */
+    /* margin-left:10%; */
+    margin-right:-50%;
+    width:50%;
+    /* position:absolute;
+    left:-79%; */
+
+  }
+
+}
+@media (max-width: 800px){
+  .fgg{
+    /* margin:0 -50%; */
+    margin-left:40%;
+    margin-right:40%;
+    width:150%;
+    position:absolute;
+    left:-9%;
+
+  }
+
+}
 
