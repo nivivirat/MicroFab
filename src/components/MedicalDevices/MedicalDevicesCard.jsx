@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import top1 from "../../assets/medicalDevices/top.svg";
 import { Icon } from "@iconify/react";
 import col1 from '../../assets/medicalDevices/col1.svg';
+import col2 from '../../assets/medicalDevices/col2.svg';
+import col3 from '../../assets/medicalDevices/col3.svg';
+import col4 from '../../assets/medicalDevices/col4.svg';
+
 import Catheters_IV from '../../assets/medicalDevices/Catheters_IV.svg';
 import Cannula_Scalp from '../../assets/medicalDevices/Cannula_Scalp.svg';
 import Vein_Sets from '../../assets/medicalDevices/Vein_Sets.svg';
@@ -30,6 +34,9 @@ export default function MedicalDevicesCard({ img, heading, content }) {
 
   const images = {
     col1,
+    col2,
+    col3,
+    col4,
     Catheters_IV,
     Cannula_Scalp,
     Vein_Sets,
