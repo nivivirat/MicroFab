@@ -5,10 +5,10 @@ import world_mobile from "../../../assets/Who_are_we/world_mobile.svg";
 import Slider from "../Testimonials/Slider";
 
 const Section = ({ title, description }) => (
-  <div className="flex-shrink-0 w-[50%] flex flex-row gap-10">
-    <div className="block md:w-[5px] w-[10px] h-[100px] md:h-[120px] bg-[#8AA6AA] gap-4"></div>
+  <div className="flex-shrink-0 w-[50%] flex flex-row gap-5">
+    <div className="block md:w-[5px] w-[10px] h-[100px] md:h-[120px] bg-[#8AA6AA] gap-1"></div>
     <div className="md:w-[75%] md:text-[16px] flex flex-col">
-      <p className="md:text-[20px] font-semibold text-[20px]">{title}</p>
+      <p className="md:text-[20px] font-semibold text-[18px] overflow-visible">{title}</p>
       <p className="md:w-full w-[60%]">{description}</p>
     </div>
   </div>
@@ -51,7 +51,7 @@ const sectionsData = [
 
 export default function Who_are_we() {
   return (
-    <div className="custom-font flex md:flex-row flex-col md:justify-between border border-black">
+    <div className="custom-font flex md:flex-row flex-col md:justify-between">
       <div className="md:hidden text-center p-4">
         <p className="md:text-[35px] text-[35px] font-bold">Who Are We?</p>
         <p className="md:text-[20px] md:w-[80%]">
@@ -65,8 +65,8 @@ export default function Who_are_we() {
       </div>
 
       <div className="relative md:h-[90%] md:text-[16px] text-[16px]">
-        
-        <img src={world} className="relative hidden md:block border border-black" alt="world"></img>
+
+        <img src={world} className="relative hidden md:block" alt="world"></img>
         <img
           src={world_mobile}
           className="md:hidden block"
@@ -79,27 +79,27 @@ export default function Who_are_we() {
         <div className="electron"></div> */}
 
         <div className="">
-          <p className="absolute text-[12px] md:text-[16px] md:top-[10%] top-[95%]  font-bold md:right-[45%] right-[35%] bg-white rounded-[20px] px-4 border-black border-2 md:p-2">
+          <p className="absolute text-[12px] md:text-[16px] md:top-[37%] top-[38%] font-bold md:right-[55%] right-[30%] bg-white rounded-[20px] px-4 border-black border-2 md:p-2">
             india
           </p>
-          <p className="absolute text-[12px] md:text-[16px] md:top-[75%] top-[82%] font-bold md:right-[60%] right-[45%] bg-white rounded-[20px] px-4 border-black border-2 md:p-2">
+          <p className="absolute text-[12px] md:text-[16px] md:top-[20%] top-[28%] font-bold md:right-[70%] right-[45%] bg-white rounded-[20px] px-4 border-black border-2 md:p-2">
             Ghana
           </p>
-          <p className="absolute text-[12px] md:text-[16px] md:top-[74%] top-[72%] font-bold md:right-[20%] right-[20%] bg-white rounded-[20px] px-4 border-black border-2 md:p-2">
+          <p className="absolute text-[12px] md:text-[16px] md:top-[20%] top-[28%] font-bold md:right-[40%] right-[10%] bg-white rounded-[20px] px-4 border-black border-2 md:p-2">
             Algeria
           </p>
-          <p className="absolute text-[12px] md:text-[16px] md:top-[135%] top-[112%]  font-bold md:right-[60%] right-[45%] bg-white rounded-[20px] px-4 border-black border-2 md:p-2">
+          <p className="absolute text-[12px] md:text-[16px] md:top-[50%] top-[50%] font-bold md:right-[70%] right-[45%] bg-white rounded-[20px] px-4 border-black border-2 md:p-2">
             Africa
           </p>
-          <p className="absolute text-[12px] md:text-[16px] md:top-[127%] top-[110%] font-bold md:right-[6%] right-[15%] bg-white rounded-[20px] px-4 border-black border-2 md:p-2">
+          <p className="absolute text-[12px] md:text-[16px] md:top-[55%] top-[55%] font-bold md:right-[26%] right-[10%] bg-white rounded-[20px] px-4 border-black border-2 md:p-2">
             Indonesia
           </p>
-          <p className="absolute text-[12px] md:text-[16px] md:top-[157%] top-[128%] font-bold md:right-[36%] right-[30%] bg-white rounded-[20px] px-4 border-black border-2 md:p-2">
+          <p className="absolute text-[12px] md:text-[16px] md:top-[70%] top-[70%] font-bold md:right-[46%] right-[30%] bg-white rounded-[20px] px-4 border-black border-2 md:p-2">
             Philippines
           </p>
         </div>
       </div>
-      <div className="border border-black w-full flex md:flex-col p-10 flex-col">
+      <div className="w-full flex md:flex-col md:p-10 p-4 flex-col">
         {/* for desktop view */}
         <div className="hidden md:block">
           <p className="md:text-[35px] font-bold">Who Are We?</p>

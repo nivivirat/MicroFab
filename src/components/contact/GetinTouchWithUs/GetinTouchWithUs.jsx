@@ -8,11 +8,11 @@ export default function GetinTouchWithUs() {
     <div className="custom-font md:w-[50%] md:p-10 p-10 md:gap-0 gap-4 flex flex-col justify-between">
       <div className="flex md:flex-col flex-col md:justify-start">
         <div className="flex flex-row mb-3">
-          <p className="md:text-[30px] text-[25px] font-bold">Get in Touch</p>
-          <p className="md:text-[30px] text-[25px] text-[#8AA6AA] ml-2 md:ml-2.5">
+          <span className="md:text-[30px] text-[23px] font-bold">Get in Touch</span>
+          <span className="md:text-[30px] text-[23px] text-[#8AA6AA] ml-1 md:ml-2.5">
             {" "}
             With Us
-          </p>
+          </span>
         </div>
         <p className="w-[90%] text-left font-semibold md:text-[18px]">
           At MicroFab, your satisfaction is our priority. Contact us today and
