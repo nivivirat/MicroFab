@@ -344,7 +344,7 @@ function AboutUs() {
           </div> */}
            <div className="flex frty mt-12 animate__animated animate__fadeInLeft animate__delay-2s">
       {/* Block 1 - SVG Image */}
-      <div className="bg-white dfdf frty mb-64">
+      <div className="bg-white dfdf frty mb-24">
         {/* Replace 'your-svg-file.svg' with the actual path to your SVG file */}
         <img src={uio} alt="SVG Image" className="w-full xdf" />
       </div>
