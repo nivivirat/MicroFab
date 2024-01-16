@@ -70,6 +70,7 @@ export default function Footer() {
                 <div className="flex flex-col gap-5">
                   <a href="/articlesList">Article and Blogs</a>
                   <a href="/contactUs">Contact Us</a>
+                  <a href="/TP">Terms & Policy</a>
                 </div>
               </div>
             </div>
@@ -152,7 +153,8 @@ export default function Footer() {
 
           {/* Justify-between section */}
           <div className="md:flex md:flex-row flex flex-row justify-between">
-            <p>Copyright 2024</p>
+            <p>Copyright 2023 @MicroFab Engineering Private Limited </p>
+            <p>Designed & Developed with ❤️ by Digilligence</p>
             {/* <p>Lorem ipsum</p> */}
           </div>
         </div>

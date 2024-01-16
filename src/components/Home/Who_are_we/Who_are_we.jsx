@@ -1,7 +1,7 @@
 import world from "../../../assets/Who_are_we/world.svg";
 import world_mobile from "../../../assets/Who_are_we/world_mobile.svg";
 // import "../../../App.css";
-import "./hstyle.css";
+// import "./hstyle.css";
 import Slider from "../Testimonials/Slider";
 
 const Section = ({ title, description }) => (
@@ -51,7 +51,7 @@ const sectionsData = [
 
 export default function Who_are_we() {
   return (
-    <div className="custom-font flex md:flex-row flex-col md:justify-between">
+    <div className="custom-font flex md:flex-row flex-col md:justify-between border border-black">
       <div className="md:hidden text-center p-4">
         <p className="md:text-[35px] text-[35px] font-bold">Who Are We?</p>
         <p className="md:text-[20px] md:w-[80%]">
@@ -64,33 +64,22 @@ export default function Who_are_we() {
         </p>
       </div>
 
-      <div className="relative md:h-[90%] justify-center place-items-center md:text-[16px] text-[16px] atom">
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <img src={world} className="hidden md:block" alt="world"></img>
+      <div className="relative md:h-[90%] md:text-[16px] text-[16px]">
+        
+        <img src={world} className="relative hidden md:block border border-black" alt="world"></img>
         <img
           src={world_mobile}
           className="md:hidden block"
           alt="world_mobile"
         ></img>
-        <div className="atom ">
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
+        {/* <div className="">
         </div>
         <div className="electron"></div>
         <div className="electron"></div>
-        <div className="electron"></div>
+        <div className="electron"></div> */}
 
-        <div className="ty">
-          <p className="absolute text-[12px] md:text-[16px] md:top-[100%] top-[95%]  font-bold md:right-[45%] right-[35%] bg-white rounded-[20px] px-4 border-black border-2 md:p-2">
+        <div className="">
+          <p className="absolute text-[12px] md:text-[16px] md:top-[10%] top-[95%]  font-bold md:right-[45%] right-[35%] bg-white rounded-[20px] px-4 border-black border-2 md:p-2">
             india
           </p>
           <p className="absolute text-[12px] md:text-[16px] md:top-[75%] top-[82%] font-bold md:right-[60%] right-[45%] bg-white rounded-[20px] px-4 border-black border-2 md:p-2">
@@ -110,7 +99,7 @@ export default function Who_are_we() {
           </p>
         </div>
       </div>
-      <div className="w-full flex md:flex-col p-10 flex-col md:ml-[150px]">
+      <div className="border border-black w-full flex md:flex-col p-10 flex-col">
         {/* for desktop view */}
         <div className="hidden md:block">
           <p className="md:text-[35px] font-bold">Who Are We?</p>
