@@ -373,7 +373,7 @@ how we have flourished in the competitive era.
           {/* Box 2 */}
           <div className="w-36 h-36 md:w-30 p-6 m-auto lg:m-4 bg-[#8AA6AA] text-white awsw kk pp ll ">
           <h3 className="text-2xl text-white  leading-tight -mb-6 ll font-['ClashDisplay']"><center><strong>
-              <CountUp end={75} duration={7} separator="," /> {/* Counting animation for 200 */}</strong>%</center>
+              <CountUp end={90} duration={7} separator="," /> {/* Counting animation for 200 */}</strong>%</center>
               
             </h3><br></br>
       <h3 className=" text-xs text-white w-full m-0 leading-tight  ll font-['ClashDisplay']"><center>Customer Retention & repeat orders</center>
@@ -395,7 +395,7 @@ different origins</center>
           {/* Box 4 */}
           <div className="w-36 h-36 md:w-30 p-6 lg:m-4 bg-[#8AA6AA] fg text-white awsw kk pp ll ">
           <h3 className="text-2xl text-white  leading-tight -mb-6 ll font-['ClashDisplay']"><center><strong>
-              <CountUp end={50000} duration={7} separator="," /> {/* Counting animation for 200 */}</strong>+ sq.ft</center>
+              <CountUp end={100000} duration={7} separator="," /> {/* Counting animation for 200 */}</strong>+ sq.ft</center>
           
             </h3><br></br>
       <h3 className=" text-xs text-white w-full m-0 leading-tight  ll font-['ClashDisplay']"><center>Workplaces across strategic locatio30</center>
