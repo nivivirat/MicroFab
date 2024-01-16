@@ -360,7 +360,7 @@ how we have flourished in the competitive era.
         <div className="flex flex-wrap -mx-4 ml-auto mt-22 frty">
           {/* Box 1 */}
           <div>
-          <div className="w-36 h-36 md:w-30 p-6 md:m-4 bg-[#8AA6AA] text-white awsw ll kk pp es">
+          <div className="w-36 h-36 md:w-30 p-6 md:m-1 mb-2 bg-[#8AA6AA] text-white awsw ll kk pp es">
           <h3 className="text-2xl text-white  leading-tight -mb-6 ll font-['ClashDisplay']"><center><strong>
               <CountUp end={400} duration={7} separator="," /> {/* Counting animation for 200 */}</strong>+</center>
              
@@ -371,7 +371,7 @@ how we have flourished in the competitive era.
           </div>
 
           {/* Box 2 */}
-          <div className="w-36 h-36 md:w-30 p-6 m-auto lg:m-4 bg-[#8AA6AA] text-white awsw kk pp ll ">
+          <div className="w-36 h-36 md:w-30 p-6 m-auto lg:m-1 mb-2 bg-[#8AA6AA] text-white awsw kk pp ll ">
           <h3 className="text-2xl text-white  leading-tight -mb-6 ll font-['ClashDisplay']"><center><strong>
               <CountUp end={90} duration={7} separator="," /> {/* Counting animation for 200 */}</strong>%</center>
               
@@ -382,7 +382,7 @@ how we have flourished in the competitive era.
           </div>
           <div>
           {/* Box 3 */}
-          <div className="w-36 h-36 md:w-30 p-6 md:m-4 bg-[#8AA6AA] fg text-white awsw kk pp ll es">
+          <div className="w-36 h-36 md:w-30 p-6 md:m-1 mb-2 bg-[#8AA6AA] fg text-white awsw kk pp ll es">
           <h3 className="text-2xl text-white  leading-tight -mb-6 ll font-['ClashDisplay']"><center><strong>
               <CountUp end={200} duration={7} separator="," /> {/* Counting animation for 200 */}</strong>+</center>
               
@@ -393,7 +393,7 @@ different origins</center>
           </div>
 
           {/* Box 4 */}
-          <div className="w-36 h-36 md:w-30 p-6 lg:m-4 bg-[#8AA6AA] fg text-white awsw kk pp ll ">
+          <div className="w-36 h-36 md:w-30 p-6 lg:m-1 mb-2 bg-[#8AA6AA] fg text-white awsw kk pp ll ">
           <h3 className="text-2xl text-white  leading-tight -mb-6 ll font-['ClashDisplay']"><center><strong>
               <CountUp end={100000} duration={7} separator="," /> {/* Counting animation for 200 */}</strong>+ sq.ft</center>
           
@@ -407,15 +407,15 @@ different origins</center>
     </div>
 <br></br>
 <div className="flex flex-col h-96 hhj rounded-lg bg-white md:max-w-6xl md:flex-row mx-auto gggg  animate__animated animate__fadeIn animate__delay-3s">
-              <div className="flex flex-col p-6 -mt-12">
-                <p className=" text-5xl sm:text-4xl leading-tight  text-[#8AA6AA] font-['ClashDisplay'] kk mt-64 pp ">
+              <div className="flex flex-col p-6 -mt-48">
+                <p className=" text-5xl sm:text-4xl leading-tight z-2 text-[#8AA6AA] font-['ClashDisplay'] kk mt-64 pp ">
                   Key People
                 </p>
                 {/* <h5 className="mb-2 text-4xl leading-tight ll">
                   Lorem ipsum
                 </h5> */}
                 <center>
-                <p className="mb-1 text-3xl  text-black leading-tight pp ll font-['ClashDisplay']"><strong>
+                <p className="mb-1 text-3xl  text-black leading-tight z-2 pp ll font-['ClashDisplay']"><strong>
                 Our entire team of mavericks are dedicated to offer packaging solutions and support your business.</strong> </p>
                 </center>
                 
@@ -431,7 +431,7 @@ different origins</center>
             </div>
             <div className="mr-8 -mt-16 gtu overflow-x-auto overflow-y-hidden flex flex-rows animate__animated animate__fadeIn animate__delay-3s">
 
-<div className="flex flex-row mt-48 lp overflow-x-auto cfr">
+<div className="flex flex-row mt-12 lp overflow-x-auto cfr">
 
   <div className="flex flex-col items-center">
     <img
