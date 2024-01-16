@@ -429,7 +429,7 @@ different origins</center>
               {/* <img src={a} alt="no" /> */}
               {/* Your browser does not support the video tag. */}
             </div>
-            <div className="mr-8 -mt-16 gtu overflow-x-auto overflow-y-hidden flex flex-rows animate__animated animate__fadeIn animate__delay-3s">
+            <div className="mr-8 mt-6 gtu overflow-x-auto overflow-y-hidden flex flex-rows animate__animated animate__fadeIn animate__delay-3s">
 
 <div className="flex flex-row mt-12 lp overflow-x-auto cfr">
 
