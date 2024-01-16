@@ -21,7 +21,7 @@ export default function Footer() {
       </div>
 
       <div className="md:mt-[0px] md:flex md:flex-col md:justify-center md:place-items-center md:w-full w-full h-[850px] md:h-[500px] bg-[#8AA6AA] text-white">
-        <div className="p-6 md:p-0 md:flex md:flex-col w-[100%] md:justify-center md:w-[90%]">
+        <div className="bg-primary p-6 md:p-0 md:flex md:flex-col w-[100%] md:justify-center md:w-[90%]">
           <div className="mt-4 md:mt-0">
             <hr className="hidden md:block h-px my-8 bg-white border-0"></hr>
             {/* vertical line */}
@@ -63,7 +63,7 @@ export default function Footer() {
                   </a>
                   <a href="/turnKeySolutions">Turnkey Solutions</a>
                   <a href="/service">Service Solutions</a>
-                  
+
                   <a href="/applications/pharmaceutical">Application</a>
                   <a href="/about">About Us</a>
                 </div>
@@ -124,24 +124,26 @@ export default function Footer() {
               </div>
             </div> */}
             {/* <img src={facebook} alt="facebook logo"></img> */}
-            <div className="md:ml-10">
-              <Icon
-                icon="mdi:instagram"
-                className="border-2 border-white text-white rounded-full h-10 p-2 w-10"
-              />
+            <div className="md:flex md:flex-row flex flex-row md:place-items-start place-items-center md:gap-2 gap-2">
+              <a href="" className="md:ml-10">
+                <Icon
+                  icon="mdi:instagram"
+                  className="border-2 border-white text-white rounded-full h-10 p-2 w-10"
+                />
+              </a>
+              <a href="" className="">
+                <Icon
+                  icon="mingcute:youtube-line"
+                  className="border-2 border-white text-white rounded-full h-10 p-2 w-10"
+                />
+              </a>
+              <a href="" className="">
+                <Icon
+                  icon="ic:baseline-facebook"
+                  className="border-2 border-white text-white rounded-full h-10 p-2 w-10"
+                />
+              </a>
             </div>
-            <span className="">
-              <Icon
-                icon="mingcute:youtube-line"
-                className="border-2 border-white text-white rounded-full h-10 p-2 w-10"
-              />
-            </span>
-            <span className="">
-              <Icon
-                icon="ic:baseline-facebook"
-                className="border-2 border-white text-white rounded-full h-10 p-2 w-10"
-              />
-            </span>
           </div>
 
           <div>
@@ -152,7 +154,7 @@ export default function Footer() {
           </div>
 
           {/* Justify-between section */}
-          <div className="md:flex md:flex-row flex flex-row justify-between">
+          <div className="md:flex md:flex-row flex flex-col md:justify-between">
             <p>Copyright 2023 @MicroFab Engineering Private Limited </p>
             <p>Designed & Developed with ❤️ by Digilligence</p>
             {/* <p>Lorem ipsum</p> */}
