@@ -8,16 +8,122 @@
 .dd{
   text-align:left;
 }
+/* Add this CSS to your existing stylesheet */
+
+.scrollable-container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  max-width: 100%; /* Adjust the max-width as needed */
+}
+
 .opp{
-  height:100%;
-  margin:-10% 0;
+  height:70%;
+  margin-bottom:-10%;
+  /* margin-top:10%; */
   
 }
 .lp{
-  margin:-90px 0;
-  margin-left:4%
+  /* margin-top:90px; */
+  margin:auto;
+  height:90%;
 
 }
+.nml{
+height:200%;
+}
+/* Add this CSS to your existing stylesheet */
+
+/* Add this CSS to your existing stylesheet */
+
+/* Default styles for larger screens */
+.lp {
+  display: flex;
+
+
+  overflow-x: auto; /* Enable horizontal scroll */
+}
+.lp > div {
+  flex-shrink: 0; /* Prevent items from shrinking too much */
+}
+@media only screen and (max-width: 767px) {
+
+.lp{
+  margin-top:20%;
+}
+/* @media only screen (min-width:767 px){
+
+  .cfr{
+    position:relative;
+    top:-15%;
+    
+    }
+
+} */
+@media only screen (min-width:490 px) and (max-width: 527px) {
+.cfr{
+  margin-top:15%;
+position:relative;
+top:-5%;
+
+}
+.opp{
+  position:relative;
+  top:20%;
+}
+.gtu{
+margin-bottom:-50%;
+ 
+}
+
+}
+@media only screen and (max-width: 491px) {
+  .cfr{
+  position:relative;
+  top:15px;
+ /* left:-70px; */
+ margin-left:-34%;
+  }
+  
+  }
+}
+
+.gtu{
+  height:500px;
+}
+/* Media query for screens with a maximum width of 767px */
+@media only screen and (max-width: 767px) {
+ 
+
+
+  .lplpp
+  {
+    margin-top:80%;
+    
+  }
+  .pot{
+    margin-left:-2%;
+  }
+}
+.pot{
+  
+}
+
+/* Add this to your existing styles */
+.animated-number {
+  opacity: 0;
+  transform: translateY(20px); /* Adjust the initial position as needed */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.vfv{
+  height:90%;
+  
+}
+.animated-number.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 @media (min-width: 769px) {
 
@@ -37,6 +143,20 @@
  line-height: 135.2%; /* 24.336px */
 }
 }
+
+
+@media (max-width: 340px) {
+  .frty{
+    position:absolute;
+   display:none;
+   
+  } 
+.hhj{
+  margin-top:-80%;
+}
+}
+
+
 
 @media (max-width: 967px) {
   .mm{
@@ -103,6 +223,15 @@ margin-left:-20%;
 }
 
 }
+@media (max-width: 767px) {
+
+.bbb{
+  position:relative;
+  
+  
+}
+
+}
 @media (max-width: 1167px) {
 
 .dfdf{
@@ -120,7 +249,8 @@ margin-left:-20%;
 
   .jjjjj{
     position:relative;
-    left:30%;
+    left:27%;
+    margin-left:10%;
   }
  
   .gggg{
@@ -188,9 +318,9 @@ line-height: normal;
  background-repeat:repeat-x; 
 }
 @media (max-width: 800px) {
- .nn {
+ /* .nn {
  background:white ;
- }
+ } */
  .ll{
   margin-right:-5%;
  }
@@ -256,7 +386,7 @@ margin-left:-10%;
 }
 .pp{
   text-align:left;
-  margin:3% 0%;
+  margin:6% 0%;
 }
  .column {
    flex: none;
@@ -386,6 +516,19 @@ text-align: left;
   margin-top:-500%;
 } */
 
+@media (min-width: 639px) and (max-width: 1150px)  {
+
+  .jklk{
+    position:absolute;
+    display:none;
+  }
+ .cvfg{
+  position:absolute;
+  display:none;
+ }
+}
+
+
 @media (min-width: 750px) and (max-width: 920px)  {
 .hf{
   font-size:15px;
@@ -416,12 +559,12 @@ text-align: left;
 
 
 }
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
 
-  /* .uo{
-  margin-right:5%;
-  width:70%;
-  } */
+  .uo{
+  margin-right:15%;
+  width:30%;
+  }
   /* .uo{
     margin-right:-5%;
     width:70%;
