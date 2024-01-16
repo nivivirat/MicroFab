@@ -407,7 +407,7 @@ different origins</center>
     </div>
 <br></br>
 <div className="flex flex-col h-96 hhj rounded-lg bg-white md:max-w-6xl md:flex-row mx-auto gggg  animate__animated animate__fadeIn animate__delay-3s">
-              <div className="flex flex-col p-6 -mt-48">
+              <div className="flex flex-col p-6 -mt-24">
                 <p className=" text-5xl sm:text-4xl leading-tight  text-[#8AA6AA] font-['ClashDisplay'] kk mt-64 pp ">
                   Key People
                 </p>
@@ -431,7 +431,7 @@ different origins</center>
             </div>
             <div className="mr-8 -mt-16 gtu overflow-x-auto overflow-y-hidden flex flex-rows animate__animated animate__fadeIn animate__delay-3s">
 
-<div className="flex flex-row mt-12 lp overflow-x-auto cfr">
+<div className="flex flex-row mt-40 lp overflow-x-auto cfr">
 
   <div className="flex flex-col items-center">
     <img
