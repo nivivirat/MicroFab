@@ -1,7 +1,7 @@
 import world from "../../../assets/Who_are_we/world.svg";
 import world_mobile from "../../../assets/Who_are_we/world_mobile.svg";
 // import "../../../App.css";
-// import "./hstyle.css";
+import "./hstyle.css";
 import Slider from "../Testimonials/Slider";
 
 const Section = ({ title, description }) => (
@@ -67,16 +67,24 @@ export default function Who_are_we() {
       <div className="relative md:h-[90%] md:text-[16px] text-[16px]">
 
         <img src={world} className="relative hidden md:block" alt="world"></img>
+        <div className="absolute -top-[150px] md:opacity-50 opacity-30">
+          <div className="atom ">
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+          </div>
+          <div className="electron"></div>
+          <div className="electron"></div>
+          <div className="electron"></div>
+        </div>
         <img
           src={world_mobile}
           className="md:hidden block"
           alt="world_mobile"
         ></img>
-        {/* <div className="">
-        </div>
-        <div className="electron"></div>
-        <div className="electron"></div>
-        <div className="electron"></div> */}
 
         <div className="">
           <p className="absolute text-[12px] md:text-[16px] md:top-[37%] top-[38%] font-bold md:right-[55%] right-[30%] bg-white rounded-[20px] px-4 border-black border-2 md:p-2">

@@ -16,7 +16,7 @@ import ProductSolutions from "./productSolutions/ProductSolutions";
 export default function Home() {
   return (
     <div className="font-['ClashDisplay'] md:h-screen w-screen h-screen overflow-x-hidden md:overflow-x-hidden">
-      <div className="md:w-full md:h-full w-full h-[1600px] flex md:flex-row flex-col">
+      <div className="md:w-full md:h-full w-full h-[1350px] flex md:flex-row flex-col">
         {/* left */}
         <div className="md:w-9/12 md:h-full w-full">
           <Machine_Frame />
