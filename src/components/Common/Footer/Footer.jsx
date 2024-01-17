@@ -20,7 +20,7 @@ export default function Footer() {
       {/* the contact page above every footer */}
       <div className="w-full flex flex-">
         {location.pathname !== "/contact" && (
-          <div className="flex flex-grow md:w-full md:flex md:justify-center gap-4 md:flex-row w-full">
+          <div className="flex flex-grow md:w-full md:flex md:justify-center gap-4 md:flex-row w-full flex-col">
             <GetinTouchWithUs />
             <ContactForm />
           </div>
@@ -29,8 +29,8 @@ export default function Footer() {
         <div></div>
       </div>
 
-      <div className="md:mt-[0px] md:flex md:flex-col md:justify-center md:place-items-center md:w-full w-full h-[850px] md:h-[500px] bg-[#8AA6AA] text-white">
-        <div className="bg-primary p-6 md:p-0 md:flex md:flex-col w-[100%] md:justify-center md:w-[90%]">
+      <div className="bg-primary md:mt-[0px] md:flex md:flex-col md:justify-center md:place-items-center md:w-full w-full text-white">
+        <div className="p-6 md:p-0 md:flex md:flex-col w-[100%] md:justify-center md:w-[90%]">
           <div className="mt-4 md:mt-0">
             <hr className="hidden md:block h-px my-8 bg-white border-0"></hr>
             {/* vertical line */}
