@@ -232,10 +232,10 @@ function AboutUs() {
           </center>
          
           <br></br>
-          <img className="cvfg opacity-[.17]" src ={qwe} alt="img"></img>
+          <img className="cvfg opacity-[.09] " src ={qwe} alt="img"></img>
 
           
-                   <div className="lg:flex flex-rows md:flex flex-cols sm:flex flex-cols-1 sm:-mt-6 animate__animated animate__fadeInRight animate__delay-1s">
+                   <div className="lg:flex z-2 flex-rows md:flex flex-cols sm:flex flex-cols sm:-mt-6 animate__animated animate__fadeInRight animate__delay-1s">
   {/* {[1, 2, 3, 4, 5, 6].map((index) => ( */}
   <div className="jkhj p-2 m-auto ">
   <div
@@ -245,22 +245,22 @@ function AboutUs() {
     <div className="flex flex-col items-center md:h-[190px] w-full">
         <Link to="/pharmaceuticals">
             <img
-                className="lg:w-48 md:w-48 sm:w-96 h-40 p-2  rounded-[16px] object-cover"
+                className="w-48 h-40 p-2 object-cover"
                 src={y1}
                 alt=""
             />
             <p className="text-center text-[#8AA6AA]">Pharmaceuticals</p>
         </Link>
     </div>
-</div>
+</div><br></br>
 <div
-      className={`md:m-2 lg:w-[22%] md:w-[250px] w-full flex flex-col shadow-lg rounded-[20px]`}
+      className={`md:m-2 lg:w-[22%] sm:mt-24 md:w-[250px] w-full flex flex-col shadow-lg rounded-[20px]`}
       
     >
     <div className="flex flex-col items-center md:h-[190px] w-full">
         <Link to="/chemical">
             <img
-                className="lg:w-48 md:w-48 sm:w-96 h-40 p-2  rounded-[16px] object-cover"
+                className="w-48 h-40 p-2 object-cover"
                 src={y2}
                 alt=""
             />
@@ -268,7 +268,7 @@ function AboutUs() {
         </Link>
     </div>
 </div>
-
+<br></br>
 <div
       className={`md:m-2 lg:w-[22%] md:w-[250px] w-full flex flex-col shadow-lg rounded-[20px]`}
       
@@ -276,7 +276,7 @@ function AboutUs() {
     <div className="flex flex-col items-center md:h-[190px] w-full">
         <Link to="/cosmic">
             <img
-                className="lg:w-48 md:w-48 sm:w-96 h-40 p-2  rounded-[16px] object-cover"
+                className="w-48 h-40 p-2  rounded-[16px] object-cover"
                 src={y3}
                 alt=""
             />
@@ -284,7 +284,7 @@ function AboutUs() {
         </Link>
     </div>
 </div>
-
+<br></br>
 <div
       className={`md:m-2 lg:w-[22%] md:w-[250px] w-full flex flex-col shadow-lg rounded-[20px]`}
       
@@ -292,22 +292,22 @@ function AboutUs() {
     <div className="flex flex-col items-center md:h-[190px] w-full">
         <Link to="/food">
             <img
-                className="lg:w-48 md:w-48 sm:w-96 h-40 p-2  rounded-[16px] object-cover"
+                className="w-48 h-40 p-2  rounded-[16px] object-cover"
                 src={y4}
                 alt=""
             />
             <p className="text-center text-[#8AA6AA]">Food</p>
         </Link>
     </div>
-</div>
+</div><br></br>
     <div
-      className={`md:m-2 lg:w-[22%] md:w-[250px] w-full flex flex-col shadow-lg rounded-[20px]`}
+      className={`md:m-2 lg:w-[22%] md:w-[250px]  w-full flex flex-col shadow-lg rounded-[20px]`}
       
     >
       <div className="flex flex-col items-center md:h-[190px] w-full">
 <Link to="/dairy">
             <img
-                className="lg:w-48 md:w-48 sm:w-96 h-40 p-2  rounded-[16px] object-cover"
+                className="w-48 h-40 p-2  rounded-[16px] object-cover"
                 src={y5}
                 alt=""
             />

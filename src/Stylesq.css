@@ -364,14 +364,14 @@ margin-left:-10%;
  margin: 5px;
  box-sizing: border-box;
 }
-@media (min-width: 1269px) {
+@media (min-width: 1024px) {
 .jkhj{
   display:flex;
   flex-direction:row;
 }
 
 }
-@media (max-width: 1268px) {
+@media (max-width: 1023px) {
 .jkhj{
   display:flex;
   flex-direction:column;
@@ -607,4 +607,3 @@ text-align: left;
   }
 
 }
-
