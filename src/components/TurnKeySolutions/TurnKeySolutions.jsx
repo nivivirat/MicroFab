@@ -9,6 +9,7 @@ import MedicalDevicesCard from "../MedicalDevices/MedicalDevicesCard";
 import Footer from "../Common/Footer/Footer";
 
 export default function TurnKeySolutions() {
+  
   return (
     <div
       id="turnkey"
@@ -46,17 +47,12 @@ export default function TurnKeySolutions() {
             <div className="bg-primary h-1 w-5"></div>
             <div>
               <p className="font-semibold text-4xl tracking-widest">
-                Purified Water System
+                Water Purification System
               </p>
             </div>
             <div className="w-[90%]">
               <p className="font-thin text-[#67675F] text-[18px] md:leading-7 md:tracking-wide">
-                Our advanced water purification system is a turnkey solution
-                under the FFS and the BFS machinery. With the system, you can
-                ensure that you get high quality water. Whether you need water
-                for a liquid solution or for cleaning equipment, you will surely
-                be able to source clean water, thereby enhancing the production
-                standards.
+                At MicroFab, we believe in providing comprehensive turnkey solutions to our clients, and our advanced water purification systems are an integral part of that commitment. Clean and safe water is essential for various industries and applications, and our water treatment solutions seamlessly complement our primary machines, ensuring that the end-to-end process is efficient and reliable.
               </p>
             </div>
           </div>
@@ -78,17 +74,12 @@ export default function TurnKeySolutions() {
             <div className="bg-primary h-1 w-5"></div>
             <div>
               <p className="font-semibold text-4xl tracking-widest">
-                Water for injection
+                Water for Injection System
               </p>
             </div>
             <div className="w-[90%]">
               <p className="font-thin text-[#67675F] text-[18px] md:leading-7 md:tracking-wide">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                MicroFab understands the critical role of water quality in plants. Our Water for Injection System is meticulously engineered to meet the exacting standards of purity and safety for the operational activities. By leveraging advanced purification technologies, our system ensures the delivery of high-quality, contaminant-free water for the entire plant.
               </p>
             </div>
           </div>
@@ -110,17 +101,12 @@ export default function TurnKeySolutions() {
             <div className="bg-primary h-1 w-5"></div>
             <div>
               <p className="font-semibold text-4xl tracking-widest">
-                Sanitization
+                sanitization System
               </p>
             </div>
             <div className="w-[90%]">
               <p className="font-thin text-[#67675F] text-[18px] md:leading-7 md:tracking-wide">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Our Sanitization System meets the stringent requirements of formulation lines within plants. Designed for seamless integration, the system employs cutting-edge technology to effectively eliminate contaminants and maintain a sterile environment. With a focus on precision and efficiency, our Sanitization System offers a reliable solution for maintaining impeccable hygiene.
               </p>
             </div>
           </div>
@@ -147,12 +133,7 @@ export default function TurnKeySolutions() {
             </div>
             <div className="w-[90%]">
               <p className="font-thin text-[#67675F] text-[18px] md:leading-7 md:tracking-wide">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Establishing a new project can be seemingly impossible or challenging especially owing to the absence of essential components. While our team of experts at MicroFab develop Clean-In-Place (CIP) systems, we design Systems for Formulation Lines ways beyond. Way ahead, we develop pressure vessels along with mixing tanks in accordance with the specifications.
               </p>
             </div>
           </div>

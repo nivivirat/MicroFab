@@ -24,6 +24,11 @@ import Safety_IV_Cathers from '../../assets/medicalDevices/Safety_IV_Cathers.svg
 import IV_Administration_Sets_with_Flow_Regulators from '../../assets/medicalDevices/IV_Administration_Sets_with_Flow_Regulators.svg';
 import Peripheral_IV_Cannula_Dressing_Kits from '../../assets/medicalDevices/Peripheral_IV_Cannula_Dressing_Kits.svg';
 
+import SystemforFormulationLine from '../../assets/turnkeySolutions/SystemforFormulationLine.svg'
+import CIPSystems from '../../assets/turnkeySolutions/CIPSystems.svg'
+import MixingTanks from '../../assets/turnkeySolutions/MixingTanks.svg'
+import PressureVessels from '../../assets/turnkeySolutions/PressureVessels.svg'
+
 
 export default function MedicalDevicesCard({ img, heading, content }) {
   const [showContent, setShowContent] = useState(false);
@@ -33,6 +38,10 @@ export default function MedicalDevicesCard({ img, heading, content }) {
   };
 
   const images = {
+    CIPSystems,
+    MixingTanks,
+    PressureVessels,
+    SystemforFormulationLine,
     col1,
     col2,
     col3,
@@ -53,7 +62,8 @@ export default function MedicalDevicesCard({ img, heading, content }) {
     IV_Drip_Chambers,
     Safety_IV_Cathers,
     IV_Administration_Sets_with_Flow_Regulators,
-    Peripheral_IV_Cannula_Dressing_Kits
+    Peripheral_IV_Cannula_Dressing_Kits,
+
 };
 
 
