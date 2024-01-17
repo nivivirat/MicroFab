@@ -235,52 +235,71 @@ function AboutUs() {
           <img className="cvfg" src ={qwe} alt="img"></img>
 
           
-          <div className="lg:flex flex-rows md:flex flex-cols sm:flex flex-cols-1 sm:-mt-6 animate__animated animate__fadeInRight animate__delay-1s">
+                   <div className="lg:flex flex-rows md:flex flex-cols sm:flex flex-cols-1 sm:-mt-6 animate__animated animate__fadeInRight animate__delay-1s">
   {/* {[1, 2, 3, 4, 5, 6].map((index) => ( */}
   <div className="jkhj p-2 m-auto ">
-    <div className="flex flex-col items-center">
+  <div
+      className={`md:m-2 lg:w-[22%] md:w-[250px] w-full flex flex-col shadow-lg rounded-[20px]`}
+      onClick={toggleContent}
+    >
+    <div className="flex flex-col items-center md:h-[190px] w-full">
         <Link to="/pharmaceuticals">
             <img
-                className="lg:w-48 md:w-48 sm:w-96 h-48 p-2"
+                className="lg:w-48 md:w-48 sm:w-96 h-40 p-2  rounded-[16px] object-cover"
                 src={y1}
                 alt=""
             />
             <p className="text-center text-[#8AA6AA]">Pharmaceuticals</p>
         </Link>
     </div>
-
-    <div className="flex flex-col items-center">
+</div>
+<div
+      className={`md:m-2 lg:w-[22%] md:w-[250px] w-full flex flex-col shadow-lg rounded-[20px]`}
+      onClick={toggleContent}
+    >
+    <div className="flex flex-col items-center md:h-[190px] w-full">
         <Link to="/chemical">
             <img
-                className="lg:w-48 md:w-48 sm:w-96 h-48 p-2"
+                className="lg:w-48 md:w-48 sm:w-96 h-40 p-2  rounded-[16px] object-cover"
                 src={y2}
                 alt=""
             />
             <p className="text-center text-[#8AA6AA]">Chemicals</p>
         </Link>
     </div>
+</div>
 
-    <div className="flex flex-col items-center">
+<div
+      className={`md:m-2 lg:w-[22%] md:w-[250px] w-full flex flex-col shadow-lg rounded-[20px]`}
+      onClick={toggleContent}
+    >
+    <div className="flex flex-col items-center md:h-[190px] w-full">
         <Link to="/cosmic">
             <img
-                className="lg:w-48 md:w-48 sm:w-96 h-48 p-2"
+                className="lg:w-48 md:w-48 sm:w-96 h-40 p-2  rounded-[16px] object-cover"
                 src={y3}
                 alt=""
             />
-            <p className="text-center text-[#8AA6AA]">Cosmetics</p>
+            <p className="text-center text-[#8AA6AA]">Cosmeticss</p>
         </Link>
     </div>
+</div>
 
-    <div className="flex flex-col items-center">
+<div
+      className={`md:m-2 lg:w-[22%] md:w-[250px] w-full flex flex-col shadow-lg rounded-[20px]`}
+      onClick={toggleContent}
+    >
+    <div className="flex flex-col items-center md:h-[190px] w-full">
         <Link to="/food">
             <img
-                className="lg:w-48 md:w-48 sm:w-96 h-48 p-2"
+                className="lg:w-48 md:w-48 sm:w-96 h-40 p-2  rounded-[16px] object-cover"
                 src={y4}
                 alt=""
             />
             <p className="text-center text-[#8AA6AA]">Food</p>
         </Link>
     </div>
+</div>
 </div>
     
 
@@ -296,18 +315,25 @@ function AboutUs() {
 
 
 {/* <div className="flex flex-row p-2 m-auto"> */}
-
-<div className="flex flex-col  items-center bbb m-auto animate__animated animate__fadeInRight animate__delay-1s">
+<div className="lg:flex flex-rows md:flex flex-cols sm:flex flex-cols-1  animate__animated animate__fadeInRight animate__delay-1s">
+<div className="jkhj p-2 m-auto bbb w-full md:ml-64">
+<div
+      className={`md:m-2 lg:w-[22%] md:w-[250px] w-full flex flex-col shadow-lg rounded-[20px]`}
+      onClick={toggleContent}
+    >
+      <div className="flex flex-col items-center md:h-[190px] w-full">
 <Link to="/dairy">
             <img
-                className="lg:w-48 md:w-48 sm:w-96 h-48 p-2"
+                className="lg:w-48 md:w-48 sm:w-96 h-40 p-2  rounded-[16px] object-cover"
                 src={y5}
                 alt=""
             />
             <p className="text-center text-[#8AA6AA]">Dairy</p>
-        </Link>
-    </div>
+        </Link></div>
 
+        </div>
+    </div>
+</div>
    
   {/* </div> */}
           <br></br>
