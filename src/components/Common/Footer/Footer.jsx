@@ -7,16 +7,25 @@ import GetinTouchWithUs from "../../contact/GetinTouchWithUs/GetinTouchWithUs";
 import ContactForm from "../../contact/Contact_form/Contact_form";
 import logo from "../../../assets/footerlogo.svg";
 import { Icon } from "@iconify/react";
+import { useLocation } from "react-router-dom";
 
 export default function Footer() {
+
+  const location = useLocation();
+
+  console.log(location.pathname === "/contact");
+
   return (
     <div className="w-full font-['ClashDisplay']">
       {/* the contact page above every footer */}
       <div className="w-full flex flex-">
-        <div className="md:w-full md:flex md:justify-center gap-4 md:flex-row w-full flex-grow">
-          <GetinTouchWithUs />
-          <ContactForm />
-        </div>
+        {location.pathname !== "/contact" && (
+          <div className="flex flex-grow md:w-full md:flex md:justify-center gap-4 md:flex-row w-full">
+            <GetinTouchWithUs />
+            <ContactForm />
+          </div>
+        )}
+
         <div></div>
       </div>
 

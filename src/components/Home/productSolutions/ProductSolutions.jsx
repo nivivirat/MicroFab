@@ -11,9 +11,9 @@ export default function ProductSolutions() {
         <div className="md:w-[70%] flex flex-col md:gap-6 gap-4">
           <div className="bg-primary h-1 w-5"></div>
           <div>
-            <p className="font-bold text-5xl tracking-widest">
+            <a href="/product" className="font-bold text-5xl tracking-widest">
               Product <br></br>Solutions
-            </p>
+            </a>
           </div>
           <div className="w-[90%]">
             <p className="font-thin text-[#67675F] text-[18px] md:leading-7 md:tracking-wide">
