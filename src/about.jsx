@@ -232,7 +232,7 @@ function AboutUs() {
           </center>
          
           <br></br>
-          <img className="cvfg" src ={qwe} alt="img"></img>
+          <img className="cvfg opacity-[.17]" src ={qwe} alt="img"></img>
 
           
                    <div className="lg:flex flex-rows md:flex flex-cols sm:flex flex-cols-1 sm:-mt-6 animate__animated animate__fadeInRight animate__delay-1s">
@@ -300,6 +300,21 @@ function AboutUs() {
         </Link>
     </div>
 </div>
+    <div
+      className={`md:m-2 lg:w-[22%] md:w-[250px] w-full flex flex-col shadow-lg rounded-[20px]`}
+      
+    >
+      <div className="flex flex-col items-center md:h-[190px] w-full">
+<Link to="/dairy">
+            <img
+                className="lg:w-48 md:w-48 sm:w-96 h-40 p-2  rounded-[16px] object-cover"
+                src={y5}
+                alt=""
+            />
+            <p className="text-center text-[#8AA6AA]">Dairy</p>
+        </Link></div>
+
+        </div>
 </div>
     
 
@@ -315,25 +330,7 @@ function AboutUs() {
 
 
 {/* <div className="flex flex-row p-2 m-auto"> */}
-<div className="lg:flex flex-rows md:flex flex-cols sm:flex flex-cols-1  animate__animated animate__fadeInRight animate__delay-1s">
-<div className="jkhj p-2 m-auto bbb w-full md:ml-64">
-<div
-      className={`md:m-2 lg:w-[22%] md:w-[250px] w-full flex flex-col shadow-lg rounded-[20px]`}
-      
-    >
-      <div className="flex flex-col items-center md:h-[190px] w-full">
-<Link to="/dairy">
-            <img
-                className="lg:w-48 md:w-48 sm:w-96 h-40 p-2  rounded-[16px] object-cover"
-                src={y5}
-                alt=""
-            />
-            <p className="text-center text-[#8AA6AA]">Dairy</p>
-        </Link></div>
 
-        </div>
-    </div>
-</div>
    
   {/* </div> */}
           <br></br>

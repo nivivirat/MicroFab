@@ -364,14 +364,14 @@ margin-left:-10%;
  margin: 5px;
  box-sizing: border-box;
 }
-@media (min-width: 969px) {
+@media (min-width: 1269px) {
 .jkhj{
   display:flex;
   flex-direction:row;
 }
 
 }
-@media (max-width: 968px) {
+@media (max-width: 1268px) {
 .jkhj{
   display:flex;
   flex-direction:column;
