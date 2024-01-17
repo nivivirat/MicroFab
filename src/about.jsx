@@ -232,7 +232,7 @@ function AboutUs() {
           </center>
          
           <br></br>
-          <img className="cvfg" src ={qwe} alt="img"></img>
+          <img className="cvfg opacity-[.17]" src ={qwe} alt="img"></img>
 
           
                    <div className="lg:flex flex-rows md:flex flex-cols sm:flex flex-cols-1 sm:-mt-6 animate__animated animate__fadeInRight animate__delay-1s">
