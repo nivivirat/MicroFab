@@ -19,7 +19,7 @@ export default function Analytics() {
               <CountUp end={200} duration={7} separator="," /> {/* Counting animation for 200 */}
               <p className="text-[#8AA6AA]">+</p>
             </h1>
-            <p className="text-[15px]">
+            <p className="text-[15px] font-semibold">
               Premium moulds made for machines <br></br>from Germany, Italy and
               US Origins
             </p>
@@ -29,7 +29,7 @@ export default function Analytics() {
               <CountUp end={100000} duration={7} separator="," /> {/* Counting animation for 100,000 */}
               <p className="text-[#8AA6AA]">+</p>
             </h1>
-            <p className="">Square feet across four strategic locations</p>
+            <p className="font-semibold">Square feet manufacturing facilities across<br></br>four strategic locations</p>
           </div>
         </div>
 
@@ -39,7 +39,7 @@ export default function Analytics() {
             <CountUp end={15} duration={10} /> {/* Counting animation for 15 */}
             <p className="text-[#8AA6AA]">+</p>Countries
           </h1>
-          <p className="">
+          <p className="font-semibold">
             Our global footprint spans over Algeria, Ghana, Nigeria, South
             Africa, Malaysia and many more
           </p>
