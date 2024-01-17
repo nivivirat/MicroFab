@@ -259,7 +259,7 @@ const Header = () => {
               {isApplicationDropdownOpen && (
                 <div onMouseLeave={toggleApplicationDropdown} className="dropdown-menu absolute mt-2 bg-white border border-gray-300 p-4 rounded-lg shadow-md w-[855px] xl:left-[10%] -left-[80%] transform -translate-x-1/2">
                   <div className="flex flex-row gap-0">
-                    <Link to="/pharmaceutical">
+                    <Link to="/pharmaceuticals">
                       <Card
                         content="Pharmaceutical Industry"
                         img={img4}
