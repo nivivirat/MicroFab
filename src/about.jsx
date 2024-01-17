@@ -240,7 +240,7 @@ function AboutUs() {
   <div className="jkhj p-2 m-auto ">
   <div
       className={`md:m-2 lg:w-[22%] md:w-[250px] w-full flex flex-col shadow-lg rounded-[20px]`}
-      onClick={toggleContent}
+      
     >
     <div className="flex flex-col items-center md:h-[190px] w-full">
         <Link to="/pharmaceuticals">
@@ -255,7 +255,7 @@ function AboutUs() {
 </div>
 <div
       className={`md:m-2 lg:w-[22%] md:w-[250px] w-full flex flex-col shadow-lg rounded-[20px]`}
-      onClick={toggleContent}
+      
     >
     <div className="flex flex-col items-center md:h-[190px] w-full">
         <Link to="/chemical">
@@ -271,7 +271,7 @@ function AboutUs() {
 
 <div
       className={`md:m-2 lg:w-[22%] md:w-[250px] w-full flex flex-col shadow-lg rounded-[20px]`}
-      onClick={toggleContent}
+      
     >
     <div className="flex flex-col items-center md:h-[190px] w-full">
         <Link to="/cosmic">
@@ -287,7 +287,7 @@ function AboutUs() {
 
 <div
       className={`md:m-2 lg:w-[22%] md:w-[250px] w-full flex flex-col shadow-lg rounded-[20px]`}
-      onClick={toggleContent}
+      
     >
     <div className="flex flex-col items-center md:h-[190px] w-full">
         <Link to="/food">
@@ -319,7 +319,7 @@ function AboutUs() {
 <div className="jkhj p-2 m-auto bbb w-full md:ml-64">
 <div
       className={`md:m-2 lg:w-[22%] md:w-[250px] w-full flex flex-col shadow-lg rounded-[20px]`}
-      onClick={toggleContent}
+      
     >
       <div className="flex flex-col items-center md:h-[190px] w-full">
 <Link to="/dairy">
