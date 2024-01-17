@@ -243,7 +243,7 @@ function AboutUs() {
       
     >
     <div className="flex flex-col items-center md:h-[190px] w-full">
-        <Link to="/pharmaceuticals">
+        <Link to="/pharmaceutical">
             <img
                 className="w-48 h-40 p-2 object-cover"
                 src={y1}
