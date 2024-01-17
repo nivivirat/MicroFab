@@ -364,6 +364,21 @@ margin-left:-10%;
  margin: 5px;
  box-sizing: border-box;
 }
+@media (min-width: 969px) {
+.jkhj{
+  display:flex;
+  flex-direction:row;
+}
+
+}
+@media (max-width: 968px) {
+.jkhj{
+  display:flex;
+  flex-direction:column;
+}
+
+
+}
 
 @media (max-width: 768px) {
  .container {
@@ -392,10 +407,7 @@ margin-left:-10%;
    flex: none;
    width: 100%;
  }
- .jkhj{
-  display:flex;
-  flex-direction:column;
-}
+
 }
 
 .hrt{
@@ -438,10 +450,7 @@ margin-left:-10%;
  font-weight: bold;
 }
 @media (min-width: 768px) {
-.jkhj{
-  display:flex;
-  flex-direction:row;
-}
+
 }
 .vertical-bar-container {
  position: absolute;
