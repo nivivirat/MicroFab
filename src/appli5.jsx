@@ -51,7 +51,7 @@ export default function Appli4() {
       <div className="text-black p-4 bg-[#E8E8E9] w-48 ml-8 rounded-[16px]">
         <div className="flex flex-col items-start">
           <button className="text-xl font-bold mb-2" onClick={toggleMenu}>
-            Menu
+          <Icon icon="uil:align-justify" />
           </button>
   
           {/* Navigation Menu */}
