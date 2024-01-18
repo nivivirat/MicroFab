@@ -583,7 +583,7 @@ different origins</center>
     
             <div className="flex justify-end mt-8 mr-8">
     <div className="w-full h-80 object-cover md:w-full md:p-4 sm:-mt-24">
-        <img className="w-full h-full object-cover ml-3 mr-3 -mt-12 lg:mt-12" src={yy5} alt="" />
+        <img className="w-full h-full object-fit ml-3 mr-3 -mt-12 lg:mt-12" src={yy5} alt="" />
     </div>
 </div>
 
