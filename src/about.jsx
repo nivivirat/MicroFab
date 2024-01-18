@@ -12,7 +12,7 @@ import CountUp from 'react-countup';
 import "./Styles_abt2.css";
 import pic from "./List.png";
 import tasto from "./testicards.json";
-import yy5 from "./assets/About/image34.svg"
+import yy5 from "./assets/About/Micro Map.png";
 import Slider from "./slider";
 import TestimonialCard from "./tasticard";
 import yy1 from "./assets/About/Frame 21443.png";
@@ -582,7 +582,7 @@ different origins</center>
             </div>
     
             <div className="flex justify-end mt-8 mr-8">
-    <div className="w-full h-96 object-cover md:w-full md:p-4 sm:-mt-24">
+    <div className="w-full h-80 object-cover md:w-full md:p-4 sm:-mt-24">
         <img className="w-full h-full object-cover ml-3 mr-3 -mt-12 lg:mt-12" src={yy5} alt="" />
     </div>
 </div>
