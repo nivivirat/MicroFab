@@ -400,12 +400,12 @@ export default function Appli1() {
 
               <div className="flex flex-col p-6 vbnn">
                <br></br>
-                          <li className=" w-full lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Vaccines </li>     
-                          <li className=" w-full lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Sterile Water </li> 
-                          <li className=" w-full lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Blood Products  </li> 
-                          <li className=" w-full lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Stability Test Kits  </li>
+                          <li className=" w-full lg:text-2xl  font-['ClashDisplay'] sm:text-2xs leading-tight text-[#8AA6AA]">Vaccines </li>     
+                          <li className=" w-full lg:text-2xl  font-['ClashDisplay'] sm:text-2xs leading-tight text-[#8AA6AA]">Sterile Water </li> 
+                          <li className=" w-full lg:text-2xl  font-['ClashDisplay'] sm:text-2xs leading-tight text-[#8AA6AA]">Blood Products  </li> 
+                          <li className=" w-full lg:text-2xl  font-['ClashDisplay'] sm:text-2xs leading-tight text-[#8AA6AA]">Stability Test Kits  </li>
                           {/* <li className=" w-full text-2xl leading-tight text-[#8AA6AA]"></li> */}
-                          <li className=" w-full lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]"> Temperature sensitive substances</li>
+                          <li className=" w-full lg:text-2xl  font-['ClashDisplay'] sm:text-2xs leading-tight text-[#8AA6AA]"> Temperature sensitive substances</li>
                           {/* <li className=" w-full text-2xl leading-tight text-[#8AA6AA]">Diagnostics</li>
                           <li className=" w-full text-2xl leading-tight text-[#8AA6AA]">Biotechnological products</li> 
                           <li className=" w-full text-2xl leading-tight text-[#8AA6AA]">Vaccines</li> 
