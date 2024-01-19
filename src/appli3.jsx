@@ -41,18 +41,65 @@ export default function Appli3() {
      
     setSelectedImage(imageId);
   };
+  const NavBar = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
+  
+    const toggleMenu = () => {
+      setMenuOpen(!menuOpen);
+    };
+
+    return (
+      <div className="text-black p-4 w-48 ml-8 rounded-[16px]">
+        <div className="flex flex-col items-start ">
+          <button className="text-xl font-bold mb-2" onClick={toggleMenu}>
+           <Icon icon="uil:align-justify" />
+          </button>
+  
+          {/* Navigation Menu */}
+          <div className={`mt-2 bg-[#E8E8E9] w-48 mb-4 ${menuOpen ? 'block' : 'hidden'}`}>
+            <button
+              onClick={() => showImage("image1")}
+              className="block text-black hover:bg-gray-300 ml-4 "
+            >
+                Flavoured Milk
+            </button>
+            <button
+          onClick={() => showImage("image2")}
+          
+           className="block text-black hover:bg-gray-300 ml-4 "
+        >
+          Sauces & Condiments
+        </button>
+        <button
+          onClick={() => showImage("image3")}
+           className="block text-black hover:bg-gray-300 ml-4 "
+        >
+         Fruit Juices
+        </button>
+        <button
+          onClick={() => showImage("image4")}
+           className="block text-black hover:bg-gray-300 ml-4 "
+        >
+            Flavoured Syrups 
+        </button>
+          </div>
+        </div>
+      </div>
+    );
+  };
   return (
     <>
       {/* <div> */}
       <div>
         <span className="qaz">
-        <div className="qa">
-          <h3 className="mb-6 w-full pb-8 lg:text-6xl md: text-4xl sm:text-5xl leading-tight text-[#8AA6AA]  animate__animated animate__fadeInLeft animate__delay-0s  df"><strong>
+        <div className="qa -mt-64">
+        <h3 className="mb-6 w-full pb-8 lg:text-6xl md: text-4xl sm:text-4xl leading-tight text-[#8AA6AA]  animate__animated animate__fadeInLeft animate__delay-0s df">
+       <strong>
           Packaging Solutions for the Food Industry</strong>
           </h3>
           <span>
-            <h6
-              className="lg:text-3xl md:text-2xl sm:text-xl leading-tight text-[#8AA6AA]  animate__animated animate__fadeInRight animate__delay-0s sd"
+          <h6
+              className="lg:text-2xl md:text-2xl mt-2 sm:text-xl leading-tight text-[#8AA6AA]  sd animate__animated animate__fadeInRight animate__delay-0s"
               color="blue"
             >
          MicroFab transforms the realm of food packaging with its solutions designed to preserve freshness, ensure safety, and enhance convenience. Our technologies cater to the unique needs, offering precision and innovation.
@@ -61,7 +108,7 @@ export default function Appli3() {
           </span>
           </div>
          
-          <button className="bg-[#8AA6AA] ee  text-white font-bold py-3 px-20 rounded m-2">
+          <button className="bg-[#8AA6AA] md:w-48 ee mt-24 sm:ml-2 lg:ml-12 md:ml-10  text-white font-bold py-3 px-20 rounded m-2 ">
   Explore
 </button>
 
@@ -97,39 +144,7 @@ export default function Appli3() {
      <h3 className="mb-4 pb-4 text-5xl ml-8 leading-tight text-black  animate__animated animate__fadeInLeft animate__delay-1s"><strong>
             Types of Packaging</strong>
           </h3>
-      <div className="navbar2">
-        <spacer></spacer><spacer></spacer>{ }
-        <button
-          onClick={() => showImage("image1")}
-          style={{ marginRight: "4%" }}
-        >
-          Flavoured Milk
-        </button>
-        <button
-          onClick={() => showImage("image2")}
-          
-          style={{ marginRight: "4%" }}
-        >
-         Sauces & Condiments
-        </button>
-        <button
-          onClick={() => showImage("image3")}
-          style={{ marginRight: "4%" }}
-        >
-          Fruit Juices
-        </button>
-        <button
-          onClick={() => showImage("image4")}
-          style={{ marginRight: "4%" }}
-        >
-          Flavoured Syrups 
-        </button>
-        {/* {selectedImage && (
-        <img src={`path/to/${selectedImage}.jpg`} alt={`Image ${selectedImage}`} />
-      )}
-      {/* Display the text */}
-     
-      </div>
+    <NavBar />
       <br></br>
 
       <div
@@ -446,9 +461,9 @@ export default function Appli3() {
           Regardless of which instance you’re at; a wealth of experience and a plethora of services ensures you to move ahead. Maybe so what we offer:
           </h5>
           </center><br></br>
-          <a className="text-xs  leading-tight mb-4   text-white  tt" href="https://google.com">Product solutions<Icon icon="ph:arrow-right-light" /></a><br></br>
-          <a className="text-xs  leading-tight mb-4 text-white  tt" href="https://google.com">Turnkey solutions <Icon icon="ph:arrow-right-light" /></a><br></br>
-          <a className="text-xs  leading-tight mb-4  text-white  tt" href="https://google.com">Service solutions <Icon icon="ph:arrow-right-light" /></a><br></br>
+          <a className="text-xs  leading-tight mb-4   text-white  tt" href="/product">Product solutions</a><br></br>
+          <a className="text-xs  leading-tight mb-4 text-white  tt" href="/TurnKeySolutions">Turnkey solutions </a><br></br>
+          <a className="text-xs  leading-tight mb-4  text-white  tt" href="/service">Service solutions </a><br></br>
           <br></br>
           
           </div>
