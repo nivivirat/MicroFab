@@ -399,11 +399,11 @@ export default function Appli3() {
 
               <div className="flex flex-col p-6 vbnn">
                <br></br>
-                          <li className=" w-full lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Cheese Sauces </li>     
-                          <li className=" w-full lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Non-Carbonated Beverages</li> 
-                          <li className=" w-full lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Electrolytes</li> 
-                          <li className=" w-full lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Drinking Bottles</li>
-                          <li className=" w-full lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Nutraceuticals </li>
+                          <li className=" w-full lg:text-2xl  font-['ClashDisplay'] sm:text-2xs leading-tight text-[#8AA6AA]">Cheese Sauces </li>     
+                          <li className=" w-full lg:text-2xl  font-['ClashDisplay'] sm:text-2xs leading-tight text-[#8AA6AA]">Non-Carbonated Beverages</li> 
+                          <li className=" w-full lg:text-2xl  font-['ClashDisplay'] sm:text-2xs leading-tight text-[#8AA6AA]">Electrolytes</li> 
+                          <li className=" w-full lg:text-2xl  font-['ClashDisplay'] sm:text-2xs leading-tight text-[#8AA6AA]">Drinking Bottles</li>
+                          <li className=" w-full lg:text-2xl  font-['ClashDisplay'] sm:text-2xs leading-tight text-[#8AA6AA]">Nutraceuticals </li>
                           {/* <li className=" w-full text-2xl leading-tight text-[#8AA6AA]">Hair Serums </li>
                           <li className=" w-full text-2xl leading-tight text-[#8AA6AA]">Conditioners</li> */}
                           {/* <li className=" w-full text-2xl leading-tight text-[#8AA6AA]">diagnostics</li>
