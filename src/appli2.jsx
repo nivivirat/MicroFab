@@ -401,13 +401,13 @@ export default function Appli1() {
 
               <div className="flex flex-col p-6 vbnn">
                <br></br>
-                          <li className=" w-full lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Lotions </li>     
-                          <li className=" w-full lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Creams </li> 
-                          <li className=" w-full lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Serums </li> 
+                          <li className=" w-full lg:text-2xl  font-['ClashDisplay'] sm:text-2xs leading-tight text-[#8AA6AA]">Lotions </li>     
+                          <li className=" w-full lg:text-2xl  font-['ClashDisplay'] sm:text-2xs leading-tight text-[#8AA6AA]">Creams </li> 
+                          <li className=" w-full lg:text-2xl  font-['ClashDisplay'] sm:text-2xs leading-tight text-[#8AA6AA]">Serums </li> 
                          
-                          <li className=" w-full lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Shampoos </li>
-                          <li className=" w-full lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Hair Serums </li>
-                          <li className=" w-full lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Conditioners</li>
+                          <li className=" w-full lg:text-2xl  font-['ClashDisplay'] sm:text-2xs leading-tight text-[#8AA6AA]">Shampoos </li>
+                          <li className=" w-full lg:text-2xl  font-['ClashDisplay'] sm:text-2xs leading-tight text-[#8AA6AA]">Hair Serums </li>
+                          <li className=" w-full lg:text-2xl  font-['ClashDisplay'] sm:text-2xs leading-tight text-[#8AA6AA]">Conditioners</li>
                           {/* <li className=" w-full text-2xl leading-tight text-[#8AA6AA]">diagnostics</li>
                           <li className=" w-full text-2xl leading-tight text-[#8AA6AA]">biotechnological products</li> 
                           <li className=" w-full text-2xl leading-tight text-[#8AA6AA]">vaccines</li> 
