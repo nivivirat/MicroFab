@@ -397,12 +397,12 @@ export default function Appli4() {
 
               <div className="flex flex-col p-6 vbnn">
                <br></br>
-                          <li className=" w-full lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Flavoured Milk</li>     
-                          <li className=" w-full lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Laban</li> 
+                          <li className=" w-full  font-['ClashDisplay'] lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Flavoured Milk</li>     
+                          <li className=" w-full  font-['ClashDisplay'] lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Laban</li> 
                         
-                          <li className=" w-full lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Cream</li>
-                          <li className=" w-full lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Almond Milk</li>
-                          <li className=" w-full lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Spreads</li>
+                          <li className=" w-full  font-['ClashDisplay'] lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Cream</li>
+                          <li className=" w-full  font-['ClashDisplay'] lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Almond Milk</li>
+                          <li className=" w-full  font-['ClashDisplay'] lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Spreads</li>
                           
                           </div> <br></br><br></br><br></br>
               {/* <br></br><br></br><br></br><br></br><br></br> */}
