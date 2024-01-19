@@ -76,7 +76,7 @@ export default function HomeArticles() {
         </p>
 
         <div
-          className="w-full h-[43vh] flex overflow-x-scroll gap-4"
+          className="w-full flex overflow-x-scroll gap-4"
           style={{ scrollSnapType: "x mandatory" }}
         >
           {Blogs_Heading.map((article, index) => (

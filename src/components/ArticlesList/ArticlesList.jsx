@@ -80,7 +80,7 @@ export default function articlesList() {
               key={index}
               className="w-full flex-shrink-0 scroll-snap-align-start rounded-lg shadow-md"
             >
-              <div className="border-2 w-full h-[40vh] flex flex-col place-items-center rounded-lg shadow-md">
+              <div className="border-2 w-full flex flex-col place-items-center rounded-lg shadow-md">
                 <img
                   src={article.img}
                   alt="Blog Thumbnail"
