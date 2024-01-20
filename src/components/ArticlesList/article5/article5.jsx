@@ -2,7 +2,7 @@ import Footer from "../../Common/Footer/Footer";
 import Blog_Content from "../singleArticleComponents/Blog_Content";
 import Blogs_bottom_side from '../singleArticleComponents/Blogs_bottom_side'
 
-export default function Article4() {
+export default function Article5() {
   return (
     <div className="font-['ClashDisplay'] flex flex-col md:mt-[85px] mt-[65px]">
       <div className="w-full flex md:flex-row flex-col">
