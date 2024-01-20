@@ -36,6 +36,8 @@ import Article1 from "./components/ArticlesList/article1/Article1"
 import Article2 from "./components/ArticlesList/article2/Article2"
 import Article3 from "./components/ArticlesList/article3/Article3"
 import Article4 from "./components/ArticlesList/article4/Article4"
+import Article5 from "./components/ArticlesList/article5/Article5"
+import Article6 from "./components/ArticlesList/article6/Article6"
 
 export default function App() {
   return (
@@ -89,6 +91,8 @@ function AppContent() {
         <Route path="/article3" element={<Article3 />} />
         <Route path="/article4" element={<Article4 />} />
         <Route path="/article2" element={<Article2 />} />
+        <Route path="/article5" element={<Article5 />} />
+        <Route path="/article6" element={<Article6 />} />
 
       </Routes>
 

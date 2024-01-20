@@ -4,6 +4,7 @@ import img1 from "../../../assets/Articles/article1/img1.svg";
 import img2 from "../../../assets/Articles/article1/img2.svg";
 import img3 from "../../../assets/Articles/article1/img3.svg";
 import img4 from "../../../assets/Articles/article1/img4.svg";
+import img5 from "../../../assets/Articles/article1/img5.svg";
 
 import img7 from "../../../assets/Articles/article1/img7.svg";
 import img8 from "../../../assets/Articles/article1/img8.svg";
@@ -12,6 +13,11 @@ import img10 from "../../../assets/Articles/article1/img10.svg";
 import img11 from "../../../assets/Articles/article1/img11.svg";
 import img12 from "../../../assets/Articles/article1/img12.svg";
 import img13 from "../../../assets/Articles/article1/img13.svg";
+import img14 from "../../../assets/Articles/article1/img14.svg";
+import img15 from "../../../assets/Articles/article1/img15.svg";
+
+
+import article5_special from "../../../assets/Articles/article1/article5_special.svg";
 
 export default function Blog_Content({ index }) {
   const blogContent = ContentData[index];
@@ -27,7 +33,7 @@ export default function Blog_Content({ index }) {
       if (item.q) {
         if (inde === 2) {
           return (
-            <div>
+            <div key={index}>  
               <div key={inde} className="py-4">
                 <p className="font-bold">{item.q}</p>
                 <p>{item.a}</p>
@@ -47,6 +53,21 @@ export default function Blog_Content({ index }) {
                   <img src={img10} className="w-[49%]"></img>
                   <img src={img11} className="w-[49%]"></img>
                 </div>
+              ) : index === 3 ? (
+                <div className="flex flex-row my-10 place-items-center justify-between">
+                  <img src={img12} className="w-[49%]"></img>
+                  <img src={img13} className="w-[49%]"></img>
+                </div>
+              ) : index === 4 ? (
+                <div className="flex flex-row my-10 place-items-center justify-between">
+                  <img src={img14} className="w-[49%]"></img>
+                  <img src={img15} className="w-[49%]"></img>
+                </div>
+              ) : index === 5 ? (
+                <div className="flex flex-row my-10 place-items-center justify-between">
+                  <img src={img12} className="w-[49%]"></img>
+                  <img src={img13} className="w-[49%]"></img>
+                </div>
               ) : (
                 <div className="flex flex-row my-10 place-items-center justify-between">
                   <img src={img12} className="w-[49%]"></img>
@@ -58,8 +79,9 @@ export default function Blog_Content({ index }) {
         }
         return (
           <div key={index} className="py-4">
-            <p className="font-bold">{item.q}</p>
-            <p>{item.a}</p>
+            {item.img ? <img src={article5_special} alt="img"></img> : <></>}
+            <p className="font-black mb-5 font-['ClashDisplayBold']">{item.q}</p>
+            <p className="font-thin">{item.a}</p>
           </div>
         );
       } else {
@@ -82,6 +104,10 @@ export default function Blog_Content({ index }) {
         return <img src={img3} className="py-4" alt="Image 3" />;
       case "article4_img":
         return <img src={img4} className="py-4" alt="Image 4" />;
+      case "article5_img":
+        return <img src={img5} className="py-4" alt="Image 4" />;
+      case "article6_img":
+        return <img src={img5} className="py-4" alt="Image 4" />;
       default:
         return null;
     }

@@ -235,7 +235,7 @@ const Header = () => {
                 }`}
               >
                 <Link
-                  to="/Applications"
+                  to="/"
                   onClick={toggleMenu}
                   onMouseEnter={toggleApplicationDropdown}
                 >
