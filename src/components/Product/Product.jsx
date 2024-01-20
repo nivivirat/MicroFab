@@ -14,9 +14,10 @@ import b1 from "./images/Rectangle 49 (1).svg";
 import b2 from "./images/4.svg";
 import b3 from "./images/1.svg";
 import b4 from "./images/3.svg";
-import MedicalDevicesCard from "./Form";
+import MedicalDevicesCard from "./ProductCard";
 import Footer from "../Common/Footer/Footer";
 import TurnKeySolutionsData from "./prodt.json";
+
 import { Icon } from "@iconify/react";
 export default function Product() {
   return (
@@ -50,11 +51,13 @@ export default function Product() {
 
       <div className="md:pl-16 flex flex-wrap gap-7 md:gap-4 md:gap-y-8 md:p-0 p-8 md:place-items-start place-items-center md:justify-start justify-center  animated-box animate__animated animate__fadeIn animate__delay-1s">
         {TurnKeySolutionsData.map((device, index) => (
+          
           <MedicalDevicesCard
             key={index} // Ensure each card has a unique key
             heading={device.heading}
             content={device.content}
             img={device.img}
+            link={device.link}
           />
         ))}
       </div>
@@ -200,9 +203,9 @@ devices which are apt for using, with comfort. </h6>
               <a
               href="/medicalDevices"
                 type="submit"
-                className="bg-[#8AA6AA] mt-4 md:mt-4 text-white px-4 py-2 -ml-6  w-[200px] rounded-md"
+                className="bg-[#8AA6AA] mt-4 md:mt-4 text-white px-4 py-2 hdfc w-[200px] rounded-md"
               >
-              KNOW MORE <Icon icon="ph:arrow-right-light" />
+              KNOW MORE
               </a>
             </div>
           </div>

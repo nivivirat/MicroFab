@@ -581,12 +581,24 @@ different origins</center>
               {/* Your browser does not support the video tag. */}
             </div>
     
-            <div className="flex justify-end mt-8 mr-8">
+           <div className="flex justify-end mt-8 mr-8">
     <div className="w-full h-80 object-cover md:w-full md:p-4 sm:-mt-24">
-        <img className="w-full h-full object-fit ml-3 mr-3 -mt-12 lg:mt-12" src={yy5} alt="" />
+        <img className="w-full h-full object-fit ml-3 mr-3 mt-12 lg:mt-12" src={yy5} alt="" />
     </div>
 </div>
-
+<div className="flex flex-col mt-24 -mb-12 p-6">
+                <p className=" text-5xl leading-tight text-[#8AA6AA] ll pp font-['ClashDisplay']">
+                Project  by Region
+                </p>
+                {/* <h5 className="mb-2 text-4xl leading-tight ll">
+                  Lorem ipsum
+                </h5> */}
+              
+                <p className=" text-4xl text-black leading-tight pp ll font-['ClashDisplay']"><strong>
+                Here’s a glimpse of our projects by various regions across countries</strong> </p>
+                
+              
+              </div>
 <div className="md:pl-6 flex flex-wrap gap-7 mt-24 md:gap-5 md:gap-y-4 md:p-0 p-8 md:place-items-start place-items-center md:justify-start justify-center  animate__animated animate__fadeInRight animate__delay-2s">
         {ServicesJson.map((device, index) => (
           <MedicalDevicesCard

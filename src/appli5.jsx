@@ -48,35 +48,35 @@ export default function Appli4() {
     };
 
     return (
-      <div className="text-black p-4 bg-[#E8E8E9] w-48 ml-8 rounded-[16px]">
-        <div className="flex flex-col items-start">
+      <div className="text-black p-4 w-48 ml-8 rounded-[16px]">
+        <div className="flex flex-col items-start ">
           <button className="text-xl font-bold mb-2" onClick={toggleMenu}>
            <Icon icon="uil:align-justify" />
           </button>
   
           {/* Navigation Menu */}
-          <div className={`mt-2 ${menuOpen ? 'block' : 'hidden'}`}>
+          <div className={`mt-2 bg-[#E8E8E9] w-48 mb-4 ${menuOpen ? 'block' : 'hidden'}`}>
             <button
               onClick={() => showImage("image1")}
-              className="block text-black hover:bg-gray-300"
+              className="block text-black hover:bg-gray-300 ml-4 "
             >
               Milk
             </button>
             <button
               onClick={() => showImage("image2")}
-              className="block text-black hover:bg-gray-300"
+              className="block text-black hover:bg-gray-300 ml-4"
             >
               Liquid Cheese
             </button>
             <button
               onClick={() => showImage("image3")}
-              className="block text-black hover:bg-gray-300 "
+              className="block text-black hover:bg-gray-300 ml-4 "
             >
               Buttermilk
             </button>
             <button
               onClick={() => showImage("image4")}
-              className="block text-black hover:bg-gray-300 "
+              className="block text-black hover:bg-gray-300 ml-4 "
             >
               Yogurt
             </button>
@@ -397,12 +397,12 @@ export default function Appli4() {
 
               <div className="flex flex-col p-6 vbnn">
                <br></br>
-                          <li className=" w-full lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Flavoured Milk</li>     
-                          <li className=" w-full lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Laban</li> 
+                          <li className=" w-full  font-['ClashDisplay'] lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Flavoured Milk</li>     
+                          <li className=" w-full  font-['ClashDisplay'] lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Laban</li> 
                         
-                          <li className=" w-full lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Cream</li>
-                          <li className=" w-full lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Almond Milk</li>
-                          <li className=" w-full lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Spreads</li>
+                          <li className=" w-full  font-['ClashDisplay'] lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Cream</li>
+                          <li className=" w-full  font-['ClashDisplay'] lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Almond Milk</li>
+                          <li className=" w-full  font-['ClashDisplay'] lg:text-2xl sm:text-2xs leading-tight text-[#8AA6AA]">Spreads</li>
                           
                           </div> <br></br><br></br><br></br>
               {/* <br></br><br></br><br></br><br></br><br></br> */}
@@ -474,5 +474,3 @@ export default function Appli4() {
     </>
   );
 }
-
-
