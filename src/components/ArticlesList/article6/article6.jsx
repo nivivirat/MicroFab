@@ -15,7 +15,9 @@ export default function Article6() {
             <Blogs_bottom_side/>
         </div>
       </div>
+
       <Footer/>
+      
     </div>
   );
 }
