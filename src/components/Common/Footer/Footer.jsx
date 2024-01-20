@@ -136,6 +136,12 @@ export default function Footer() {
             <div className="md:flex md:flex-row flex flex-row md:place-items-start place-items-center md:gap-2 gap-2">
               <a href="" className="md:ml-10">
                 <Icon
+                  icon="mdi:linkedin"
+                  className="border-2 border-white text-white rounded-full h-10 p-2 w-10"
+                />
+              </a>
+              <a href="" className="">
+                <Icon
                   icon="mdi:instagram"
                   className="border-2 border-white text-white rounded-full h-10 p-2 w-10"
                 />
