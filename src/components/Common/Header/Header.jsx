@@ -61,12 +61,11 @@ const Header = () => {
 
   return (
     <header
-      className={`font-['ClashDisplay'] fixed top-0 left-0 p-0 m-0 right-0 lg:w-full py-4 z-10 ${
-        isMenuOpen ? "bg-white" : "bg-white"
-      } w-screen`}
+      className={`font-['ClashDisplay'] fixed top-0 left-0 p-0 m-0 right-0 lg:w-full py-4 z-10 ${isMenuOpen ? "bg-white" : "bg-white"
+        } w-screen`}
       style={
         window.innerWidth >= 768 ||
-        (!isMenuOpen && window.innerWidth < 768 && location.pathname !== "/")
+          (!isMenuOpen && window.innerWidth < 768 && location.pathname !== "/")
           ? { background: "#FFFFFF" }
           : {}
       }
@@ -88,33 +87,30 @@ const Header = () => {
           "
           >
             <li
-              className={`${
-                location.pathname === "/"
-                  ? "font-extrabold border-b-2 border-black "
-                  : ""
-              }`}
+              className={`${location.pathname === "/"
+                ? "font-extrabold border-b-2 border-black "
+                : ""
+                }`}
             >
               <Link to="/" onClick={toggleMenu}>
                 Home
               </Link>
             </li>
             <li
-              className={`${
-                location.pathname === "/about"
-                  ? "font-extrabold border-b-2 border-black "
-                  : ""
-              }`}
+              className={`${location.pathname === "/about"
+                ? "font-extrabold border-b-2 border-black "
+                : ""
+                }`}
             >
               <Link to="/about" onClick={toggleMenu}>
                 About Us
               </Link>
             </li>
             <li
-              className={`${
-                location.pathname === "/product"
-                  ? "font-extrabold border-b-2 border-black "
-                  : ""
-              }`}
+              className={`${location.pathname === "/product"
+                ? "font-extrabold border-b-2 border-black "
+                : ""
+                }`}
             >
               <Link to="/product" onClick={toggleMenu}>
                 Products
@@ -203,11 +199,10 @@ const Header = () => {
             <Link
               to="/TurnKeySolutions"
               onClick={toggleMenu}
-              className={`${
-                location.pathname === "/TurnKeySolutions"
-                  ? "font-extrabold border-b-2 border-black "
-                  : ""
-              }`}
+              className={`${location.pathname === "/TurnKeySolutions"
+                ? "font-extrabold border-b-2 border-black "
+                : ""
+                }`}
             >
               Turnkey
             </Link>
@@ -215,24 +210,21 @@ const Header = () => {
             <Link
               to="/service"
               onClick={toggleMenu}
-              className={`${
-                location.pathname === "/service"
-                  ? "font-extrabold border-b-2 border-black "
-                  : ""
-              }`}
+              className={`${location.pathname === "/service"
+                ? "font-extrabold border-b-2 border-black "
+                : ""
+                }`}
             >
               Services
             </Link>
 
             <li
-              className={`relative cursor-pointer ${
-                location.pathname === "/Applications" ? "font-extrabold " : ""
-              }`}
+              className={`relative cursor-pointer ${location.pathname === "/Applications" ? "font-extrabold " : ""
+                }`}
             >
               <div
-                className={`flex items-center cursor-pointer ${
-                  isApplicationDropdownOpen ? "font-bold" : ""
-                }`}
+                className={`flex items-center cursor-pointer ${isApplicationDropdownOpen ? "font-bold" : ""
+                  }`}
               >
                 <Link
                   to="/s"
@@ -343,11 +335,10 @@ const Header = () => {
               <Link
                 to="/articlesList"
                 onClick={toggleMenu}
-                className={`${
-                  location.pathname === "/articlesList"
-                    ? "font-extrabold border-b-2 border-black "
-                    : ""
-                }`}
+                className={`${location.pathname === "/articlesList"
+                  ? "font-extrabold border-b-2 border-black "
+                  : ""
+                  }`}
               >
                 Blogs
               </Link>
@@ -367,23 +358,22 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <div className="hidden lg:flex lg:text-[18px] lg:font-light lg:text[16px]">
-          <ul className="flex flex-col justify-center items-center">
-            <img src={contact} alt="Contact" className="w-4 h-4 mr-2" />
-            <li>
-              <Link
-                to="/contact"
-                onClick={toggleMenu}
-                className={`${
-                  location.pathname === "/contact"
-                    ? "font-extrabold border-b-2 border-black "
-                    : ""
-                }`}
-              >
+        <div className="hidden lg:flex lg:text-[18px] lg:font-light lg:text[16px] ">
+          <Link
+            to="/contact"
+            onClick={toggleMenu}
+            className={`${location.pathname === "/contact"
+              ? "font-extrabold border-b-2 border-black "
+              : ""
+              }`}
+          >
+            <ul className="flex flex-col justify-center items-center">
+              <img src={contact} alt="Contact" className="w-4 h-4 mr-2" />
+              <li>
                 Contact
-              </Link>
-            </li>
-          </ul>
+              </li>
+            </ul>
+          </Link>
         </div>
 
         <div className="text-[20px] font-light lg:hidden">
@@ -393,7 +383,7 @@ const Header = () => {
           <button
             className="focus:outline-none"
             onClick={toggleMenu}
-            // Toggle the dropdown menu visibility here
+          // Toggle the dropdown menu visibility here
           >
             {isMenuOpen ? (
               <div className="text-black">
@@ -409,25 +399,26 @@ const Header = () => {
       </nav>
 
       {/* Mobile menu */}
-      {isMenuOpen && (
-        <div className="relative z-50 lg:hidden h-screen w-screen bg-[#8AA6AA] text-white text-[28px] p-4 mt-4 shadow-md transition-transform duration-400 ease-in-out">
-          <ul className="flex flex-col gap-4 gap-y-6">
-            <li>
-              <Link to="/" onClick={toggleMenu}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/about" onClick={toggleMenu}>
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link to="/product" onClick={toggleMenu}>
-                Products
-              </Link>
-            </li>
-            {/* <li className="relative cursor-pointer">
+      {
+        isMenuOpen && (
+          <div className="relative z-50 lg:hidden h-screen w-screen bg-[#8AA6AA] text-white text-[28px] p-4 mt-4 shadow-md transition-transform duration-400 ease-in-out">
+            <ul className="flex flex-col gap-4 gap-y-6">
+              <li>
+                <Link to="/" onClick={toggleMenu}>
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" onClick={toggleMenu}>
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/product" onClick={toggleMenu}>
+                  Products
+                </Link>
+              </li>
+              {/* <li className="relative cursor-pointer">
               <div
                 className={`flex items-center cursor-pointer${
                   isTechnologyDropdownOpen ? "font-bold" : ""
@@ -450,8 +441,8 @@ const Header = () => {
                 )}
               </div> */}
 
-            {/* tech in mobile */}
-            {/* {isTechnologyDropdownOpen && (
+              {/* tech in mobile */}
+              {/* {isTechnologyDropdownOpen && (
                 <Link to="/Technology" onClick={toggleMenu}>
                   <div className="lg:absolute mt-2 bg-white border border-gray-300 p-4 rounded-lg shadow-md h-[250px] w-[350px] lg:w-[739px] mx-auto lg:left-1/2 lg:transform lg:-translate-x-1/2">
                     <div className="flex flex-col">
@@ -487,138 +478,138 @@ const Header = () => {
                 </Link>
               )}
             </li> */}
-            <li className="relative cursor-pointer">
-              <div
-                className={`flex items-center cursor-pointer ${
-                  isApplicationDropdownOpen ? "font-bold" : ""
-                }`}
-              >
-                <Link to="/Applications" onClick={toggleMenu}>
-                  Applications
-                </Link>
-                {isApplicationDropdownOpen ? (
-                  <img
-                    src={ExpandLess}
-                    alt="Expand Less"
-                    className="ml-2 w-4 h-4"
-                    onClick={toggleApplicationDropdown}
-                  />
-                ) : (
-                  <img
-                    src={ExpandMore}
-                    alt="Expand More"
-                    className="ml-2 w-4 h-4"
-                    onClick={toggleApplicationDropdown}
-                  />
-                )}
-              </div>
+              <li className="relative cursor-pointer">
+                <div
+                  className={`flex items-center cursor-pointer ${isApplicationDropdownOpen ? "font-bold" : ""
+                    }`}
+                >
+                  <Link to="/Applications" onClick={toggleMenu}>
+                    Applications
+                  </Link>
+                  {isApplicationDropdownOpen ? (
+                    <img
+                      src={ExpandLess}
+                      alt="Expand Less"
+                      className="ml-2 w-4 h-4"
+                      onClick={toggleApplicationDropdown}
+                    />
+                  ) : (
+                    <img
+                      src={ExpandMore}
+                      alt="Expand More"
+                      className="ml-2 w-4 h-4"
+                      onClick={toggleApplicationDropdown}
+                    />
+                  )}
+                </div>
 
-              {/* application in mobile */}
-              {isApplicationDropdownOpen && (
-                <Link to="/applications" onClick={toggleMenu}>
-                  <div className="lg:absolute mt-2 bg-white border border-gray-300 p-4 rounded-lg shadow-md h-[360px] w-[350px] lg:w-[739px] mx-auto lg:left-1/2 lg:transform lg:-translate-x-1/2">
-                    <div className="flex flex-row gap-[16px]">
-                      <Link to="/pharmaceutical">
-                        <Card
-                          content="Pharmaceutical Industry"
-                          img={img4}
-                          isSelected={
-                            selectedApplicationCard ===
-                            "Pharmaceutical Industry"
-                          }
-                          onClick={() => {
-                            handleApplicationCardClick(
+                {/* application in mobile */}
+                {isApplicationDropdownOpen && (
+                  <Link to="/applications" onClick={toggleMenu}>
+                    <div className="lg:absolute mt-2 bg-white border border-gray-300 p-4 rounded-lg shadow-md h-[360px] w-[350px] lg:w-[739px] mx-auto lg:left-1/2 lg:transform lg:-translate-x-1/2">
+                      <div className="flex flex-row gap-[16px]">
+                        <Link to="/pharmaceutical">
+                          <Card
+                            content="Pharmaceutical Industry"
+                            img={img4}
+                            isSelected={
+                              selectedApplicationCard ===
                               "Pharmaceutical Industry"
-                            );
-                            toggleApplicationDropdown();
-                          }}
-                        />
-                      </Link>
-                      <Link to="/cosmic">
-                        <Card
-                          content="Cosmetic Industry"
-                          img={img5}
-                          isSelected={
-                            selectedApplicationCard === "Cosmetic Industry"
-                          }
-                          onClick={() => {
-                            handleApplicationCardClick("Cosmetic Industry");
-                            toggleApplicationDropdown();
-                          }}
-                        />
-                      </Link>
+                            }
+                            onClick={() => {
+                              handleApplicationCardClick(
+                                "Pharmaceutical Industry"
+                              );
+                              toggleApplicationDropdown();
+                            }}
+                          />
+                        </Link>
+                        <Link to="/cosmic">
+                          <Card
+                            content="Cosmetic Industry"
+                            img={img5}
+                            isSelected={
+                              selectedApplicationCard === "Cosmetic Industry"
+                            }
+                            onClick={() => {
+                              handleApplicationCardClick("Cosmetic Industry");
+                              toggleApplicationDropdown();
+                            }}
+                          />
+                        </Link>
+                      </div>
+                      <div className="flex flex-row gap-[16px]">
+                        <Link to="/food">
+                          <Card
+                            content="Food Industry"
+                            img={img6}
+                            isSelected={
+                              selectedApplicationCard === "Food Industry"
+                            }
+                            onClick={() => {
+                              handleApplicationCardClick("Food Industry");
+                              toggleApplicationDropdown();
+                            }}
+                          />
+                        </Link>
+                        <Link to="/chemical">
+                          <Card
+                            content="Chemical Industry"
+                            img={img7}
+                            isSelected={
+                              selectedApplicationCard === "Chemical Industry"
+                            }
+                            onClick={() => {
+                              handleApplicationCardClick("Chemical Industry");
+                              toggleApplicationDropdown();
+                            }}
+                          />
+                        </Link>
+                      </div>
+                      <div className="flex flex-row gap-[16px]">
+                        <Link to="/dairy">
+                          <Card
+                            content="Dairy Industry"
+                            img={img8}
+                            isSelected={
+                              selectedApplicationCard === "Dairy Industry"
+                            }
+                            onClick={() => {
+                              handleApplicationCardClick("Dairy Industry");
+                              toggleApplicationDropdown();
+                            }}
+                          />
+                        </Link>
+                      </div>
                     </div>
-                    <div className="flex flex-row gap-[16px]">
-                      <Link to="/food">
-                        <Card
-                          content="Food Industry"
-                          img={img6}
-                          isSelected={
-                            selectedApplicationCard === "Food Industry"
-                          }
-                          onClick={() => {
-                            handleApplicationCardClick("Food Industry");
-                            toggleApplicationDropdown();
-                          }}
-                        />
-                      </Link>
-                      <Link to="/chemical">
-                        <Card
-                          content="Chemical Industry"
-                          img={img7}
-                          isSelected={
-                            selectedApplicationCard === "Chemical Industry"
-                          }
-                          onClick={() => {
-                            handleApplicationCardClick("Chemical Industry");
-                            toggleApplicationDropdown();
-                          }}
-                        />
-                      </Link>
-                    </div>
-                    <div className="flex flex-row gap-[16px]">
-                      <Link to="/dairy">
-                        <Card
-                          content="Dairy Industry"
-                          img={img8}
-                          isSelected={
-                            selectedApplicationCard === "Dairy Industry"
-                          }
-                          onClick={() => {
-                            handleApplicationCardClick("Dairy Industry");
-                            toggleApplicationDropdown();
-                          }}
-                        />
-                      </Link>
-                    </div>
-                  </div>
+                  </Link>
+                )}
+              </li>
+              <li>
+                <Link to="/TurnKeySolutions" onClick={toggleMenu}>
+                  TurnKey
                 </Link>
-              )}
-            </li>
-            <li>
-              <Link to="/TurnKeySolutions" onClick={toggleMenu}>
-                TurnKey
-              </Link>
-            </li>
-            <li>
-              <Link to="/articlesList" onClick={toggleMenu}>
-                Blogs
-              </Link>
-            </li>
-            <li>
-              <Link to="/service" onClick={toggleMenu}>
-                Services
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" onClick={toggleMenu}>
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </div>
-      )}
-    </header>
+              </li>
+              <li>
+                <Link to="/articlesList" onClick={toggleMenu}>
+                  Blogs
+                </Link>
+              </li>
+              <li>
+                <Link to="/service" onClick={toggleMenu}>
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" onClick={toggleMenu}>
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+        )
+      }
+    </header >
   );
 };
 
