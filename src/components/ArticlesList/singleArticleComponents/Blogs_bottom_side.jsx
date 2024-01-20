@@ -9,31 +9,42 @@ export default function blogs_bottom_side() {
     {
       sub: "Covid - 19 Vaccine",
       content:
-        "Where do COVID-19 vaccine players stand on pricing? So far, it's no profit, slight profit or undecided", // Added content
+        "Latest Trends you could perceive with the BFS Technology", // Added content
       img: img1,
+      dir: "/article1"
     },
     {
       sub: "Covid - 19 Vaccine",
       content:
-        "Where do COVID-19 vaccine players stand on pricing? So far, it's no profit, slight profit or undecided", // Added content
+        "Factors you must consider while Purchasing an FFS Machine", // Added content
       img: img1,
+      dir: "/article2"
     },
   ];
   const posts = [
     {
       sub: "Blow-Fill-Seal, Technology ",
-      content: "Investing in Form-Fill-Seal", // Added content
+      content: "Things to look for When Buying Medical Devices for your Hospital", // Added content
       img: img1,
+      dir: "/article3"
     },
     {
       sub: "Blow-Fill-Seal, Technology ",
-      content: "Investing in Form-Fill-Seal", // Added content
+      content: "Benefits of Approaching a Contract Manufacturer", // Added content
       img: img1,
+      dir: "/article4"
     },
     {
       sub: "Blow-Fill-Seal, Technology ",
-      content: "Investing in Form-Fill-Seal", // Added content
+      content: "What you need to know about the Injection Stretch Blow Molding (ISBM) process?", // Added content
       img: img1,
+      dir: "/article5"
+    },
+    {
+      sub: "Blow-Fill-Seal, Technology ",
+      content: "Designing Standards our team follows for Clean-In-Place Systems", // Added content
+      img: img1,
+      dir: "/article6"
     },
   ];
 
@@ -66,14 +77,14 @@ export default function blogs_bottom_side() {
                     <p className="text-left text-black text-[16px] font-black">
                       {blog.content}
                     </p>
-                    <div className="flex flex-row place-items-center gap-3">
+                    <a href={blog.dir} className="flex flex-row place-items-center gap-3">
                       <p className="text-[#8AA6AA] font-extrabold">Read more</p>
                       <img
                         src={arrow_right}
                         className="bg-[#8AA6AA] h-6 p-0.5 rounded-full"
                         alt="Read more"
                       />
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -109,14 +120,14 @@ export default function blogs_bottom_side() {
                         {blog.sub}
                       </p>
                     </div>
-                    <div className="flex flex-row place-items-center gap-3">
+                    <a href={blog.dir} className="flex flex-row place-items-center gap-3">
                       <p className="text-[#8AA6AA] font-extrabold">Read more</p>
                       <img
                         src={arrow_right}
                         className="bg-[#8AA6AA] h-6 p-0.5 rounded-full"
                         alt="Read more"
                       />
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>
