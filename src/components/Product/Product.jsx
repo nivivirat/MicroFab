@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import './prod.css';
 
 // import pro from "./images/Frame 21516.svg";
@@ -20,6 +20,17 @@ import TurnKeySolutionsData from "./prodt.json";
 
 import { Icon } from "@iconify/react";
 export default function Product() {
+  
+  const [openCardIndex, setOpenCardIndex] = useState(null);
+
+  const handleCardToggle = (index) => {
+    if (openCardIndex === index) {
+      setOpenCardIndex(null); // Close the card if it's already open
+    } else {
+      setOpenCardIndex(index); // Open the clicked card
+    }
+  };
+
   return (
     <>
       {/* <NavbarDefault /> */}
@@ -58,6 +69,9 @@ export default function Product() {
             content={device.content}
             img={device.img}
             link={device.link}
+            index={index}
+            isOpen={openCardIndex === index}
+            onToggle={handleCardToggle}
           />
         ))}
       </div>

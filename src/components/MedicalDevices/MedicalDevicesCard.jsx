@@ -29,13 +29,12 @@ import CIPSystems from '../../assets/turnkeySolutions/CIPSystems.svg'
 import MixingTanks from '../../assets/turnkeySolutions/MixingTanks.svg'
 import PressureVessels from '../../assets/turnkeySolutions/PressureVessels.svg'
 
-
-export default function MedicalDevicesCard({ img, heading, content }) {
-  const [showContent, setShowContent] = useState(false);
-
+export default function MedicalDevicesCard({ index, isOpen, onToggle, img, heading, content }) {
   const toggleContent = () => {
-    setShowContent(!showContent);
-  };
+    onToggle(index);
+  }
+
+  const [showContent, setShowContent] = useState(false);
 
   const images = {
     CIPSystems,
@@ -64,7 +63,7 @@ export default function MedicalDevicesCard({ img, heading, content }) {
     IV_Administration_Sets_with_Flow_Regulators,
     Peripheral_IV_Cannula_Dressing_Kits,
 
-};
+  };
 
 
   return (
@@ -81,7 +80,7 @@ export default function MedicalDevicesCard({ img, heading, content }) {
       </div>
       <div className="md:h-[60px] flex flex-row justify-between place-items-center p-5">
         <h3 className="text-[16px] font-semibold">{heading}</h3>
-        {showContent ? (
+        {isOpen  ? (
           <div className="bg-primary rounded-full text-white p-2">
             {/* <Icon icon="majesticons:arrow-down" /> */}
             <Icon icon="ic:baseline-minus" />
@@ -93,7 +92,7 @@ export default function MedicalDevicesCard({ img, heading, content }) {
           </div>
         )}
       </div>
-      {showContent && (
+      {isOpen  && (
         <p className="text-[14px] font-thin opacity-70 px-5 pb-5">{content}</p>
       )}
     </div>

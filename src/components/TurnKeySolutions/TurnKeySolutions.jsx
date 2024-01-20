@@ -7,9 +7,20 @@ import four from "../../assets/turnkeySolutions/four.svg";
 import TurnKeySolutionsData from "./TurnKeySolutionsData.json";
 import MedicalDevicesCard from "../MedicalDevices/MedicalDevicesCard";
 import Footer from "../Common/Footer/Footer";
+import { useState } from "react";
 
 export default function TurnKeySolutions() {
-  
+
+  const [openCardIndex, setOpenCardIndex] = useState(null);
+
+  const handleCardToggle = (index) => {
+    if (openCardIndex === index) {
+      setOpenCardIndex(null); // Close the card if it's already open
+    } else {
+      setOpenCardIndex(index); // Open the clicked card
+    }
+  };
+
   return (
     <div
       id="turnkey"
@@ -149,13 +160,16 @@ export default function TurnKeySolutions() {
         </div>
       </div>
 
-      <div className="md:pl-16 flex flex-wrap md:gap-4 md:gap-y-8 md:p-0 p-8 md:place-items-start place-items-center md:justify-start justify-center">
+      <div className="md:pl-16 flex flex-wrap md:gap-4 gap-10 md:gap-y-8 md:p-0 p-8 md:place-items-start place-items-center md:justify-start justify-center">
         {TurnKeySolutionsData.map((device, index) => (
           <MedicalDevicesCard
             key={index} // Ensure each card has a unique key
             heading={device.heading}
             content={device.content}
             img={device.img}
+            index={index}
+            isOpen={openCardIndex === index}
+            onToggle={handleCardToggle}
           />
         ))}
       </div>

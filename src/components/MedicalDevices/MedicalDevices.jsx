@@ -1,9 +1,22 @@
+import { useState } from "react";
 import top from "../../assets/medicalDevices/top.svg";
 import Footer from "../Common/Footer/Footer";
 import MedicalDevicesCard from "./MedicalDevicesCard";
 import medicalDevicesData from "./MedicalDevicesData.json";
 
 export default function MedicalDevices() {
+
+  const [openCardIndex, setOpenCardIndex] = useState(null);
+
+  const handleCardToggle = (index) => {
+    if (openCardIndex === index) {
+      setOpenCardIndex(null); // Close the card if it's already open
+    } else {
+      setOpenCardIndex(index); // Open the clicked card
+    }
+  };
+
+
   return (
     <div>
       <div className="md:mt-[80px] mt-[40px] md:pt-0 pt-[30px] md:px-[8%] px-[3%]">
@@ -63,7 +76,10 @@ export default function MedicalDevices() {
           <div className="flex flex-wrap md:gap-4 md:gap-y-8 gap-6 md:pl-10 md:p-0 p-8 md:place-items-start place-items-center md:justify-start justify-center">
             {medicalDevicesData.map((device, index) => (
               <MedicalDevicesCard
-                key={index} // Ensure each card has a unique key
+                key={index}
+                index={index}
+                isOpen={openCardIndex === index}
+                onToggle={handleCardToggle}
                 heading={device.heading}
                 content={device.content}
                 img={device.img}
