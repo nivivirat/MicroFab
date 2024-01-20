@@ -203,9 +203,9 @@ devices which are apt for using, with comfort. </h6>
               <a
               href="/medicalDevices"
                 type="submit"
-                className="bg-[#8AA6AA] mt-4 md:mt-4 text-white px-4 py-2 -ml-6  w-[200px] rounded-md"
+                className="bg-[#8AA6AA] mt-4 md:mt-4 text-white px-4 py-2 hdfc w-[200px] rounded-md"
               >
-              KNOW MORE <Icon icon="ph:arrow-right-light" />
+              KNOW MORE
               </a>
             </div>
           </div>
