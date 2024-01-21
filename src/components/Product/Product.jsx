@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import './prod.css';
 
 // import pro from "./images/Frame 21516.svg";
@@ -20,17 +20,6 @@ import TurnKeySolutionsData from "./prodt.json";
 
 import { Icon } from "@iconify/react";
 export default function Product() {
-  
-  const [openCardIndex, setOpenCardIndex] = useState(null);
-
-  const handleCardToggle = (index) => {
-    if (openCardIndex === index) {
-      setOpenCardIndex(null); // Close the card if it's already open
-    } else {
-      setOpenCardIndex(index); // Open the clicked card
-    }
-  };
-
   return (
     <>
       {/* <NavbarDefault /> */}
@@ -69,9 +58,6 @@ export default function Product() {
             content={device.content}
             img={device.img}
             link={device.link}
-            index={index}
-            isOpen={openCardIndex === index}
-            onToggle={handleCardToggle}
           />
         ))}
       </div>
@@ -92,7 +78,7 @@ export default function Product() {
           />
 
           <img
-            className="w-96 df zz rounded-t-lg dffp cgh object-cover -ml-24  md:h-auto md:w-96 md:rounded-none md:rounded-l-lg md:order-1"
+            className="w-96 df max-[1180px]:mt-12 max-[1180px]:mr-12 max-[1180px]:ml-2 max-[1180px]:w-64 rounded-t-lg dffp cgh object-cover ml-8  md:h-auto md:w-96 md:rounded-none md:rounded-l-lg md:order-1"
             src={s2}
             alt=""
           />
@@ -101,8 +87,8 @@ export default function Product() {
             src={s1}
             alt=""
           />
-          <div className="flex flex-col justify-start order-1 md:order-1 xd gh ">
-            <h3 className="mb-2 pb-4 text-5xl leading-tight text-black xd bh zs -mr-3">
+          <div className="flex flex-col justify-start order-1 md:order-1 11 pok">
+            <h3 className="mb-2 pb-4 text-5xl leading-tight text-black xd bh zs -mr-3 pok">
               
               After sale
               service </h3>
@@ -125,7 +111,7 @@ export default function Product() {
           alt=""
         />
         <img
-          className="w-auto rounded-t-lg object-cover ghj md:h-auto md:w-full md:rounded-none md:rounded-l-lg md:order-3"
+          className="w-auto rounded-t-lg object-cover max-[1180px]:w-80 max-[1180px]:ml-8 max-[1180px]:mb-4 md:h-auto md:w-full md:rounded-none md:rounded-l-lg md:order-3"
           src={a2}
           alt=""
         />
@@ -166,12 +152,12 @@ Note: The images used for this section is for reference purpose only</h6>
 
           <div className="flex flex-col  rounded-lg gghh text-black md:max-w-5xl md:flex-row  animated-box animate__animated animate__fadeInLeft animate__delay-5s">
             <img
-              className="h-96 w-full  rounded-t-lg  object-cover  md:h-auto md:w-96 md:rounded-none md:rounded-l-lg order-2 bbv animated-box animate__animated animate__fadeInLeft animate__delay-5s md:order-"
+              className="h-96 w-full  rounded-t-lg gghh cvf  object-cover  md:h-auto md:w-96 md:rounded-none md:rounded-l-lg order-2  animated-box animate__animated animate__fadeInLeft animate__delay-5s md:order-"
               src={pro4}
               alt=""
             />
             <img
-              className="h-64 w-full cvf rounded-t-lg  object-cover  md:h-auto md:w-120 md:rounded-none md:rounded-l-lg order-2 bv animated-box animate__animated animate__fadeInLeft animate__delay-5s md:order-1"
+              className="h-64 w-full  rounded-t-lg  object-cover ml-12 md:h-auto md:w-120 md:rounded-none md:rounded-l-lg order-2 bv animated-box animate__animated animate__fadeInLeft animate__delay-5s md:order-1"
               src={pro3}
               alt=""
             />
@@ -191,12 +177,12 @@ Note: The images used for this section is for reference purpose only</h6>
     alt=""
   /> */}
             <img
-              className="w-full ml-96 gghh fdr -mt-10 mb-8  rounded-t-lg object-cover  md:h-196 md:w-64 md:rounded-none md:rounded-l-lg md:order-3"
+              className="w-full ml-96 gghh  fdr -mt-10 mb-8  rounded-t-lg object-cover  md:h-196 md:w-64 md:rounded-none md:rounded-l-lg md:order-3"
               src={b2}
               alt=""
             />
             <img
-              className="w-56 m-8 h-64 ml-24 fdr -mt-8 rounded-t-lg object-cover  md:w-56 md:rounded-none md:rounded-l-lg md:order-3"
+              className="w-56 m-8 h-64 ml-24 max-[1180px]:h-32 max-[1180px]:mt-12 max-[1180px]:-ml-2  -mt-8 rounded-t-lg object-cover  md:w-56 md:rounded-none md:rounded-l-lg md:order-3"
               src={b3}
               alt=""
             />
