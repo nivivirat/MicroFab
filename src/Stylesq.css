@@ -4,6 +4,42 @@
 
  
 }
+/* Add this style to your global stylesheet or component-specific stylesheet */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: gray transparent;
+}
+.slider-container {
+  overflow: hidden;
+  width: 90%;
+  margin-left:6%;
+  position: relative;
+  max-width: 100%;
+}
+
+.slider-content {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+  width: 20%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: gray;
+}
 
 .dd{
   text-align:left;
@@ -77,12 +113,27 @@ margin-bottom:-50%;
 }
 
 }
+
 @media only screen and (max-width: 491px) {
   .cfr{
   position:relative;
   top:15px;
  /* left:-70px; */
  margin-left:-34%;
+  }
+  .gggg{
+    margin-top:40%;
+  }
+  .uo{
+    font-size:13px;
+   
+  
+  }
+  .aws{
+    margin-right:4%;
+    
+    margin-left:4%;
+    width:65%;
   }
   .sd{
     fonts-size:8px;
@@ -547,11 +598,11 @@ text-align: left;
 
 }
 
-@media (max-width: 750px) {
+@media (min-width:492px) and (max-width: 750px) {
 
   .uo{
-  margin-right:5%;
-  width:50%;
+  /* margin-right:5%;
+  width:50%; */
   margin-left:2%;
   }
   .aws{
@@ -574,7 +625,8 @@ text-align: left;
 
   .uo{
   margin-right:15%;
-  width:30%;
+  width:50%;
+  margin-left:4%;
   }
   /* .uo{
     margin-right:-5%;
