@@ -12,7 +12,9 @@
       animation: App-logo-spin infinite 20s linear;
     }
   }
-  
+  .huo{
+    margin-left:-5%;
+  }
   .App-header {
     background-color: #282c34;
     min-height: 100vh;
@@ -183,6 +185,9 @@
       margin-right:-20%;
      
     
+    }
+    .pok{
+      margin-top:19%;
     }
     .cgh{
       position:relative;
