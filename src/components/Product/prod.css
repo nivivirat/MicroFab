@@ -96,8 +96,13 @@
   .ser{
     position:relative;
     bottom:10%;
-   
   }
+ .llg{
+position:relative;
+left:-50vh;
+ }
+   
+  
   .xv{
     margin-right:30%;
     width:95%;
