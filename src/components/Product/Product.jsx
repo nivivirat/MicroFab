@@ -182,12 +182,12 @@ Note: The images used for this section is for reference purpose only</h6>
               alt=""
             />
             <img
-              className="w-56 m-8 h-64 ml-24 max-[1180px]:h-32 max-[1180px]:mt-12 max-[1180px]:-ml-2  -mt-8 rounded-t-lg object-cover  md:w-56 md:rounded-none md:rounded-l-lg md:order-3"
+              className="w-56 m-8 h-64 ml-24 fdr -mt-8 rounded-t-lg object-cover  md:w-56 md:rounded-none md:rounded-l-lg md:order-3"
               src={b3}
               alt=""
             />
              <img
-              className="w-96 m-8 h-48 ser fdr mt-64 -mb-4  -ml-64  rounded-t-lg object-cover  md:w-96 md:rounded-none md:rounded-l-lg md:order-3"
+              className="w-96 m-8 h-48 ser fdr max-[1180px]:ml-0 mt-64 -mb-4  -ml-64  rounded-t-lg object-cover  md:w-96 md:rounded-none md:rounded-l-lg md:order-3"
               src={b4}
               alt=""
             />
