@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import top1 from "../../assets/medicalDevices/top.svg";
 import { Icon } from "@iconify/react";
-import 
+
 
 import col1 from '../../assets/medicalDevices/col1.svg';
 import col2 from '../../assets/medicalDevices/col2.svg';
