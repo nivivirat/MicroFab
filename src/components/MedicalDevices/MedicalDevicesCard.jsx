@@ -5,10 +5,7 @@ import col1 from '../../assets/medicalDevices/col1.svg';
 import col2 from '../../assets/medicalDevices/col2.svg';
 import col3 from '../../assets/medicalDevices/col3.svg';
 import col4 from '../../assets/medicalDevices/col4.svg';
-import m2 from '../Product/image 45.svg';
-import m1 from '../Product/image 46.svg';
-import m4 from '../Product/WhatsApp Image 2023-11-16 at 14.07 1.svg';
-import m3 from '../Product/39e46a4d-ddaa-484b-9c21-531fcab6aaec-PhotoRoom 1.svg';
+
 import col1 from '../../assets/medicalDevices/col1.svg';
 import col2 from '../../assets/medicalDevices/col2.svg';
 import col3 from '../../assets/medicalDevices/col3.svg';
@@ -68,10 +65,6 @@ export default function MedicalDevicesCard({ index, isOpen, onToggle, img, headi
     col22,
     col32,
     col42,
-     m1,
-    m2,
-    m3,
-    m4,
     Catheters_IV,
     Cannula_Scalp,
     Vein_Sets,
