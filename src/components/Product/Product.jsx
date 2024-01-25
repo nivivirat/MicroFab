@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import './prod.css';
 
 // import pro from "./images/Frame 21516.svg";
@@ -20,6 +20,17 @@ import TurnKeySolutionsData from "./prodt.json";
 
 import { Icon } from "@iconify/react";
 export default function Product() {
+
+  const [openCardIndex, setOpenCardIndex] = useState(null);
+
+  const handleCardToggle = (index) => {
+    if (openCardIndex === index) {
+      setOpenCardIndex(null); // Close the card if it's already open
+    } else {
+      setOpenCardIndex(index); // Open the clicked card
+    }
+  };
+  
   return (
     <>
       {/* <NavbarDefault /> */}
@@ -32,32 +43,34 @@ export default function Product() {
         <br></br><br></br><br></br>
 
         <h3 className="mb-4  pb-4 text-4xl sm:text-2xl hgf leading-tight text-black  animated-box animate__animated animate__fadeInLeft">
-       <strong> Our solutions ensure ease of maintaining machines</strong></h3>
+          <strong> Our solutions ensure ease of maintaining machines</strong></h3>
 
         <h6 className="text-2xs leading-tight text-black serv2 animated-box animate__animated animate__fadeInRight" color="clack">
-        MicroFab’s dedicated team is always present round-the-clock to assist you in every way. Our dedicated team also conducts specialized training sessions, empowering your personnel with the skills for optimal utilization of machines.
+          MicroFab’s dedicated team is always present round-the-clock to assist you in every way. Our dedicated team also conducts specialized training sessions, empowering your personnel with the skills for optimal utilization of machines.
         </h6>
         <br></br><br>
         </br>
       </div>
-     <div className="oo">
-      <h3 className="mb-4 pb-4 hhk text-4xl ml-4 leading-tight text-black vbb  animated-box animate__animated animate__fadeInLeft animate__delay-1s">
-        Machines</h3>
-      <h6 className="text-xl  leading-tight text-black ml-4 vbb  animated-box animate__animated animate__fadeInRight animate__delay-1s" color="clack">
-        While we dabble in providing exceptional customer service, you can connect with us for project management and contract manufacturing.
-      </h6>
+      <div className="oo">
+        <h3 className="mb-4 pb-4 hhk text-4xl ml-4 leading-tight text-black vbb  animated-box animate__animated animate__fadeInLeft animate__delay-1s">
+          Machines</h3>
+        <h6 className="text-xl  leading-tight text-black ml-4 vbb  animated-box animate__animated animate__fadeInRight animate__delay-1s" color="clack">
+          While we dabble in providing exceptional customer service, you can connect with us for project management and contract manufacturing.
+        </h6>
       </div>
       <br></br>
 
       <div className="md:pl-16 flex flex-wrap gap-7 md:gap-4 md:gap-y-8 md:p-0 p-8 md:place-items-start place-items-center md:justify-start justify-center  animated-box animate__animated animate__fadeIn animate__delay-1s">
         {TurnKeySolutionsData.map((device, index) => (
-          
+
           <MedicalDevicesCard
             key={index} // Ensure each card has a unique key
+            index={index}
             heading={device.heading}
             content={device.content}
             img={device.img}
-            link={device.link}
+            isOpen={openCardIndex === index}
+            onToggle={handleCardToggle}
           />
         ))}
       </div>
@@ -89,11 +102,11 @@ export default function Product() {
           />
           <div className="flex flex-col justify-start order-1 md:order-1 11 pok">
             <h3 className="mb-2 pb-4 text-5xl leading-tight text-black xd bh zs -mr-3 pok">
-              
+
               After sale
               service </h3>
             <h6 className="text-xl leading-tight text-black serv7 -mr-64 bh fui" color="clack">
-            At MicroFab, our dedication to excellence extends beyond the point of purchase. We take pride in providing comprehensive after-sales services to ensure that your experience with our products and services remain seamless, reliable, and maximally productive.
+              At MicroFab, our dedication to excellence extends beyond the point of purchase. We take pride in providing comprehensive after-sales services to ensure that your experience with our products and services remain seamless, reliable, and maximally productive.
             </h6></div>
         </div>
       </div>
@@ -139,11 +152,11 @@ export default function Product() {
 
             <div className="flex flex-col justify-start order-1 md:order-1 gghh  animated-box animate__animated animate__fadeInRight animate__delay-4s">
               <h3 className="mb-2 pb-4 md:text-5xl text-5xl hhjj  leading-tight text-black">
-              Refurbished Machines</h3>
+                Refurbished Machines</h3>
               <h6 className="text-xl " color="clack">
-              Our refurbished machines offer the perfect blend of performance and value. By breathing new life into pre-owned equipment, we make cutting-edge technology accessible at a fraction of the cost, all while promoting eco-friendly practices. 
-  </h6><br></br><h6 className="text-xl ">
-Note: The images used for this section is for reference purpose only</h6>
+                Our refurbished machines offer the perfect blend of performance and value. By breathing new life into pre-owned equipment, we make cutting-edge technology accessible at a fraction of the cost, all while promoting eco-friendly practices.
+              </h6><br></br><h6 className="text-xl ">
+                Note: The images used for this section is for reference purpose only</h6>
 
             </div>
           </div>
@@ -186,7 +199,7 @@ Note: The images used for this section is for reference purpose only</h6>
               src={b3}
               alt=""
             />
-             <img
+            <img
               className="w-96 m-8 h-48 ser fdr max-[1180px]:ml-0 mt-64 -mb-4  -ml-64  rounded-t-lg object-cover  md:w-96 md:rounded-none md:rounded-l-lg md:order-3"
               src={b4}
               alt=""
@@ -196,16 +209,16 @@ Note: The images used for this section is for reference purpose only</h6>
                 Medical devices</h3>
               <h6 className="text-xl leading-tight text-black hdfc fgi -mr-64" color="clack">
 
-              In the healthcare sector, MicroFab understands the criticality of
-choosing quality medical equipment. While serving patients, we
-ensure that the device is safe to use. We also develop designs for
-devices which are apt for using, with comfort. </h6>
+                In the healthcare sector, MicroFab understands the criticality of
+                choosing quality medical equipment. While serving patients, we
+                ensure that the device is safe to use. We also develop designs for
+                devices which are apt for using, with comfort. </h6>
               <a
-              href="/medicalDevices"
+                href="/medicalDevices"
                 type="submit"
                 className="bg-[#8AA6AA] mt-4 md:mt-4 text-white px-4 py-2 hdfc w-[200px] rounded-md"
               >
-              KNOW MORE
+                KNOW MORE
               </a>
             </div>
           </div>
