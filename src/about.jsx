@@ -600,14 +600,14 @@ different origins</center>
 </div>
 <div className="flex flex-col mt-24 -mb-12 p-6">
                 <p className=" text-5xl leading-tight text-[#8AA6AA] ll pp font-['ClashDisplay']">
-                Project  by Region
+                Project  by Solutions
                 </p>
                 {/* <h5 className="mb-2 text-4xl leading-tight ll">
                   Lorem ipsum
                 </h5> */}
               
                 <p className=" text-4xl text-black leading-tight pp ll font-['ClashDisplay']"><strong>
-                Here’s a glimpse of our projects by various regions across countries</strong> </p>
+               Here are the various packaging solutions we provide</strong> </p>
                 
               
               </div>

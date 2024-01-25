@@ -17,6 +17,14 @@
   .Application-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+  .uuu{
+    /* margin-left:70%; */
+    /* margin-right:15%;
+    margin-top:10%;width:110%; */
+    position:relative;
+    left:-55%;
+    top:40%;
+  }
 }
 .h{
   position:relative;
@@ -60,7 +68,16 @@ margin: 0 -30%;
   
   display: none;
 }
+@media screen and (max-width: 768px) {
 
+.uuu{
+  position:relative;
+  top:1%;
+  left:1%;
+  width:90%;
+}
+
+}
 /* Apply styles only when the screen width is 900 pixels or more */
 @media screen and (min-width: 1100px) {
   .xcc {
@@ -250,14 +267,8 @@ button:hover{
 .opl{
   margin-left:1%;
 }
-.uuu{
-  /* margin-left:70%; */
-  /* margin-right:15%;
-  margin-top:10%;width:110%; */
-  position:relative;
-  left:-55%;
-  top:40%;
-}
+
+
 @media only screen and (min-width: 421px) {
 .vbnn{
   margin-top:1%;
@@ -265,13 +276,7 @@ button:hover{
   width:200%;
 }
 }
-@media only screen and (min-width: 421px) {
-  .vbnn{
-    margin-top:1%;
-    display:inline;
-    width:100%;
-  }
-  }
+
 .mm{
 width:90%;  position:relative;
 }
@@ -325,18 +330,14 @@ width:90%;  position:relative;
   .poi{
     margin-top:0%;
   }
-  .uuu{
-    position:absolute;
-    display:none;
-
-  }
+  
   .kll{
     margin:0 -15%;
   }
   .qaz{
     margin-bottom:-4%;
   }
-  
+
 }
 @media only screen and (max-width: 600px) {
 /* .sd {

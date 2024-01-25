@@ -1,11 +1,20 @@
 import React, { useState } from "react";
 import top1 from "../../assets/medicalDevices/top.svg";
 import { Icon } from "@iconify/react";
+
+
 import col1 from '../../assets/medicalDevices/col1.svg';
 import col2 from '../../assets/medicalDevices/col2.svg';
 import col3 from '../../assets/medicalDevices/col3.svg';
 import col4 from '../../assets/medicalDevices/col4.svg';
-
+import col11 from '../../components/Services/images/image 84.svg';
+import col21 from '../../components/Services/images/1 (1).svg';
+import col31 from '../../components/Services/images/1 (2).svg';
+import col41 from '../../components/Services/images/1 (3).svg';
+import col12 from '../../components/Services/images/10.svg';
+import col22 from '../../components/Services/images/11.svg';
+import col32 from '../../components/Services/images/12.svg';
+import col42 from '../../components/Services/images/13.svg';
 import Catheters_IV from '../../assets/medicalDevices/Catheters_IV.svg';
 import Cannula_Scalp from '../../assets/medicalDevices/Cannula_Scalp.svg';
 import Vein_Sets from '../../assets/medicalDevices/Vein_Sets.svg';
@@ -41,10 +50,18 @@ export default function MedicalDevicesCard({ index, isOpen, onToggle, img, headi
     MixingTanks,
     PressureVessels,
     SystemforFormulationLine,
-    col1,
+      col1,
     col2,
     col3,
     col4,
+    col11,
+    col21,
+    col31,
+    col41,
+    col12,
+    col22,
+    col32,
+    col42,
     Catheters_IV,
     Cannula_Scalp,
     Vein_Sets,
