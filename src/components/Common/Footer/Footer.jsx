@@ -169,11 +169,13 @@ export default function Footer() {
           </div>
 
           {/* Justify-between section */}
-          <div className="md:flex md:flex-row flex flex-col md:justify-between">
-            <p>Copyright 2023 @MicroFab Engineering Private Limited </p>
-            <p>Designed & Developed with ❤️ by Digilligence</p>
+          <a href="https://digilligence.in/" target="_blank" rel="noopener noreferrer" className="md:flex md:flex-row flex flex-col md:justify-between">
+            {/* <p>Copyright 2023 @MicroFab Engineering Private Limited</p>
+            <p>Designed & Developed with ❤️ by Digilligence</p> */}
+
+            Designed & Developed by Digilligence for MicroFab Engineering ©All rights Reserved. 2024
             {/* <p>Lorem ipsum</p> */}
-          </div>
+          </a>
         </div>
       </div>
     </div>
