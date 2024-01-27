@@ -51,7 +51,7 @@ export default function Product() {
         <br></br><br>
         </br>
       </div>
-      <div className="oo">
+      {/* <div className="oo">
         <h3 className="mb-4 pb-4 hhk text-4xl ml-4 leading-tight text-black vbb  animated-box animate__animated animate__fadeInLeft animate__delay-1s">
           Machines</h3>
         <h6 className="text-xl  leading-tight text-black ml-4 vbb  animated-box animate__animated animate__fadeInRight animate__delay-1s" color="clack">
@@ -73,7 +73,7 @@ export default function Product() {
             onToggle={handleCardToggle}
           />
         ))}
-      </div>
+      </div> */}
       <br></br>
 
 

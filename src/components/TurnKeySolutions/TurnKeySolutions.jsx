@@ -112,7 +112,7 @@ export default function TurnKeySolutions() {
             <div className="bg-primary h-1 w-5"></div>
             <div>
               <p className="font-semibold text-4xl tracking-widest">
-                sanitization System
+                Sanitization System
               </p>
             </div>
             <div className="w-[90%]">

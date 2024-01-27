@@ -82,10 +82,10 @@ function AppContent() {
         <Route path="/food" element={<Appli3 />} />
         <Route path="/chemical" element={<Appli4 />} />
         <Route path="/dairy" element={<Appli5 />} />
-        <Route path="/BFS" element={<BFS />} />
+        {/* <Route path="/BFS" element={<BFS />} />
         <Route path="/FFS" element={<FFS />} />
         <Route path="/ISBM" element={<ISBM />} />
-        <Route path="/IV" element={<IV />} />
+        <Route path="/IV" element={<IV />} /> */}
         <Route path="/articlesList" element={<ArticlesList />} />
         <Route path="/article1" element={<Article1 />} />
         <Route path="/article3" element={<Article3 />} />
