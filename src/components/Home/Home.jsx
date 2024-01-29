@@ -30,8 +30,8 @@ export default function Home() {
 
           <div className="w-full md:h-[40%] h-[200px] md:m-0 m-4 mt-0 flex flex-row gap-3">
             <div className="w-[50%]">
-              <BFS content="Product solutions" />
-              <BFS content="Turnkey Solutions" />
+              <BFS content="BFS" />
+              <BFS content="FFS" />
             </div>
             <div className="w-[50%] h-[100%] md:mr-0 mr-3">
               <Moulds />
