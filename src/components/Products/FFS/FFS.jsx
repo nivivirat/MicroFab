@@ -23,7 +23,9 @@ export default function FFS() {
         ></img>
         <div className="absolute text-primary top-[2%] left-[2%] flex flex-col w-full">
           <div className="md:h-auto h-[150px] flex md:flex-row flex-row justify-between">
-            <p className="xl:pr-[10%] 2xl:text-[50px] xl:text-[45px] lg:text-[40px] md:text-[36px] w-[50%] sm:text-[28px] text-[20px] font-[600] lg:leading-[70px] md:leading-[50px]">
+            {/* <p className="xl:pr-[10%] 2xl:text-[50px] xl:text-[45px] lg:text-[40px] md:text-[36px] w-[50%] sm:text-[28px] text-[20px] font-[600] lg:leading-[70px] md:leading-[50px]"> */}
+            <p className="xl:tracking-wider xl:pr-[10%] 2xl:text-[50px] xl:text-[40px] lg:text-[37px] md:text-[36px] w-[50%] sm:text-[28px] text-[20px] font-[600] lg:leading-[70px] md:leading-[50px]">
+
               We help you package sterile products through automated technology
             </p>
             <p className="xl:w-[40%] md:p-0 sm:px-10 px-5 font-medium md:pr-[15%] md:pl-[3%] 2xl:text-[24px] xl:text-[20px] lg:text-[18px] w-[60%] lg:w-[50%] md:w-[60%]">
@@ -43,10 +45,7 @@ export default function FFS() {
             Introducing the FFS Technology
           </p>
           <p className="font-normal md:text-[18px] xl:text-[18px] text-[16px] text-center">
-            With MicroFab's FFS (Form-Fill-Seal) technology, ensure a seamless
-            packaging process, with minimal risk of contamination and
-            preservation of product integrity. FFS reduces manual labor and
-            streamlines production, thereby improving the overall efficiency.
+            With Microtools FFS (Form-Fill-Seal) technology, ensure a seamless packaging process, with minimal risk of contamination and preservation of product integrity. FFS reduces manual labor and streamlines production, thereby improving the overall efficiency.
           </p>
 
           {/* bottom left */}

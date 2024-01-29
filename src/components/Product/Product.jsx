@@ -30,7 +30,7 @@ export default function Product() {
       setOpenCardIndex(index); // Open the clicked card
     }
   };
-  
+
   return (
     <>
       {/* <NavbarDefault /> */}
@@ -51,12 +51,11 @@ export default function Product() {
         <br></br><br>
         </br>
       </div>
-      {/* <div className="oo">
+      <div className="oo">
         <h3 className="mb-4 pb-4 hhk text-4xl ml-4 leading-tight text-black vbb  animated-box animate__animated animate__fadeInLeft animate__delay-1s">
-          Machines</h3>
-        <h6 className="text-xl  leading-tight text-black ml-4 vbb  animated-box animate__animated animate__fadeInRight animate__delay-1s" color="clack">
-          While we dabble in providing exceptional customer service, you can connect with us for project management and contract manufacturing.
-        </h6>
+          Innovative Machines</h3>
+        <h6 className="text-xl text-center leading-tight text-black ml-4 vbb  animated-box animate__animated animate__fadeInRight animate__delay-1s" color="clack">
+          Here’s a glimpse of our state-of-the-art machines which are ideal for primary and perfect packaging.</h6>
       </div>
       <br></br>
 
@@ -64,16 +63,17 @@ export default function Product() {
         {TurnKeySolutionsData.map((device, index) => (
 
           <MedicalDevicesCard
-            key={index} // Ensure each card has a unique key
+            key={index}
             index={index}
+            isOpen={openCardIndex === index}
+            onToggle={handleCardToggle}
             heading={device.heading}
             content={device.content}
             img={device.img}
-            isOpen={openCardIndex === index}
-            onToggle={handleCardToggle}
+            link={device.link}
           />
         ))}
-      </div> */}
+      </div>
       <br></br>
 
 

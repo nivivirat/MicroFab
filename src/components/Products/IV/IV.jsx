@@ -23,7 +23,9 @@ export default function IV() {
         ></img>
         <div className="absolute text-primary top-[2%] left-[2%] flex flex-col w-full">
           <div className="md:h-auto h-[150px] flex md:flex-row flex-row justify-between">
-            <p className="xl:tracking-wider xl:pr-[10%] 2xl:text-[50px] xl:text-[45px] lg:text-[40px] md:text-[36px] w-[50%] sm:text-[28px] text-[20px] font-[600] lg:leading-[70px] md:leading-[50px]">
+            {/* <p className="xl:tracking-wider xl:pr-[10%] 2xl:text-[50px] xl:text-[45px] lg:text-[40px] md:text-[36px] w-[50%] sm:text-[28px] text-[20px] font-[600] lg:leading-[70px] md:leading-[50px]"> */}
+            <p className="xl:tracking-wider xl:pr-[10%] 2xl:text-[50px] xl:text-[40px] lg:text-[37px] md:text-[36px] w-[50%] sm:text-[28px] text-[20px] font-[600] lg:leading-[70px] md:leading-[50px]">
+
               Empowering care with innovation and precise infusions
             </p>
             <p className="xl:w-[40%] md:p-0 sm:px-10 px-5 font-medium md:pr-[15%] md:pl-[3%] 2xl:text-[24px] xl:text-[20px] lg:text-[18px] text-[14px] w-[60%] lg:w-[50%] md:w-[60%]">
@@ -39,14 +41,11 @@ export default function IV() {
         {/* bg */}
         <div className="px-[10%] text-white relative flex flex-col gap-10 justify-center place-items-center bg-primary w-[80%] h-[80%] rounded-[15px] my-[2%]">
           {/* content */}
-          <p className="font-normal md:text-3xl xl:text-5xl text-2xl">
+          <p className="font-normal md:text-3xl xl:text-5xl text-2xl text-center">
             Introducing the IV Bag Manufacturing Technology
           </p>
           <p className="font-normal md:text-[18px] xl:text-[18px] text-[16px] text-center">
-            The IV bag manufacturing technology assures enhanced efficiency and
-            the safety of fluid infusions. While stringent quality control
-            measures are implemented along with testing for durability, the
-            machinery produces hygienic IV bags.
+            The IV bag manufacturing technology assures enhanced efficiency and the safety of fluid infusions. While stringent quality control measures are implemented along with testing for durability, the machinery produces hygienic IV bags.
           </p>
 
           {/* bottom left */}
@@ -70,7 +69,7 @@ export default function IV() {
       </div>
 
       {/* process of packaging */}
-      
+
       {/* advantages */}
       <div className="w-full bg-primary md:p-12 p-5 flex flex-col md:gap-8 gap-10">
         {/* heading */}

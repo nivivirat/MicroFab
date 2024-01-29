@@ -23,8 +23,10 @@ export default function ISBM() {
         ></img>
         <div className="absolute text-primary top-[2%] left-[2%] flex flex-col w-full">
           <div className="md:h-auto h-[150px] flex md:flex-row flex-row justify-between">
-            <p className="xl:tracking-wider 2xl:text-[50px] xl:text-[45px] lg:text-[40px] md:text-[36px] w-[50%] sm:text-[28px] text-[20px] font-[600] lg:leading-[80px] md:leading-[50px]">
-              We offer a versatile solution for making hollow bottles 
+            <p className="xl:tracking-wider xl:pr-[10%] 2xl:text-[50px] xl:text-[40px] lg:text-[37px] md:text-[36px] w-[50%] sm:text-[28px] text-[20px] font-[600] lg:leading-[70px] md:leading-[50px]">
+
+              {/* <p className="xl:tracking-wider 2xl:text-[50px] xl:text-[45px] lg:text-[40px] md:text-[36px] w-[50%] sm:text-[28px] text-[20px] font-[600] lg:leading-[80px] md:leading-[50px]"> */}
+              We offer a versatile solution for making hollow bottles
               cost-effectively
             </p>
             <p className="xl:w-[40%] md:p-0 sm:px-10 px-5 font-medium md:pr-[15%] md:pl-[3%] 2xl:text-[24px] xl:text-[20px] lg:text-[18px] w-[60%] lg:w-[50%] md:w-[60%]">
@@ -40,15 +42,11 @@ export default function ISBM() {
         {/* bg */}
         <div className="px-[10%] text-white relative flex flex-col gap-10 justify-center place-items-center bg-primary w-[80%] h-[80%] rounded-[15px] my-[2%]">
           {/* content */}
-          <p className="font-normal md:text-3xl xl:text-5xl text-2xl">
+          <p className="font-normal md:text-3xl xl:text-5xl text-2xl text-center">
             Introducing the ISBM/PFFS Technology
           </p>
           <p className="font-normal md:text-[18px] xl:text-[18px] text-[16px] text-center">
-            MicroFab's ISBM technology represents a cutting-edge solution for
-            the efficient production of hollow plastic containers. By
-            integrating the capabilities of injection molding and blow molding,
-            this advanced process enables the creation of intricate designs with
-            enhanced precision.
+            Microtools ISBM technology represents a cutting-edge solution for the efficient production of hollow plastic containers. By integrating the capabilities of injection molding and blow molding, this advanced process enables the creation of intricate designs with enhanced precision.
           </p>
 
           {/* bottom left */}
@@ -82,13 +80,13 @@ export default function ISBM() {
         <div className="relative">
           <img src={process} className="" alt="img"></img>
           <p className="absolute bottom-0 text-[18px] font-semibold left-[30%]">
-          Injection
+            Injection
           </p>
           <p className="absolute bottom-0 text-[18px] font-semibold left-[48%]">
-          Stretching & Blowing
+            Stretching & Blowing
           </p>
           <p className="absolute bottom-0 text-[18px] font-semibold left-[78%]">
-          Filling & Capping
+            Filling & Capping
           </p>
         </div>
 

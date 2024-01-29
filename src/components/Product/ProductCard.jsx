@@ -66,41 +66,43 @@ export default function MedicalDevicesCard({ img, heading, content, link }) {
     Safety_IV_Cathers,
     IV_Administration_Sets_with_Flow_Regulators,
     Peripheral_IV_Cannula_Dressing_Kits
-};
+  };
+
+  console.log(link);
 
 
   return (
-    
+
     <div
       className={`md:m-2 lg:w-[22%] md:w-[250px] w-full flex flex-col shadow-lg rounded-[20px]`}
     //   onClick={toggleContent}
-    
+
     >
-       <a href={link} >
-      <div className="md:h-[190px] w-full">
-        <img
-          src={images[img]}
-          alt="Medical Device"
-          className="w-full h-full rounded-[16px] object-cover"
-        />
-      </div>
-      <div className="md:h-[60px] flex flex-row justify-between place-items-center p-5">
-        <h3 className="text-[16px] font-semibold">{heading}</h3>
-        {showContent ? (
-          <div className="bg-primary rounded-full text-white p-2">
-            {/* <Icon icon="majesticons:arrow-down" /> */}
-            <Icon icon="ic:baseline-minus" />
-          </div>
-        ) : (
-          <div className="bg-primary rounded-full text-white p-2">
-            {/* <Icon icon="majesticons:arrow-right" className="" /> */}
-            <Icon icon="ic:baseline-plus" />
-          </div>
+      <a href={link}>
+        <div className="md:h-[190px] w-full">
+          <img
+            src={images[img]}
+            alt="Medical Device"
+            className="w-full h-full rounded-[16px] object-cover"
+          />
+        </div>
+        <div className="md:h-[60px] flex flex-row justify-between place-items-center p-5">
+          <h3 className="text-[16px] font-semibold">{heading}</h3>
+          {showContent ? (
+            <div className="bg-primary rounded-full text-white p-2">
+              {/* <Icon icon="majesticons:arrow-down" /> */}
+              <Icon icon="ic:baseline-minus" />
+            </div>
+          ) : (
+            <div className="bg-primary rounded-full text-white p-2">
+              {/* <Icon icon="majesticons:arrow-right" className="" /> */}
+              <Icon icon="ic:baseline-plus" />
+            </div>
+          )}
+        </div>
+        {showContent && (
+          <p className="text-[14px] font-thin opacity-70 px-5 pb-5">{content}</p>
         )}
-      </div>
-      {showContent && (
-        <p className="text-[14px] font-thin opacity-70 px-5 pb-5">{content}</p>
-      )}
       </a>
     </div>
   );

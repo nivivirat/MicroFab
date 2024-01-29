@@ -23,7 +23,7 @@ export default function BFS() {
         ></img>
         <div className="absolute text-primary top-[2%] left-[2%] flex flex-col w-full">
           <div className="md:h-auto h-[150px] flex md:flex-row flex-row justify-between">
-            <p className="xl:tracking-wider xl:pr-[10%] 2xl:text-[50px] xl:text-[45px] lg:text-[40px] md:text-[36px] w-[50%] sm:text-[28px] text-[20px] font-[600] lg:leading-[70px] md:leading-[50px]">
+            <p className="xl:tracking-wider xl:pr-[10%] 2xl:text-[50px] xl:text-[40px] lg:text-[37px] md:text-[36px] w-[50%] sm:text-[28px] text-[20px] font-[600] lg:leading-[70px] md:leading-[50px]">
               We revolutionize the way of filling liquids or semi-solids
             </p>
             <p className="xl:w-[40%] md:p-0 sm:px-10 px-5 font-medium md:pr-[15%] md:pl-[3%] 2xl:text-[24px] xl:text-[20px] lg:text-[18px] w-[60%] lg:w-[50%] md:w-[60%]">
@@ -43,10 +43,7 @@ export default function BFS() {
             Introducing the BFS Technology
           </p>
           <p className="font-normal md:text-[18px] xl:text-[18px] text-[16px] text-center">
-            MicroFab’s BFS (Blow-Fill-Seal) technology always sets new standards
-            in precision manufacturing and packaging solutions. With the
-            commitment to excellence, experience unparalleled efficiency and
-            reliability in product development.
+            Microtools BFS (Blow-Fill-Seal) technology always sets new standards in precision manufacturing and packaging solutions. With the commitment to excellence, experience unparalleled efficiency and reliability in product development.
           </p>
 
           {/* bottom left */}
@@ -145,7 +142,7 @@ export default function BFS() {
               key={index}
               className="md:w-[25%] w-[100%]"
             >
-              <ApplicationCard heading={item.heading} content={item.content} img={item.img}/>
+              <ApplicationCard heading={item.heading} content={item.content} img={item.img} />
             </div>
           ))}
         </div>

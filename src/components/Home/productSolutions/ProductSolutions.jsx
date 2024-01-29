@@ -2,6 +2,7 @@ import one from "../../../assets/Home_productSoltuions/one.svg";
 import two from "../../../assets/Home_productSoltuions/two.svg";
 import three from "../../../assets/Home_productSoltuions/three.svg";
 import { tint } from "@cloudinary/url-gen/actions/adjust";
+import { Icon } from "@iconify/react";
 
 export default function ProductSolutions() {
   return (
@@ -17,13 +18,19 @@ export default function ProductSolutions() {
           </div>
           <div className="w-[90%]">
             <p className="font-thin text-[#67675F] text-[18px] md:leading-7 md:tracking-wide">
-            MicroFab is a leading provider of comprehensive solutions, offering advanced machinery for BFS and FFS manufacturing, and medical devices. Our commitment extends to exceptional after-sales service, seamless machine upgrades, and expertise in refurbishing equipment. MicroFab focuses on continuous improvement, ensuring clients stay at the forefront of technological advancements.
+              Microtools is a leading provider of comprehensive solutions, offering advanced machinery for BFS and FFS manufacturing, and medical devices. Our commitment extends to exceptional after-sales service, seamless machine upgrades, and expertise in refurbishing equipment. Microtools focuses on continuous improvement, ensuring clients stay at the forefront of technological advancements.
             </p>
           </div>
+          <a href="/product">
+            <div className="text-white flex flex-row justify-center place-items-center gap-2 bg-primary xl:w-[35%] lg:w-[30%] md:w-[200px] w-[40%] rounded-[10px] h-[45px]">
+            <p className="">Know More</p>
+            <Icon icon="majesticons:arrow-right" className="" />
+          </div>
+          </a>
         </div>
 
         {/* img */}
-        <div className="md:w-[30%] rounded-[20px] h-[400px] flex gap-5 flex-row">
+        <div className="md:w-[30%] rounded-[20px] h-[500px] flex gap-5 flex-row">
           <div className="rounded-lg w-[50%]">
             <img
               src={one}

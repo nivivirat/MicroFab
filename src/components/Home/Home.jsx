@@ -52,7 +52,7 @@ export default function Home() {
 
       <ProductSolutions />
 
-      {/* <OptionsButtons /> */}
+      <OptionsButtons />
 
       <div className="flex justify-center w-screen">
         <WaterTS />

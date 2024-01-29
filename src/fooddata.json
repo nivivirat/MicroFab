@@ -1,0 +1,22 @@
+[
+    {
+        "img" : "pharma",
+        "heading" : "Pharma",
+        "content" : "MicroFab's machines leverage packaging technologies that extend the shelf life of perishable items and enhance overall food quality."
+    },
+    {
+        "img" : "cosmetics",
+        "heading" : "Cosmetics",
+        "content" : "The swift production speed of our machines enable food manufacturers to respond promptly to market demands, maintaining the freshness and quality of their products."
+    },
+    {
+        "img" : "food",
+        "heading" : "Food",
+        "content" : "Our machines run on technologies that can produce lightweight and visually appealing packaging solutions. The transparency of containers creates an enticing visual experience for consumers."
+    },
+    {
+        "img" : "chemicals",
+        "heading" : "Chemicals",
+        "content" : "The machines of MicroFab redefine the standards of the food industry, offering a perfect blend of precision, versatility, and sustainability."
+    }
+]

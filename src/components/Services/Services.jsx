@@ -55,7 +55,7 @@ export default function Service() {
               <h3 className="mb-2 pb-4 text-4xl kl leading-tight text-black">
                 Project Construction & Management </h3>
               <h6 className="text-2xs leading-tight text-black kl" color="clack">
-                While you communicate your project requirements with us, our agile and proactive team always directs and supervises project implementation right from the nascent and initial stage. Ultimately, our strength lies in customer satisfaction and meeting the business needs for a viable project with regards to the budget and the functionality.
+                As you get in touch with us to outline more about your project, our dynamic and forward-thinking team takes charge of overseeing and guiding the project execution from its earliest stages. Ultimately, our focus remains steadfast on ensuring customer delight and fulfilling business requirements by delivering a feasible project within the allocated budget, while prioritizing its functionality.
               </h6>
 
             </div>
@@ -92,8 +92,8 @@ export default function Service() {
               <h3 className="mb-2 pb-4 text-4xl kl leading-tight text-black">
                 Contract manufacturing</h3>
               <h6 className="text-2xs leading-tight text-black xz hj" color="clack">
-                When the entire gamut of production operational activities becomes cumbersome, you can approach us to deal with everything from scratch. With MicroFab, your company is sure to save money, produce more products, and gain access to more resources. As we cater to different businesses, our mavericks are adept at maintaining machinery and the tools. We also shoulder every responsibility while designing products. </h6>
-
+                When the entire gamut of production operational activities becomes cumbersome, you can approach us at that instance. With MicroFab, you can work closely with professionals that possess specialized skills and the expertise. With advanced technologies, you can further expect higher quality products and an improvement in the production process.
+              </h6>
             </div>
           </div>
           <br></br>
@@ -126,8 +126,8 @@ export default function Service() {
               <h3 className="mb-2 pb-4 text-4xl leading-tight kl zx text-black">
                 Advisory Services </h3>
               <h6 className="text-2xs leading-tight text-black kl zx" color="clack">
-                When perplexity is still reigning when you gear up to be future ready, we advise on the technology that you need to incorporate in your organization. Eventually, the machinery must lower down the operational costs and be capable of producing an astounding number of finished products. After all, we provide packaging solutions for you to attain recognition in the competitive world. </h6>
-
+                When perplexity is still reigning while the project implementation is yet to commence, we offer advisory services with experience. While we help you with technology transfer and ensure that everything you need is incorporated on premise, we conduct market research and a diligent study about sites across different locations. For project success, we also help you sift through the technical complexities so that you can focus on what really matters.
+              </h6>
             </div>
           </div>
         </div></div>
@@ -135,14 +135,14 @@ export default function Service() {
       <div className="md:pl-6 flex flex-wrap gap-7 md:gap-5 md:gap-y-4 md:p-0 p-8 md:place-items-start place-items-center md:justify-start justify-center  animate__animated animate__fadeIn animate__delay-5s">
         {ServicesJson1.map((device, index) => (
           <MedicalDevicesCard
-          key={index} // Ensure each card has a unique key
-          index={index}
-          heading={device.heading}
-          content={device.content}
-          img={device.img}
-          isOpen={openCardIndex === index}
-          onToggle={handleCardToggle}
-        />
+            key={index} // Ensure each card has a unique key
+            index={index}
+            heading={device.heading}
+            content={device.content}
+            img={device.img}
+            isOpen={openCardIndex === index}
+            onToggle={handleCardToggle}
+          />
         ))}
       </div>
 

@@ -1,0 +1,22 @@
+[
+    {
+        "img" : "pharma",
+        "heading" : "Pharma",
+        "content" : "MicroFab's machines empower chemical manufacturers with the flexibility to customize container sizes, colors, and features. This helps to stay ahead of the ever evolving preferences of consumers."
+    },
+    {
+        "img" : "cosmetics",
+        "heading" : "Cosmetics",
+        "content" : "Our machines offer unparalleled precision in producing intricate container designs. This is especially beneficial where specific packaging shapes are vital for product functionality and branding."
+    },
+    {
+        "img" : "food",
+        "heading" : "Food",
+        "content" : "With minimal material waste and optimized packaging sizes, MicroFab's machines are aligned with sustainable practices. This reduces environmental impact and is in sync with the focus on eco-friendly solutions."
+    },
+    {
+        "img" : "chemicals",
+        "heading" : "Chemicals",
+        "content" : "The machines by MicroFab seamlessly integrate into chemical production lines, offering a harmonious workflow and an automated process. This enhances product integrity and prevents contamination."
+    }
+]

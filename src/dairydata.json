@@ -1,0 +1,22 @@
+[
+    {
+        "img" : "pharma",
+        "heading" : "Pharma",
+        "content" : "MicroFab machines run with hygienic packaging processes, which is important for dairy products and when contamination can affect quality. The advanced packaging technologies also help in extending the shelf life."
+    },
+    {
+        "img" : "cosmetics",
+        "heading" : "Cosmetics",
+        "content" : "Our range of machines offer versatility for the creation of various packaging formats, thereby meeting the different preferences of consumers for most commonly used dairy and other products."
+    },
+    {
+        "img" : "food",
+        "heading" : "Food",
+        "content" : "The machines of MicroFab are known for the ability to create single-dose packaging. These also support portion control, offering convenience to consumers."
+    },
+    {
+        "img" : "chemicals",
+        "heading" : "Chemicals",
+        "content" : "As the different processes are integrated into one continuous operation, MicroFab machines reduce the production time and enhance the overall efficiency in dairy packaging."
+    }
+]

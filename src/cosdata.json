@@ -1,0 +1,22 @@
+[
+    {
+        "img" : "pharma",
+        "heading" : "Pharma",
+        "content" : "MicroFab machines ensure aseptic and sterile packaging, thereby preserving delicate cosmetic formulations. This extends the shelf life and purity of the products."
+    },
+    {
+        "img" : "cosmetics",
+        "heading" : "Cosmetics",
+        "content" : "Beyond aesthetics, the streamlined processes of our machines minimize material waste, offering eco-friendly solutions."
+    },
+    {
+        "img" : "food",
+        "heading" : "Food",
+        "content" : "The efficiency of MicroFab machines ensures rapid adaptation to evolving market trends, giving brands a competitive edge."
+    },
+    {
+        "img" : "chemicals",
+        "heading" : "Chemicals",
+        "content" : "The automated nature of MicroFab machines enhances product integrity by reducing human intervention."
+    }
+]
