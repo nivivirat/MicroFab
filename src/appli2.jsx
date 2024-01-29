@@ -198,7 +198,7 @@ export default function Appli1() {
 
                 }}
               >
-                Under the list of skin care products, the BFS technology helps you produce containers with the intended amount of cream. As the container’s material is quite soft, these are easily squeezable with a slight pressure.</p>  </div>
+                MicroFab’s packaging technologies ensure optimal product preservation and user convenience. These facilitate the prevention of contamination and extend the shelf life of creams.</p>  </div>
           </div>
         </div>
       </div>
@@ -252,7 +252,8 @@ export default function Appli1() {
 
                 }}
               >
-                Under the list of skin care products, the BFS technology helps you produce containers with the intended amount of cream. As the container’s material is quite soft, these are easily squeezable with a slight pressure. </p>
+                MicroFab’s machines based on packaging technologies enable the packaging of serums. The packaging solutions allow for the creation of customized and sleek packaging that preserves the efficacy of serums. They can be packed for one time use.
+              </p>
             </div>
           </div>
         </div>
@@ -315,7 +316,7 @@ export default function Appli1() {
                   fontWeight: 500,
 
                 }}
-              >Under the list of skin care products, the BFS technology helps you produce containers with the intended amount of cream. As the container’s material is quite soft, these are easily squeezable with a slight pressure. </p>
+              >In the realm of cosmetics, MicroFab’s packaging technologies stand as key enablers for achieving optimal quality and user satisfaction in gel products. </p>
             </div>
           </div>
         </div>
@@ -370,7 +371,7 @@ export default function Appli1() {
 
                 }}
               >
-                Under the list of skin care products, the BFS technology helps you produce containers with the intended amount of cream. As the container’s material is quite soft, these are easily squeezable with a slight pressure. </p> </div>
+                The FFS, BFS and ISBM/PFFS technologies of MicroFab offer invaluable solutions for the meticulous packaging of tonics. The packaging processes ensure that tonics remain uncontaminated, preserving their therapeutic properties. </p> </div>
           </div>
         </div>
       </div>

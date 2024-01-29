@@ -249,7 +249,7 @@ export default function Appli4() {
                   fontWeight: 500,
 
                 }}
-              >By embracing our technologies, MicroFab delivers packaging solutions that go beyond containment, addressing the unique requirements of liquid adhesives. These technologies showcase our commitment to precision, ensuring that liquid adhesives are delivered to end-users with uncompromised quality.</p>
+              > By embracing our technologies, MicroFab delivers packaging solutions that go beyond containment, addressing the unique requirements of liquid adhesives. These technologies showcase our commitment to precision, ensuring that liquid adhesives are delivered to end-users with uncompromised quality.</p>
             </div>
           </div>
         </div>

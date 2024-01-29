@@ -237,7 +237,7 @@ export default function Appli4() {
 
                 }}
               >
-                Milk
+                Liquid Cheese
               </h1>
               <hr></hr><br></br>
               <p className="j"
@@ -249,7 +249,7 @@ export default function Appli4() {
                   fontWeight: 500,
 
                 }}
-              >The packaging solutions of MicroFab help to shield milk from external factors like bacteria, air and light. This aspect extends the shelf life of milk, and helps in the preservation of nutrients.</p>
+              >Packaging technologies play a crucial role in packing liquid cheese, offering benefits such as the preservation of freshness, extended shelf life, protection from contamination, and a variety of packaging formats.</p>
             </div>
           </div>
         </div>
@@ -299,7 +299,7 @@ export default function Appli4() {
 
                 }}
               >
-                Milk
+                Buttermilk
               </h1>
               <hr></hr><br></br>
               <p className="j"
@@ -311,7 +311,7 @@ export default function Appli4() {
                   fontWeight: 500,
 
                 }}
-              >The packaging solutions of MicroFab help to shield milk from external factors like bacteria, air and light. This aspect extends the shelf life of milk, and helps in the preservation of nutrients.</p>
+              >Through our packaging technologies, buttermilk can be protected from contaminants. The aseptic packaging also helps in maintaining the integrity of the buttermilk.</p>
             </div>
           </div>
         </div>
@@ -353,7 +353,7 @@ export default function Appli4() {
 
                 }}
               >
-                Milk
+                Yogurt
               </h1>
               <hr></hr><br></br>
               <p className="j"
@@ -365,7 +365,7 @@ export default function Appli4() {
                   fontWeight: 500,
 
                 }}
-              >The packaging solutions of MicroFab help to shield milk from external factors like bacteria, air and light. This aspect extends the shelf life of milk, and helps in the preservation of nutrients.</p>
+              >MicroFab’s packaging solutions help to preserve the freshness and prevent spoilage. Technologies supporting recyclability help to mitigate the environmental impact.</p>
             </div>
           </div>
         </div>

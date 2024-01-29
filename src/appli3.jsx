@@ -197,7 +197,7 @@ export default function Appli3() {
                   fontWeight: 500,
 
                 }}
-              >The BFS technology enables you to create a unique packaging for dairy products like milk,  and yogurt. With the use of the same mold, you can produce different containers.</p>
+              >MicroFab’s technologies ensure aseptic and sterile packaging, minimizing the risk of contamination. This is crucial for preserving the freshness and quality of flavored milk, preventing spoilage, and extending shelf life.</p>
             </div>
           </div>
         </div>
@@ -251,7 +251,7 @@ export default function Appli3() {
                   fontWeight: 500,
 
                 }}
-              >The BFS technology enables you to create a unique packaging for dairy products like milk,  and yogurt. With the use of the same mold, you can produce different containers. </p>
+              >The packaging technologies of MicroFab enhance the safety, efficiency, and visual appeal of packaging for sauces, contributing to the overall quality and marketability of these products. These can be packed for one time use as well.</p>
             </div>
           </div>
         </div>
@@ -313,7 +313,7 @@ export default function Appli3() {
                   fontWeight: 500,
 
                 }}
-              >The BFS technology enables you to create a unique packaging for dairy products like milk,  and yogurt. With the use of the same mold, you can produce different containers. </p>
+              >During the entire packaging process, the technologies ensure to preserve the freshness and quality of fruit juices. The seamless and automated nature of machines also reduces the risk of contamination. </p>
             </div>
           </div>
         </div>
@@ -368,7 +368,7 @@ export default function Appli3() {
                   fontWeight: 500,
 
                 }}
-              >The BFS technology enables you to create a unique packaging for dairy products like milk,  and yogurt. With the use of the same mold, you can produce different containers.</p>
+              >Our machines based on packaging technologies offer benefits in terms of aseptic packaging, production efficiency, versatility, and sustainability. These  advantages contribute to the overall quality and market success of flavored syrups.</p>
             </div>
           </div>
         </div>

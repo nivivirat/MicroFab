@@ -369,7 +369,7 @@ export default function Appli1() {
 
                 }}
               >
-                With our packaging technologies, the inhalants don’t lose their strength. The stability is also preserved because the innovations protect the contents from environmental factors such as moisture, and light. </p> </div>
+                MicroFab’s packaging technologies ensure the efficacy and safety of infusions, offering a delicate balance between protecting the contents and facilitating a seamless administration process. </p> </div>
           </div>
         </div>
       </div>
