@@ -26,9 +26,9 @@ import ApplicationCard from "./components/Products/BFS/Application/ApplicationCa
 import aq from "./tyfg.png";
 import dropu from "./vbnm.svg";
 import pic11 from "./new2.svg";
-import pic12 from "./new2.svg";
-import pic13 from "./new2.svg";
-import pic14 from "./new2.svg";
+import pic12 from "./assets/Application/Rectangle 6225.svg";
+import pic13 from "./assets/Application/Rectangle 6225 (1).svg";
+import pic14 from "./assets/Application/Rectangle 6225 (2).svg";
 import { Icon } from "@iconify/react";
 
 export default function Appli4() {
