@@ -61,7 +61,7 @@ export default function Appli4() {
               onClick={() => showImage("image1")}
               className="block text-black hover:bg-gray-300 ml-4 "
             >
-              Pheromones
+              Additives
             </button>
             <button
               onClick={() => showImage("image2")}
