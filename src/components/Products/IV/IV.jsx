@@ -75,7 +75,7 @@ export default function IV() {
         {/* heading */}
         <div>
           <p className="md:text-4xl text-2xl font-semibold text-white tracking-wider">
-            Advantages of the BFS Technology
+            Advantages of IV bag manufacturing
           </p>
         </div>
 
@@ -102,7 +102,7 @@ export default function IV() {
       <div className="md:px-14 mt-[5%] px-4 gap-10 flex flex-col">
         <div>
           <p className="font-semibold text-3xl">
-            Applications of the Blow-Fill-Seal Technology
+            Applications of IV Bags
           </p>
         </div>
         <div className="w-full flex flex-row md:gap-10 gap-[200px] md:overflow-auto overflow-scroll pb-10">
