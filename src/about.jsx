@@ -136,8 +136,8 @@ function AboutUs() {
               <br></br>
               <br></br>
               <center>
-                <div className="flex flex-col rounded-lg bg-white md:max-w-6xl md:flex-row mm ggg sm:ml-24">
-                  <div className="flex flex-col p-6 sm:ml-24">
+                <div className="flex flex-col rounded-lg bg-white md:max-w-6xl md:flex-row mm ggg md:ml-24">
+                  <div className="flex flex-col p-6 md:ml-12 md:mr-4">
                     <h6 className="mb-2 text-xs  sm:mr-8 ml-4 leading-tight text-[#8AA6AA] font-['ClashDisplay']">
                       WHO WE ARE
                     </h6>
@@ -150,7 +150,7 @@ function AboutUs() {
                   </div>
                   {/* <br></br><br></br><br></br> */}
                   <img
-                    className="h-96 lg:w-80 rounded-t-lg ju aws jklk md:h-96  md:w-64  md:mr-24 sm:mr-24 md:rounded-none md:rounded-l-lg"
+                    className="h-96 lg:w-80 md:-ml-24 rounded-t-lg ju aws jklk md:w-56 md:h-96  md:w-64  md:mr-24 sm:mr-24 md:rounded-none md:rounded-l-lg"
                     src={yu}
                     alt=""
                   />
