@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { BrowserRouter as Router, useLocation } from "react-router-dom";
+import { HashRouter as Router, useLocation } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/Common/Header/Header";
 import Technology from "./Technology";
@@ -71,7 +71,6 @@ function AppContent() {
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<Home />} /> 
         <Route path="/technology" element={<Technology />} />
-
         <Route path="/turnKeySolutions" element={<TurnKeySolutions />} /> 
         <Route path="/applications" element={<Applications />} />
         <Route path="/service" element={<Service />} />
