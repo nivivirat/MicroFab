@@ -7,8 +7,10 @@ export default function Moulds() {
   const items = [
     { img: "icon-park-twotone:bottle-two", line1: '200+', line2: 'Moulds' },
     { img: "icon-park-twotone:bottle-two", line1: '300+', line2: 'Moulds' },
-    { img: "icon-park-twotone:bottle-two", line1: '400+', line2: 'Moulds' }
-  ]; // Add more items as needed
+    { img: "icon-park-twotone:bottle-two", line1: '400+', line2: 'Moulds' },
+    { img: "icon-park-twotone:bottle-two", line1: '500+', line2: 'Moulds' },
+    { img: "icon-park-twotone:bottle-two", line1: '600+', line2: 'Moulds' }
+  ]; // Add more items as neede
   const allItems = [...items, ...items]; // Duplicate items for infinite scroll
 
   useEffect(() => {
