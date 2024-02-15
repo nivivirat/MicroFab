@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../../../App.css";
+import { db } from "../../../../firebase";
+import { ref, push, set } from "firebase/database";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -19,19 +21,30 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you can handle the form submission, e.g., sending data to a server
-    console.log(formData);
-    // Reset the form after submission
-    setFormData({
-      firstName: "",
-      lastName: "",
-      phoneNumber: "",
-      email: "",
-      serviceInterestedIn: "",
-      message: "",
-    });
+
+    // Push the form data to Firebase with a unique UID
+    try {
+      const dataRef = ref(db, 'ContactUs');
+      const newFormDataRef = push(dataRef);
+
+      await set(newFormDataRef, formData);
+
+      // Reset the form after submission
+      setFormData({
+        firstName: "",
+        lastName: "",
+        phoneNumber: "",
+        email: "",
+        serviceInterestedIn: "",
+        message: "",
+      });
+
+      console.log('Form data submitted successfully!');
+    } catch (error) {
+      console.error('Error submitting form data:', error.message);
+    }
   };
 
   const serviceOptions = [
@@ -39,7 +52,6 @@ const ContactForm = () => {
     "Water Treatment System",
     "Other Service",
   ];
-
   return (
     <div className="md:ml-0 md:w-[80%] max-w-lg mx-auto w-full flex justify-center place-items-center custom-font md:m-10 m-10 md:rounded-[33px] md:border md:border-[#8AA6AA] md:my-4 md:mt-10 md:mb-10 p-4 rounded-md">
       <form
@@ -55,9 +67,10 @@ const ContactForm = () => {
               name="firstName"
               placeholder="First Name"
               value={formData.firstName}
+              required
               onChange={handleInputChange}
               className="w-full border border-black rounded-md px-2 py-1"
-            /> 
+            />
           </div>
           <div className="md:w-1/2 w-full">
             <label htmlFor="lastName">Last Name</label>
@@ -79,6 +92,10 @@ const ContactForm = () => {
               type="tel"
               id="phoneNumber"
               name="phoneNumber"
+              pattern="[0-9]{10}"
+              required
+              title="Please enter a 10-digit phone number"
+              maxLength={10}
               placeholder="Phone Number"
               value={formData.phoneNumber}
               onChange={handleInputChange}
