@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../../App.css";
 import { db } from "../../../../firebase";
-import { ref, push, set } from "firebase/database";
+import { ref, push, set, serverTimestamp } from "firebase/database";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -29,7 +29,13 @@ const ContactForm = () => {
       const dataRef = ref(db, 'ContactUs');
       const newFormDataRef = push(dataRef);
 
-      await set(newFormDataRef, formData);
+      // Include timestamp in IST
+      const timestamp = serverTimestamp();
+
+      await set(newFormDataRef, {
+        ...formData,
+        timestamp,
+      });
 
       // Reset the form after submission
       setFormData({
@@ -174,7 +180,6 @@ const ContactForm = () => {
           Submit
         </button>
       </form>
-
     </div>
   );
 };
