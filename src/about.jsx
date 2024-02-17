@@ -31,6 +31,8 @@ import a from "./Rectangle 57.svg";
 import b from "./layer.svg";
 import cc from "./WhatsApp Image 2023-11-23 at 13.48.59.jpeg";
 import "./App.css";
+import { get, ref, update } from 'firebase/database';
+import { db } from "../firebase";
 
 function FaqItem({ question, answers, initiallyOpen }) {
   const [isOpen, setIsOpen] = useState(initiallyOpen);
@@ -121,6 +123,96 @@ function AboutUs() {
     } else {
       setOpenCardIndex(index); // Open the clicked card
     }
+  };
+
+  const categories = [
+    {
+      id: 1,
+      title: "Pharmaceuticals",
+      image: y1,
+      link: "/pharmaceutical",
+    },
+    {
+      id: 2,
+      title: "Chemicals",
+      image: y2,
+      link: "/chemical",
+    },
+    {
+      id: 3,
+      title: "Cosmetics",
+      image: y3,
+      link: "/cosmic",
+    },
+    {
+      id: 4,
+      title: "Food",
+      image: y4,
+      link: "/food",
+    },
+    {
+      id: 5,
+      title: "Dairy",
+      image: y5,
+      link: "/dairy",
+    },
+  ];
+
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [editMode, setEditMode] = useState(false);
+
+  useEffect(() => {
+    const keyFiguresRef = ref(db, 'AboutUs/keyFigures');
+
+    get(keyFiguresRef)
+      .then((snapshot) => {
+        const keyFiguresData = snapshot.val();
+        setData(keyFiguresData);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+        setError(error.message);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
+
+  const handleEditClick = () => {
+    setEditMode(!editMode);
+  };
+
+  const handleSaveClick = async () => {
+    // Update the data in the database
+    const keyFiguresRef = ref(db, 'AboutUs/keyFigures');
+    await update(keyFiguresRef, data);
+
+    setEditMode(false);
+  };
+
+  const handleInputChange = (event, blockIndex, boxIndex, field) => {
+    const newData = { ...data };
+    const inputValue = event.target.value;
+
+    // Check if the input value is a number
+    // const isNumber = !isNaN(inputValue);
+
+    newData.blocks[blockIndex].boxes[boxIndex][field] = inputValue;
+    setData(newData);
+  };
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error: {error}</p>;
+  }
+
+  const handleCancelClick = () => {
+    setEditMode(false);
   };
 
   return (
@@ -220,23 +312,6 @@ function AboutUs() {
             </div>
           </div>
 
-          <br></br>
-          <br></br>
-          {/* <h5 className="mb-2 text-2xl leading-tight">
-                  Our latest blog posts
-                </h5><br></br> */}
-          {/* <div className="w-screen as h-160px okl">
-            <Slider options={{ align: "center" }}>
-              {tasto.map((tasto, i) => (
-                // 3. flex-[0_0_50%] set the width of each card to 50% of the viewport
-                // for mobile devices we use 90% width
-                <div key={i} className="flex-[0_0_190%] md:flex-[0_0_23%] vvv">
-                  <TestimonialCard {...tasto} />
-                </div>
-              ))}
-            </Slider>
-          </div> */}
-
           <center>
             <br></br>
             <br></br>
@@ -255,14 +330,6 @@ function AboutUs() {
                 </center>
 
               </div>
-
-              <br></br>
-              <br></br>
-              <br></br>
-              {/* <br></br><br></br><br></br><br></br><br></br> */}
-
-              {/* <img src={a} alt="no" /> */}
-              {/* Your browser does not support the video tag. */}
             </div>
 
           </center>
@@ -271,222 +338,120 @@ function AboutUs() {
 
 
 
-          <div className="lg:flex z-2 flex-rows md:flex flex-cols sm:flex flex-cols sm:-mt-6 animate__animated animate__fadeInRight animate__delay-1s">
-            {/* {[1, 2, 3, 4, 5, 6].map((index) => ( */}
-            <div className="jkhj p-2 m-auto ">
-              <div
-                className={`md:m-2 lg:w-[22%] md:w-[250px] w-full flex flex-col shadow-lg rounded-[20px]`}
-
-              >
-                <div className="flex flex-col items-center md:h-[190px] w-full">
-                  <Link to="/pharmaceutical">
-                    <img
-                      className="w-48 h-40 p-2 object-cover"
-                      src={y1}
-                      alt=""
-                    />
-                    <p className="text-center text-[#8AA6AA]">Pharmaceuticals</p>
-                  </Link>
-                </div>
-              </div><br></br>
-              <div
-                className={`md:m-2 lg:w-[22%] sm:mt-24 md:w-[250px] w-full flex flex-col shadow-lg rounded-[20px]`}
-
-              >
-                <div className="flex flex-col items-center md:h-[190px] w-full">
-                  <Link to="/chemical">
-                    <img
-                      className="w-48 h-40 p-2 object-cover"
-                      src={y2}
-                      alt=""
-                    />
-                    <p className="text-center text-[#8AA6AA]">Chemicals</p>
-                  </Link>
-                </div>
-              </div>
-              <br></br>
-              <div
-                className={`md:m-2 lg:w-[22%] md:w-[250px] w-full flex flex-col shadow-lg rounded-[20px]`}
-
-              >
-                <div className="flex flex-col items-center md:h-[190px] w-full">
-                  <Link to="/cosmic">
-                    <img
-                      className="w-48 h-40 p-2  rounded-[16px] object-cover"
-                      src={y3}
-                      alt=""
-                    />
-                    <p className="text-center text-[#8AA6AA]">Cosmeticss</p>
-                  </Link>
-                </div>
-              </div>
-              <br></br>
-              <div
-                className={`md:m-2 lg:w-[22%] md:w-[250px] w-full flex flex-col shadow-lg rounded-[20px]`}
-
-              >
-                <div className="flex flex-col items-center md:h-[190px] w-full">
-                  <Link to="/food">
-                    <img
-                      className="w-48 h-40 p-2  rounded-[16px] object-cover"
-                      src={y4}
-                      alt=""
-                    />
-                    <p className="text-center text-[#8AA6AA]">Food</p>
-                  </Link>
-                </div>
-              </div><br></br>
-              <div
-                className={`md:m-2 lg:w-[22%] md:w-[250px]  w-full flex flex-col shadow-lg rounded-[20px]`}
-
-              >
-                <div className="flex flex-col items-center md:h-[190px] w-full">
-                  <Link to="/dairy">
-                    <img
-                      className="w-48 h-40 p-2  rounded-[16px] object-cover"
-                      src={y5}
-                      alt=""
-                    />
-                    <p className="text-center text-[#8AA6AA]">Dairy</p>
-                  </Link></div>
-
-              </div>
-            </div>
-
-
-
-
-
-
-
-
-            {/* ))} */}
-          </div>
-
-
-
-          {/* <div className="flex flex-row p-2 m-auto"> */}
-
-
-          {/* </div> */}
-          <br></br>
-
-
-
-          {/* <div className="bg-[url('./piku.png')] jk">
-            <br></br>
-            <center>
-              <div className="flex flex-col rounded-lg md:max-w-3xl md:flex-row mm">
-                <center>
-                  <div className="flex flex-col p-6 klkl">
-                    <p>
-                      <h5 className="mb-2 text-5xl leading-tight text-white  font-['ClashDisplay']">
-                        <strong>Why choose MicroFab?</strong>
-                      </h5>
-                    </p>
-                    <p className="mb-4 text-xl leading-tight text-white font-['ClashDisplay']">
-                    With MicroFab, you can gain the most from cutting-edge innovations to evolve the company in the industry it’s destined for. While we are driven by passion to transform the packaging industry, we infuse every endeavour with a blend of technical brilliance and utmost dedication.
-                    </p>
+          <div className="lg:flex z-2 flex-rows md:flex flex-cols overflow-x-scroll sm:flex flex-cols sm:-mt-6 animate__animated animate__fadeInRight animate__delay-1s">
+            {categories.map((category) => (
+              <div key={category.id} className="jkhj p-2 m-auto">
+                <div
+                  className={`md:w-[230px] w-full flex flex-col shadow-lg rounded-[20px]`}
+                >
+                  <div className="flex flex-col items-center md:h-[190px] w-full">
+                    <Link to={category.link}>
+                      <img
+                        className="w-48 h-40 p-2 object-cover"
+                        src={category.image}
+                        alt=""
+                      />
+                      <p className="text-center text-[#8AA6AA]">{category.title}</p>
+                    </Link>
                   </div>
-                </center>
+                </div>
+                <br></br>
               </div>
-              <Button
-                variant="filled"
-                size="lg"
-                color="white"
-                className="ab h-12 w-32 rounded-full bg-white text-black font-['ClashDisplay']"
-              >
-                <strong> Read More </strong>
-              </Button>
-            </center>
-            <br></br>
-          </div> */}
-          <div className="flex frty mt-12 animate__animated animate__fadeInLeft animate__delay-2s">
+            ))}
+          </div>;
+
+
+          <div className="flex mt-12 h-[600px] animate__animated animate__fadeInLeft animate__delay-2s">
             {/* Block 1 - SVG Image */}
-            <div className="bg-white dfdf frty mb-24">
-              {/* Replace 'your-svg-file.svg' with the actual path to your SVG file */}
-              <img src={uio} alt="SVG Image" className="w-full xdf" />
-            </div>
+            {/* <div className="bg-white md:mb-32 mb-44">
+              <img src={uio} alt="SVG Image" className="w-[650px] md:block hidden h-full object-cover" />
+            </div> */}
 
             {/* Block 2 - Text and Boxes */}
-            <div className="flex-1 h-96 mb-24 sm:ml-0 bg-white p-8  frty ">
-              <h3 className="lg:ml-0 sm:ml-0 text-5xl sm:text-4xl  text-[#8AA6AA] mb-6  mr-32 m-auto leading-tight   kk pp font-['ClashDisplay']"><strong>Key Figures</strong>
-              </h3>
-              <h3 className="mb-4 text-2xs text-[#8AA6AA] mr-32 m-auto leading-tight  pp  font-['ClashDisplay']">Phenomenal business success has now made us proud about
-                how we have flourished in the competitive era.
-              </h3>
 
-              <div className="flex flex-wrap -mx-4 ml-auto mt-22 frty">
-                {/* Box 1 */}
-                <div>
-                  <div className="w-36 h-36 md:w-30 p-6 md:m-1 mb-2 bg-[#8AA6AA] text-white awsw ll kk pp es">
-                    <h3 className="text-2xl text-white  leading-tight -mb-6 ll font-['ClashDisplay']"><center><strong>
-                      <CountUp end={400} duration={7} separator="," /> {/* Counting animation for 200 */}</strong>+</center>
+            {/* code here */}
 
-                    </h3>
-                    <br></br>
-                    <h3 className=" text-xs text-white w-full m-0 leading-tight  ll font-['ClashDisplay']"><center>Cutting-Edge Machinery</center>
-                    </h3>
-                  </div>
-
-                  {/* Box 2 */}
-                  <div className="w-36 h-36 md:w-30 p-6 m-auto lg:m-1 mb-2 bg-[#8AA6AA] text-white awsw kk pp ll ">
-                    <h3 className="text-2xl text-white  leading-tight -mb-6 ll font-['ClashDisplay']"><center><strong>
-                      <CountUp end={90} duration={7} separator="," /> {/* Counting animation for 200 */}</strong>%</center>
-
-                    </h3><br></br>
-                    <h3 className=" text-xs text-white w-full m-0 leading-tight  ll font-['ClashDisplay']"><center>Customer Retention & repeat orders</center>
-                    </h3>
-                  </div>
-                </div>
-                <div>
-                  {/* Box 3 */}
-                  <div className="w-36 h-36 md:w-30 p-6 md:m-1 mb-2 bg-[#8AA6AA] fg text-white awsw kk pp ll es">
-                    <h3 className="text-2xl text-white  leading-tight -mb-6 ll font-['ClashDisplay']"><center><strong>
-                      <CountUp end={200} duration={7} separator="," /> {/* Counting animation for 200 */}</strong>+</center>
-
-                    </h3><br></br>
-                    <h3 className=" text-xs text-white w-full m-0 leading-tight  ll font-['ClashDisplay']"><center>Premium molds from
-                      different origins</center>
-                    </h3>
-                  </div>
-
-                  {/* Box 4 */}
-                  <div className="w-36 h-36 md:w-30 p-6 lg:m-1 mb-2 bg-[#8AA6AA] fg text-white awsw kk pp ll ">
-                    <h3 className="text-2xl text-white  leading-tight -mb-6 ll font-['ClashDisplay']"><center><strong>
-                      <CountUp end={100000} duration={7} separator="," /> {/* Counting animation for 200 */}</strong>+ sq.ft</center>
-
-                    </h3><br></br>
-                    <h3 className=" text-xs text-white w-full m-0 leading-tight  ll font-['ClashDisplay']"><center>Workplaces across strategic locatio30</center>
-                    </h3>
-                  </div>
+            <div className="flex mt-12 h-[600px] animate__animated animate__fadeInLeft animate__delay-2s">
+              <div className="bg-white md:mb-32 mb-44">
+                <img src={uio} className="w-[650px] md:block hidden h-full object-cover" />
+              </div>
+              <div className="flex-1 mb-24 sm:ml-0 bg-white p-8 flex flex-col place-items-center justify-center">
+                <h3 className="lg:ml-0 sm:ml-0 text-5xl sm:text-4xl text-[#8AA6AA] pb-5 leading-tight font-['ClashDisplay']">
+                  <strong>
+                    {editMode ? (
+                      <input type="text" value={data.title} onChange={(e) => handleInputChange(e, 0, 0, 'title')} className="border border-white bg-primary text-white px-2 py-1 rounded-md" />
+                    ) : (
+                      data.title
+                    )}
+                  </strong>
+                </h3>
+                <h3 className="mb-4 text-2xs text-[#8AA6AA] mx-10 leading-tight font-['ClashDisplay']">
+                  {editMode ? (
+                    <textarea value={data.description} onChange={(e) => handleInputChange(e, 0, 0, 'description')} className="border border-white bg-primary w-[500px] text-white px-2 py-1 rounded-md" />
+                  ) : (
+                    data.description
+                  )}
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-22">
+                  {data.blocks[1].boxes.map((box, boxIndex) => (
+                    <div key={boxIndex}>
+                      <div className={`w-36 h-36 md:w-30 p-6 md:m-1 mb-2 bg-[#8AA6AA] text-white `}>
+                        <h3 className="text-2xl text-white leading-tight -mb-6 font-['ClashDisplay']">
+                          <center>
+                            <strong>
+                              {editMode ? (
+                                <>
+                                  <span className='flex flex-row border border-black'>
+                                    <input type="number" value={box.count} onChange={(e) => handleInputChange(e, 1, boxIndex, 'count')} className="border border-white bg-primary text-white px-2 py-1 w-[70px] text-sm rounded-md mr-1" />
+                                    <input type="text" value={box.customValue} onChange={(e) => handleInputChange(e, 1, boxIndex, 'customValue')} className="border border-white bg-primary text-white px-2 w-[30px] py-1 rounded-md" />
+                                  </span>
+                                  <input type="text" value={box.percentage} onChange={(e) => handleInputChange(e, 1, boxIndex, 'percentage')} className="border border-white bg-primary text-white px-2 w-[100px] py-1 rounded-md mt-1" />
+                                </>
+                              ) : (
+                                <>
+                                  <CountUp end={box.count} duration={box.countDuration} separator="," />
+                                  {box.customValue && box.customValue}
+                                  {/* <br /> */}
+                                  <br />
+                                  <span className='text-2xs'>
+                                    {box.percentage && box.percentage}
+                                  </span>
+                                </>
+                              )}
+                            </strong>
+                          </center>
+                        </h3>
+                        <br />
+                        <h3 className=" text-xs text-white w-full m-0 leading-tight ll font-['ClashDisplay']">
+                          <center>
+                            {editMode ? (
+                              <input type="text" value={box.title} onChange={(e) => handleInputChange(e, 1, boxIndex, 'title')} className="border w-[120px] border-white bg-primary text-white px-2 py-1 rounded-md" />
+                            ) : (
+                              box.title
+                            )}
+                          </center>
+                        </h3>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
+
+
+
           </div>
-          <br></br>
           <div className="flex flex-col h-96 hhj rounded-lg bg-white md:max-w-6xl md:flex-row mx-auto gggg min-[280px]:mt-64 min-[680px]:mt-32 min-[880px]:mt-24 min-[1180px]:mt-2 animate__animated animate__fadeIn animate__delay-3s">
             <div className="flex flex-col p-6 -mt-96">
-              <p className=" text-5xl sm:text-4xl leading-tight z-2 text-[#8AA6AA] font-['ClashDisplay'] kk mt-64 pp ">
+              <p className=" text-5xl sm:text-4xl leading-tight z-2 text-[#8AA6AA] font-['ClashDisplay'] kk mt-80 pp ">
                 Key People
               </p>
-              {/* <h5 className="mb-2 text-4xl leading-tight ll">
-                  Lorem ipsum
-                </h5> */}
               <center>
                 <p className="mb-1 text-3xl  text-black leading-tight z-2 pp ll font-['ClashDisplay']"><strong>
                   Our entire team of mavericks are dedicated to offer packaging solutions and support your business.</strong> </p>
               </center>
 
             </div>
-
-            <br></br>
-            <br></br> <br></br>
-            <br></br>
-            {/* <br></br><br></br><br></br><br></br><br></br> */}
-
-            {/* <img src={a} alt="no" /> */}
-            {/* Your browser does not support the video tag. */}
           </div>
           <div className="overflow-x-auto min-[880px]:-mt-64 min-[280px]:-mt-12 scrollbar-bottom" ref={containerRef}>
             {containerWidth <= 800 ? (
@@ -511,83 +476,11 @@ function AboutUs() {
             )}
           </div>
 
-
-
-
-          <br></br>
-
-
-
-          {/* <img src={huo} alt=""></img> */}
-
-          <br></br>
-          {/* <br></br>
-        <h5 className="mb-2 text-3xl leading-tight text-black font-['ClashDisplay']">
-          <center>FAQ</center>
-        </h5>
-        <br></br> */}
-
-          {/* <div className="flex flex-col p-6 container">
-
-          <div className="cv pl-[100px] pr-[10px]">
-            <br></br>
-            <FaqItem
-              question="What is BFS and FFS Technology, and how does It work? "
-              answers={[
-                "Blow-Fill-Seal (BFS) and Form-Fill-Seal (FFS) technologies are advanced manufacturing processes for aseptic packaging. BFS involves forming a container, filling it with the product, and sealing it in one continuous operation. FFS, on the other hand, is a broader term encompassing various methods of forming and filling containers before sealing.",
-              ]}
-              initiallyOpen={true}
-            />
-            <br></br>
-            <FaqItem
-              question="How energy-efficient are your BFS and FFS machines? "
-              answers={[
-                "We prioritize energy efficiency in our machine designs. Our systems incorporate advanced technologies to minimize energy consumption, contributing to both cost savings and environmental sustainability.",
-              ]}
-              initiallyOpen={true}
-            />
-            <br></br>
-            <FaqItem
-              question="What sets your BFS and FFS machines apart from others in the market?"
-              answers={[
-                "Our machines stand out due to their state-of-the-art technology, customizable features, and a commitment to precision and reliability. We prioritize innovation to ensure our clients have a competitive edge in their respective industries.",
-              ]}
-              initiallyOpen={true}
-            />
-            <br></br>
-            <FaqItem
-              question="Can your machines be customized for specific production needs? "
-              answers={[
-                "Yes, we offer customization options to tailor our machines to the unique production requirements of our clients. Our engineering team works closely with clients to understand their needs and deliver bespoke solutions.",
-              ]}
-              initiallyOpen={true}
-            />
-            <br></br>
-            <FaqItem
-              question="Do you provide turnkey solutions for BFS and FFS projects? "
-              answers={[
-                "Absolutely. We provide comprehensive turnkey solutions, from initial design and manufacturing to installation and ongoing support. Our turnkey approach ensures a seamless and efficient process for our clients.",
-              ]}
-              initiallyOpen={true}
-            />
-            <br></br>
-            <FaqItem
-              question="What quality control measures are implemented in your manufacturing process?"
-              answers={[
-                "Our manufacturing process adheres to rigorous quality control standards. We implement thorough testing and inspection protocols at every stage to guarantee the highest quality and performance of our BFS and FFS machines..",
-              ]}
-              initiallyOpen={true}
-            />
-          </div>
-        </div> */}
           <div className="flex flex-col rounded-lg lplpp mt-12 jlk bg-white md:max-w-6xl md:flex-row m-auto  animate__animated animate__fadeInLeft animate__delay-4s">
             <div className="flex flex-col -mt-12 p-6">
               <p className=" text-5xl leading-tight text-[#8AA6AA] kk pp font-['ClashDisplay']">
                 Project  by Region
               </p>
-              {/* <h5 className="mb-2 text-4xl leading-tight ll">
-                  Lorem ipsum
-                </h5> */}
               <center>
                 <p className=" text-4xl text-black leading-tight pp ll font-['ClashDisplay']"><strong>
                   Here’s a glimpse of our projects by various regions across countries</strong> </p>
