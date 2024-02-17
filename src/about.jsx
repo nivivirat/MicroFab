@@ -1,38 +1,28 @@
-import logo from "./logo.svg";
-import "./Stylesq.css";
-import { NavbarDefault } from "./Navbar";
-import { Button } from "@material-tailwind/react";
-import we from "./qw.png";
-import sdd from "./cder.png";
-import uio from "./Frame 21430 (1).svg";
 import { Link } from 'react-router-dom';
-import huo from './assets/About/Frame 21449.svg'
-import hj from "./Union1.jpg";
+import uio from "./Frame 21430 (1).svg";
+import "./Stylesq.css";
 // import Slider from "./slider"
-import CountUp from 'react-countup';
-import "./Styles_abt2.css";
-import pic from "./List.png";
-import tasto from "./testicards.json";
-import yy5 from "./assets/About/Micro Map.png"
-import Slider from "../src/components/AboutUs/Sliderr";
-import TestimonialCard from "./tasticard";
-import yy1 from "./assets/About/Frame 21443.png";
-import yy2 from "./assets/About/Frame 21448.png"; import yy3 from "./assets/About/Frame 21449.png"; import yy4 from "./assets/About/Frame 21450.png";
-import qwe from "./qwe.svg"
-import y1 from "./y1.svg";
-import y2 from "./y2.svg"; import y3 from "./y3.svg"; import y4 from "./y4.svg";
-import y5 from "../src/assets/About/Rectangle 2810.svg";
-import MedicalDevicesCard from "../src/components/MedicalDevices/MedicalDevicesCard";
-import ServicesJson from "./components/Services/Services.json";
-import Footer from "./components/Common/Footer/Footer";
-import React, { useState, useRef, useEffect } from "react";
-import yu from "./WhatsApp Image 2023-11-16 at 18.26 1.svg";
-import a from "./Rectangle 57.svg";
-import b from "./layer.svg";
-import cc from "./WhatsApp Image 2023-11-23 at 13.48.59.jpeg";
-import "./App.css";
 import { get, ref, update } from 'firebase/database';
+import React, { useEffect, useRef, useState } from "react";
+import CountUp from 'react-countup';
 import { db } from "../firebase";
+import y5 from "../src/assets/About/Rectangle 2810.svg";
+import Slider from "../src/components/AboutUs/Sliderr";
+import MedicalDevicesCard from "../src/components/MedicalDevices/MedicalDevicesCard";
+import "./App.css";
+import "./Styles_abt2.css";
+import yu from "./WhatsApp Image 2023-11-16 at 18.26 1.svg";
+import yy1 from "./assets/About/Frame 21443.png";
+import yy2 from "./assets/About/Frame 21448.png";
+import yy3 from "./assets/About/Frame 21449.png";
+import yy4 from "./assets/About/Frame 21450.png";
+import yy5 from "./assets/About/Micro Map.png";
+import Footer from "./components/Common/Footer/Footer";
+import ServicesJson from "./components/Services/Services.json";
+import y1 from "./y1.svg";
+import y2 from "./y2.svg";
+import y3 from "./y3.svg";
+import y4 from "./y4.svg";
 
 function FaqItem({ question, answers, initiallyOpen }) {
   const [isOpen, setIsOpen] = useState(initiallyOpen);
@@ -53,21 +43,6 @@ function FaqItem({ question, answers, initiallyOpen }) {
   }, [isOpen]);
 
   return (
-    // <center>
-    // <div className="faq-item mb-4 text-xs leading-tight text-black container lm" onClick={toggleAnswer}>
-    //   <div className={`question ${isOpen ? 'active' : ''}mb-4 text-xs leading-tight text-black question mb-4 text-sm leading-tight text-black `}>
-    //   <span className="vertical-bar"></span> {/* Add a vertical bar element */}
-    //     {question}
-    //   </div>
-    //   {isOpen && (
-    //     <div className="answer">
-    //       {answers.map((paragraph, index) => (
-    //         <p key={index}>{paragraph}</p>
-    //       ))}
-    //     </div>
-    //   )}
-    // </div>
-    // </center>
     <div className="faq-item">
       <div
         className={`question ${isOpen ? "active" : ""}`}
@@ -457,7 +432,7 @@ function AboutUs() {
             {containerWidth <= 800 ? (
               <Slider images={[yy1, yy2, yy3, yy4]} autoScrollInterval={5000} />
             ) : (
-              <div className="mr-8 -mt-64 min-[880px]:-mt-12 gtu overflow-y-hidden flex flex-rows animate__animated animate__fadeIn animate__delay-3s">
+              <div className="mr-8 -mt-64 h-[400px] min-[880px]:-mt-12 gtu overflow-y-hidden flex flex-rows animate__animated animate__fadeIn animate__delay-3s">
                 <div className="flex flex-row mt-12 lp cfr">
                   <div className="flex flex-col items-center">
                     <img className="opp px-2 h-full object-cover" src={yy1} alt="" />
