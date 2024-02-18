@@ -1,42 +1,33 @@
-import img1 from "../../../assets/Happy_customers/img1.svg";
-import img2 from "../../../assets/Happy_customers/img2.svg";
-import img3 from "../../../assets/Happy_customers/img3.svg";
-import arrow1 from "../../../assets/Happy_customers/arrow1.svg";
-import arrow2 from "../../../assets/Happy_customers/arrow2.svg";
-import quotes from "../../../assets/Happy_customers/quotes.svg";
-import ONEMILL from "../../../assets/Happy_customers/1M.svg";
-import "../../../App.css";
-import MobileTestimonials from "../Testimonials/MobileTestimonials";
+import React, { useState, useEffect } from 'react';
+import { ref, onValue } from 'firebase/database';
+import { db } from '../../../../firebase';
+import img1 from '../../../assets/Happy_customers/img1.svg';
+import img2 from '../../../assets/Happy_customers/img2.svg';
+import img3 from '../../../assets/Happy_customers/img3.svg';
+import arrow1 from '../../../assets/Happy_customers/arrow1.svg';
+import arrow2 from '../../../assets/Happy_customers/arrow2.svg';
+import quotes from '../../../assets/Happy_customers/quotes.svg';
+import ONEMILL from '../../../assets/Happy_customers/1M.svg';
+import MobileTestimonials from '../Testimonials/MobileTestimonials';
 
 export default function HappyCustomers() {
-  const customerData = [
-    {
-      content:
-        "Kudos to the entire team at MicroFab!! The professionals have really worked assiduously to set up the injectable facility. No stone was left unturned when MicroFab executed everything with a customer-centric approach. Our injectable facility has now been running smoothly without a hitch and it’s been a long time since we are happy with the experience using the machinery.",
-      author: "Nepal BLS  Laboratory",
-      company: "Future Creative Technician",
-    },
-    {
-      content:
-        "We were in need of high-end machinery to produce SVPs across the shop floor of our plant. Our team perceived producing SVPs as a colossal challenge especially when we had to move on with mass production. But, working closely with MicroFab brought tranquility. The machinery can now produce 500,000 ampoules per day with little to no human intervention.",
-      author: "Geneka Naturals",
-      company: "Future Creative Technician",
-    },
-    {
-      content:
-        "Packaging Intravenous Solutions in huge quantities would otherwise be a pain if we wouldn’t have contacted MicroFab. However, when the team comprehended our needs, it was brimming with proactiveness to set up four lines of IV. Thanks MicroFab for being quite supportive and managing things just the way we wanted.",
-      author: "Healthline Pharmaceuticals",
-      company: "Future Creative Technician",
-    },
-    {
-      content:
-        "Hats off to the entire team working at MicroFab. We really appreciate the efforts that the entire team has put in while working towards the design of the machinery that had to be set up in Sri Lanka. Earlier, we were at our wit s end and didn t know how to commence. But, everything seemed easy when we contacted MicroFab.",
-      author: "PIIPL, Sri Lanka",
-      company: "Future Creative Technician",
-    },
+  const [customerData, setCustomerData] = useState([]);
 
-    // Add more objects as needed
-  ];
+  useEffect(() => {
+    const testimonialsRef = ref(db, 'Home/Testimonials');
+    onValue(testimonialsRef, (snapshot) => {
+      if (snapshot.exists()) {
+        const data = snapshot.val();
+        // Convert testimonials object into an array of objects
+        const testimonialArray = Object.entries(data).map(([key, value]) => ({ ...value, uid: key }));
+        // Sort testimonials by timestamp in descending order
+        testimonialArray.sort((a, b) => b.timestamp - a.timestamp);
+        // Limit to the most recent 4 testimonials
+        const recentTestimonials = testimonialArray.slice(0, 4);
+        setCustomerData(recentTestimonials);
+      }
+    });
+  }, []);
 
   return (
     <div className="font-['ClashDisplay'] flex flex-col md:flex-row justify-between p-10">
@@ -55,7 +46,7 @@ export default function HappyCustomers() {
             <div>
               <p
                 className="font-['ClashDisplayBold'] border-blue text-[50px] hidden md:block"
-                style={{ WebkitTextStroke: "2px blue" }}
+                style={{ WebkitTextStroke: '2px blue' }}
               >
                 + 1M
               </p>
@@ -86,19 +77,11 @@ export default function HappyCustomers() {
                 <img src={quotes} className=""></img>
               </div>
               <p className="text-[14px]">{customer.content}</p>
-              {/* <p className="text-[15px] mt-2 font-normal">{customer.author}</p> */}
-              {/* <p className="text-[13px]">{customer.company}</p> */}
+              <p className="text-[15px] mt-2 font-normal">{customer.author}</p>
+              <p className="text-[13px]">{customer.company}</p>
             </div>
           ))}
         </div>
-        {/* <div className="md:hidden block bg-white shadow-md p-4 m-4 rounded-lg w-[80%] md:w-[40%] text-center">
-          <div className="flex justify-center">
-            <img src={quotes} className=""></img>
-          </div>
-          <p className="text-[17px]">{customerData[0].content}</p>
-          <p className="text-[15px] mt-2 font-bold">{customerData[0].author}</p>
-          <p className="text-[13px]">{customerData[0].company}</p>
-        </div> */}
 
         <div className="md:hidden">
           <MobileTestimonials />
