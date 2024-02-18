@@ -4,6 +4,9 @@ import { db } from "../../../../firebase";
 import { ref, push, set, serverTimestamp } from "firebase/database";
 
 const ContactForm = () => {
+
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -48,6 +51,11 @@ const ContactForm = () => {
       });
 
       console.log('Form data submitted successfully!');
+
+      setShowSuccessMessage(true);
+      setTimeout(() => {
+        setShowSuccessMessage(false);
+      }, 3000);
     } catch (error) {
       console.error('Error submitting form data:', error.message);
     }
@@ -173,12 +181,16 @@ const ContactForm = () => {
             className="w-full md:hidden border border-black rounded px-2 py-1"
           />
         </div>
-        <button
-          type="submit"
-          className="bg-[#8AA6AA] text-white hover:h-auto px-4 py-2 hover:py-2 hover:px-4 w-full md:w-full hover:md:w-full rounded-md hover:bg-[#8AA6AA]"
-        >
-          Submit
-        </button>
+        {showSuccessMessage ? (
+          <p className="text-green-500 mt-2">Submitted successfully</p>
+        ) : (
+          <button
+            type="submit"
+            className="bg-[#8AA6AA] text-white hover:h-auto px-4 py-2 hover:py-2 hover:px-4 w-full md:w-full hover:md:w-full rounded-md hover:bg-[#8AA6AA]"
+          >
+            Submit
+          </button>
+        )}
       </form>
     </div>
   );
