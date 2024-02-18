@@ -3,6 +3,9 @@ import world_mobile from "../../../assets/Who_are_we/world_mobile.svg";
 // import "../../../App.css";
 import "./hstyle.css";
 import Slider from "../Testimonials/Slider";
+import { useEffect, useState } from "react";
+import { db } from '../../../../firebase'
+import { ref, get } from "firebase/database";
 
 const Section = ({ title, description }) => (
   <div className="flex-shrink-0 w-[50%] flex flex-row gap-5">
@@ -30,37 +33,48 @@ const Sections = ({ data }) => (
   </div>
 );
 
-const sectionsData = [
-  {
-    title: "500+ cutting-edge machinery",
-    description: "We design machinery as per the requirements",
-  },
-  {
-    title: "200+ employees",
-    description: "We have maintained the aplomb through the years",
-  },
-  {
-    title: "90% customer retention",
-    description: "Our team is known for incredible service",
-  },
-  {
-    title: "Across 15+ countries",
-    description: "We have our footprint across the globe",
-  },
-];
-
 export default function Who_are_we() {
+
+  const [sectionsData, setSectionsData] = useState([]);
+  const [content, setContent] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const snapshot = await get(ref(db, "Home/Who_Are_We"));
+        const snapshot2 = await get(ref(db, "Home/Who_Are_We_Text"));
+
+        if (snapshot.exists()) {
+          // Extract the data from the snapshot
+          const data = snapshot.val();
+          setSectionsData(data);
+        } else {
+          console.log("No data available");
+        }
+
+        if (snapshot2.exists()) {
+          // Extract the data from the snapshot
+          const data = snapshot2.val();
+          setContent(data);
+          console.log(data);
+        } else {
+          console.log("No data available !");
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error.message);
+      }
+    };
+    fetchData();
+
+  }, []);
+
+  console.log(sectionsData);
   return (
     <div className="custom-font flex md:flex-row flex-col md:justify-between">
       <div className="md:hidden text-center p-4">
         <p className="md:text-[35px] text-[35px] font-bold">Who Are We?</p>
         <p className="md:text-[20px] md:w-[80%]">
-          MicroFab, born from the merger of MicroTools and FabLab, excels in BFS
-          and FFS machine manufacturing and EPC contracting. Committed to
-          quality and innovation, we redefine industry standards in advanced
-          packaging and industrial solutions. Our mission is to revolutionize
-          packaging and project execution as a unified source for cutting-edge
-          technologies and turnkey solutions across diverse industries.
+          {content ? content.content : "Loading..."}
         </p>
       </div>
 
@@ -112,133 +126,37 @@ export default function Who_are_we() {
         <div className="hidden md:block">
           <p className="md:text-[35px] font-bold">Who Are We?</p>
           <p className="md:text-[16px] font-semibold md:w-[80%]">
-            MicroFab, born from the merger of MicroTools and FabLab, excels in
-            BFS and FFS machine manufacturing and EPC contracting. Committed to
-            quality and innovation, we redefine industry standards in advanced
-            packaging and industrial solutions. Our mission is to revolutionize
-            packaging and project execution as a unified source for cutting-edge
-            technologies and turnkey solutions across diverse industries.
+            {content ? content.content : "Loading..."}
           </p>
         </div>
 
         {/* mobile x scroll */}
         <div>
           <Sections data={sectionsData} />
-
-          {/* <div className="md:hidden flex flex-row overflow-x-scroll mt-[30px]">
-            <div className="flex flex-nowrap">
-              <div className="w-[45%] flex-shrink-0">
-                <div className="flex flex-row gap-10">
-                  <div className="block md:w-[5px] w-[10px] h-[120px] md:h-[120px] bg-[#8AA6AA] gap-4"></div>
-                  <div className="md:w-[75%] md:text-[16px] flex flex-col">
-                    <p className="md:text-[20px] font-semibold text-[20px]">
-                      500+ cutting-edge <br></br>machinery
-                    </p>
-                    <p className="">
-                      We design machinery as<br></br> per the requirements
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="w-[50%] flex-shrink-0">
-                <div className="flex flex-row gap-10">
-                  <div className="block md:w-[5px] w-[10px] h-[120px] md:h-[120px] bg-[#8AA6AA] gap-4"></div>
-                  <div className="md:w-[75%] md:text-[16px] flex flex-col">
-                    <p className="md:text-[20px] font-semibold text-[20px]">
-                      200+ employees
-                    </p>
-                    <p className="">
-                      We have maintained the<br></br> aplomb through the
-                      <br></br> years
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="w-[50%] flex-shrink-0">
-                <div className="flex flex-row gap-10">
-                  <div className="block md:w-[5px] w-[10px] h-[100px] bg-[#8AA6AA] gap-4"></div>
-                  <div className="md:w-[75%] md:text-[16px] flex flex-col">
-                    <p className="md:text-[20px] font-semibold text-[20px]">
-                      90% customer retention
-                    </p>
-                    <p className="">
-                      Our team is known for<br></br> incredible service
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="w-[50%] flex-shrink-0">
-                <div className="flex flex-row gap-10">
-                  <div className="block md:w-[5px] w-[10px] h-[100px] bg-[#8AA6AA] gap-4"></div>
-                  <div className="md:w-[75%] md:text-[16px] flex flex-col">
-                    <p className="md:text-[20px] font-semibold text-[20px]">
-                      Across 15+ countries
-                    </p>
-                    <p className="">
-                      We have our footprint <br></br>across the globe
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> */}
         </div>
 
         {/* desktop view */}
         <div className="md:flex hidden md:flex-col overflow-x-auto md:justify-start md:gap-20">
           {/* 21 countries */}
-          <div className="flex md:flex-row gap-1 flex-row md:mt-10">
-            <div className="flex flex-row w-full gap-4">
-              {/* line */}
-              <div className="block md:w-[5px] w-[10px] h-[170px] md:h-[120px] bg-[#8AA6AA] gap-4"></div>
-              <div className="md:w-[75%] md:text-[16px] w-full">
-                <p className="md:text-[20px] font-semibold text-[20px]">
-                  500+ cutting-edge <br></br>machinery
-                </p>
-                <p className="">
-                  We design machinery as<br></br> per the requirements
-                </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:mt-10">
+            {sectionsData.map((section, index) => (
+              <div className="flex flex-row gap-4" key={index}>
+                {/* line */}
+                <div className="block md:w-[5px] w-[10px] h-[170px] md:h-[120px] bg-[#8AA6AA] gap-4"></div>
+                <div className="md:w-[75%] md:text-[16px] w-full">
+                  {section && section.title && (
+                    <p className="md:text-[20px] font-semibold text-[20px]">
+                      {section.title}
+                    </p>
+                  )}
+                  {section && section.description && (
+                    <p>{section.description}</p>
+                  )}
+                </div>
               </div>
-            </div>
-
-            <div className="flex flex-row w-full gap-4">
-              {/* line */}
-              <div className="md:w-[5px] w-[10px] h-[170px] md:h-[120px] bg-[#8AA6AA] gap-4"></div>
-              <div className="md:w-[75%] md:text-[16px] w-full">
-                <p className="md:text-[20px] font-semibold text-[20px]">
-                  200+ employees
-                </p>
-                <p>
-                  We have maintained the<br></br> aplomb through the<br></br>{" "}
-                  years
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
 
-          {/* this is hidden in mobile view */}
-          <div className="md:flex md:flex-row gap-4 hidden">
-            {/* line */}
-            <div className="w-[5px] md:w-[8px] md:h-[100px] bg-[#8AA6AA] gap-4"></div>
-            <div className="md:w-[75%] md:text-[16px]">
-              <p className="md:text-[20px] font-semibold text-[25px]">
-                90% customer retention
-              </p>
-              <p>
-                Our team is known for <br></br>incredible service
-              </p>
-            </div>
-            {/* line */}
-            <div className="w-[5px] md:h-[100px] md:w-[8px] bg-[#8AA6AA] gap-4"></div>
-            <div className="md:w-[75%] w-[90%] md:text-[16px]">
-              <p className="md:text-[20px] font-semibold text-[25px]">
-                Across 15+ countries
-              </p>
-              <p>
-                We have our footprint <br></br>across the globe
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </div>
