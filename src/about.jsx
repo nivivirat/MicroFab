@@ -429,11 +429,11 @@ function AboutUs() {
             </div>
           </div>
           <div className="overflow-x-auto min-[880px]:-mt-64 min-[280px]:-mt-12 scrollbar-bottom" ref={containerRef}>
-            {containerWidth <= 800 ? (
+            {containerWidth <= 800 && containerWidth != 0 ? (
               <Slider images={[yy1, yy2, yy3, yy4]} autoScrollInterval={5000} />
             ) : (
-              <div className="mr-8 -mt-64 h-[400px] min-[880px]:-mt-12 gtu overflow-y-hidden flex flex-rows animate__animated animate__fadeIn animate__delay-3s">
-                <div className="flex flex-row mt-12 lp cfr">
+              <div className="mr-8 -mt-64 h-[480px] min-[880px]:-mt-12 gtu overflow-y-hidden flex flex-rows animate__animated animate__fadeIn animate__delay-3s">
+                <div className="flex flex-row mt-12 lp cfr h-[400px]">
                   <div className="flex flex-col items-center">
                     <img className="opp px-2 h-full object-cover" src={yy1} alt="" />
                   </div>
