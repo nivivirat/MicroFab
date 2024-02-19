@@ -14,6 +14,8 @@ import sync from "../../../assets/water_TS/sync.svg";
 import WCO from "../../../assets/water_TS/water_check_outline.svg";
 import water_polo from "../../../assets/water_TS/water_polo.svg";
 import data from "./water_TS_Data.json";
+import { db } from '../../../../firebase'
+import { ref, get } from 'firebase/database'
 
 const WaterTS = () => {
   const images = {
@@ -53,6 +55,33 @@ const WaterTS = () => {
   console.log(index);
 
   console.log(index);
+
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const waterTSRef = ref(db, 'Home/water_TS_Data');
+        const snapshot = await get(waterTSRef);
+        const dataFromDB = snapshot.val();
+
+        if (dataFromDB) {
+          setData(dataFromDB);
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <div className="w-[100%] flex flex-col">
@@ -148,16 +177,6 @@ const WaterTS = () => {
       </div>
       <div>
         <div className="md:hidden flex flex-row overflow-x-scroll mt-[30px]">
-          {/* <div className="flex flex-nowrap">
-            {data.map((item,num) => (
-              <div
-                key={item.heading}
-                className="w-full flex-shrink-0 md:w-[300px]"
-              >
-                {renderMobileView(item)}
-              </div>
-            ))}
-          </div> */}
           {renderMobileView(data[index])}
         </div>
       </div>
