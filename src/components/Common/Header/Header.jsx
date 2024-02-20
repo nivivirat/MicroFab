@@ -227,7 +227,7 @@ const Header = () => {
                   }`}
               >
                 <Link
-                  to="/s"
+                  to="/pharmaceutical"
                   onClick={toggleMenu}
                   onMouseEnter={toggleApplicationDropdown}
                 >

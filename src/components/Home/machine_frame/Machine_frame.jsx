@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Machine from "../../../assets/Machine_Frame_Images/Machine.svg";
 import "../../../App.css";
 import WFS_Card from "./WFS_Card";
+import { text } from "@cloudinary/url-gen/qualifiers/source";
 
 const Machine_Frame = () => {
   const textArray = ["Start", "Solutions from the", "Providing Industry"];
@@ -14,24 +15,28 @@ const Machine_Frame = () => {
     }, 1000); // Adjust the delay as needed (3 seconds in this example)
 
     return () => clearInterval(interval); // Clean up the interval on unmount
-  }, []);
+  }, [textArray.length]);
 
   return (
     <div className="font-['ClashDisplay'] w-full h-[500px] md:w-[97%] md:h-full md:mt-[80px] mt-[50px] md:rounded-[20px] bg-gradient-to-r from-[#e1e1e1] to-[#8ca7ab] md:m-4 mb-0 overflow-clip">
       <div className="relative w-full h-full z-0">
-        <div className="absolute md:top-[50%] md:left-[38%] z-10 top-[60%] left-[4%]">
+        <a href="/#/product" className="absolute md:top-[50%] md:left-[38%] z-10 top-[60%] left-[4%]">
           <div className="font-['ClashDisplay'] rounded-b-[16px] rounded-tr-[16px] bg-[#8AA6AA] md:bg-[#8AA6AA] md:h-[40px] h-[30px] w-[200px] md:w-[180px] p-[6px] md:p-[10px]">
             <p className="custom-font text-white md:text-[12px] text-[11px] flex justify-center place-items-center">
               Product Solutions
             </p>
           </div>
-        </div>
-        <div className="absolute md:top-[83%] md:left-[70%] z-10 top-[78%] left-[44%]">
-          <WFS_Card />
-        </div>
-        <div className="absolute md:top-[93%] md:left-[20%] z-10 top-[43%] left-[44%]">
-          <WFS_Card />
-        </div>
+        </a>
+        <a href="/#/TurnKeySolutions" className="absolute md:top-[83%] md:left-[70%] z-10 top-[78%] left-[44%]">
+          <div className="font-['ClashDisplay'] rounded-b-[16px] rounded-tr-[16px] bg-[#8AA6AA] md:bg-[#8AA6AA] md:h-[40px] h-[40px] w-[200px] md:w-[180px] p-[10px] md:p-[10px]">
+            <p className="custom-font text-white md:text-[12px] text-[11px] text-center">Turnkey Solutions</p>
+          </div>
+        </a>
+        <a href="/#/service" className="absolute md:top-[93%] md:left-[20%] z-10 top-[43%] left-[44%]">
+          <div className="font-['ClashDisplay'] rounded-b-[16px] rounded-tr-[16px] bg-[#8AA6AA] md:bg-[#8AA6AA] md:h-[40px] h-[40px] w-[200px] md:w-[180px] p-[10px] md:p-[10px]">
+            <p className="custom-font text-white md:text-[12px] text-[11px] text-center">Service Solutions</p>
+          </div>
+        </a>
 
         <img
           src={Machine}
