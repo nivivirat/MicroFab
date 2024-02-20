@@ -212,7 +212,7 @@ function AboutUs() {
                       About Us
                     </h3>
                     <p className="mb-4 sm:mr-24 lg:w-96 md:w-64 uo leading-tight text-[#8AA6AA] font-['ClashDisplay']">
-                      MicroFab, a trailblazing company not only delivers exceptional packaging solutions but also facilitates the establishment of plants for the cosmetics industry. By choosing MicroFab, the team empowers the organization to set up state-of-the-art production facilities according to the unique needs. Our expertise extends ways beyond just design and manufacturing. With a focus on efficiency and innovation, MicroFab offers guidance every step of the way, ensuring that the cosmetic brand stands out with impeccable packaging. We streamline the production and adhere to high quality standards for your company.
+                      Welcome to MicroFab, where dedication and expertise converge to deliver exceptional solutions for the IV industry. With a relentless commitment to excellence, we specialize in executing projects with precision and innovation, ensuring the highest standards of quality and reliability. Our team is driven by a passion for pushing boundaries and redefining industry standards, consistently delivering cutting-edge solutions tailored to meet the unique needs of our clients in the IV sector. At MicroFab, we pride ourselves on our ability to seamlessly execute projects, from conception to completion, while maintaining a focus on customer satisfaction and delivering value-added services. Join us in revolutionizing the IV industry through our unwavering dedication and expertise in project execution.
                     </p>
                   </div>
                   {/* <br></br><br></br><br></br> */}
@@ -337,14 +337,6 @@ function AboutUs() {
 
 
           <div className="flex mt-12 h-[600px] animate__animated animate__fadeInLeft animate__delay-2s">
-            {/* Block 1 - SVG Image */}
-            {/* <div className="bg-white md:mb-32 mb-44">
-              <img src={uio} alt="SVG Image" className="w-[650px] md:block hidden h-full object-cover" />
-            </div> */}
-
-            {/* Block 2 - Text and Boxes */}
-
-            {/* code here */}
 
             <div className="flex mt-12 h-[600px] animate__animated animate__fadeInLeft animate__delay-2s">
               <div className="bg-white md:mb-32 mb-44">
@@ -417,12 +409,12 @@ function AboutUs() {
 
           </div>
           <div className="flex flex-col h-96 hhj rounded-lg bg-white md:max-w-6xl md:flex-row mx-auto gggg min-[280px]:mt-64 min-[680px]:mt-32 min-[880px]:mt-24 min-[1180px]:mt-2 animate__animated animate__fadeIn animate__delay-3s">
-            <div className="flex flex-col p-6 -mt-96">
-              <p className=" text-5xl sm:text-4xl leading-tight z-2 text-[#8AA6AA] font-['ClashDisplay'] kk mt-80 pp ">
+            <div className="flex flex-col p-6 md:-mt-96 -mt-80">
+              <p className=" text-5xl sm:text-4xl leading-tight text-[#8AA6AA] font-['ClashDisplay'] text-center mb-5 mt-80 ">
                 Key People
               </p>
               <center>
-                <p className="mb-1 text-3xl  text-black leading-tight z-2 pp ll font-['ClashDisplay']"><strong>
+                <p className="mb-1 text-3xl text-black leading-tight font-['ClashDisplay']"><strong>
                   Our entire team of mavericks are dedicated to offer packaging solutions and support your business.</strong> </p>
               </center>
 
@@ -453,7 +445,7 @@ function AboutUs() {
 
           <div className="flex flex-col rounded-lg lplpp mt-12 jlk bg-white md:max-w-6xl md:flex-row m-auto  animate__animated animate__fadeInLeft animate__delay-4s">
             <div className="flex flex-col -mt-12 p-6">
-              <p className=" text-5xl leading-tight text-[#8AA6AA] kk pp font-['ClashDisplay']">
+              <p className=" text-5xl leading-tight text-[#8AA6AA] text-center font-['ClashDisplay']">
                 Project  by Region
               </p>
               <center>
