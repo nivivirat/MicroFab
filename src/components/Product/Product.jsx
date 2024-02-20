@@ -105,7 +105,7 @@ export default function Product() {
 
               After sale
               service </h3>
-            <h6 className="text-xl leading-tight text-black serv7 -mr-64 bh fui" color="clack">
+            <h6 className="text-xl leading-tight text-black serv7 md:w-[30vw] w-[90vw] -mr-64 bh fui" color="clack">
               At MicroFab, our dedication to excellence extends beyond the point of purchase. We take pride in providing comprehensive after-sales services to ensure that your experience with our products and services remain seamless, reliable, and maximally productive.
             </h6></div>
         </div>
@@ -204,21 +204,23 @@ export default function Product() {
               src={b4}
               alt=""
             />
-            <div className="flex flex-col justify-start order-1 md:order-1 xd xdd ">
-              <h3 className="mb-2 pb-4 text-5xl leading-tight text-black hdfc fgi xd">
+            <div className="md:ml-0 ml-24 flex flex-col w-screen justify-start order-1 md:order-1 xd xdd">
+              <h3 className="mb-2 pb-4 text-5xl leading-tight text-black hdfc fgi xd ">
                 Medical devices</h3>
-              <h6 className="text-xl leading-tight text-black hdfc fgi -mr-64" color="clack">
-
+              <h6 className="text-xl leading-tight text-black hdfc fgi md:w-[50vw] w-[70vw] -mr-[500px]" color="clack">
                 In the healthcare sector, MicroFab understands the criticality of
                 choosing quality medical equipment. While serving patients, we
                 ensure that the device is safe to use. We also develop designs for
                 devices which are apt for using, with comfort. </h6>
               <a
-                href="/medicalDevices"
+                href="/#/medicalDevices"
                 type="submit"
                 className="bg-[#8AA6AA] mt-4 md:mt-4 text-white px-4 py-2 hdfc w-[200px] rounded-md"
               >
-                KNOW MORE
+                <div className="flex flex-row gap-3">
+                  KNOW MORE
+                  <Icon icon="ph:arrow-right" />
+                </div>
               </a>
             </div>
           </div>

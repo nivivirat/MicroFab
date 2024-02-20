@@ -78,7 +78,7 @@ export default function MedicalDevicesCard({ img, heading, content, link }) {
     //   onClick={toggleContent}
 
     >
-      <a href={link}>
+      <a href={`/#/${link}`}>
         <div className="md:h-[190px] w-full">
           <img
             src={images[img]}

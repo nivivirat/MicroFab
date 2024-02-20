@@ -61,33 +61,21 @@ export default function Footer() {
 
             <div className="md:hidden md:w-[1px] md:h-[w-[30%]] w-[h-[90%]] h-[2px] bg-white md:mt-0 md:mb-0 mt-[22px] mb-[15px]"></div>
             <div className="w-[100%] md:w-[50%] flex flex-col justify-between">
-              {/* <div className="flex flex-row mb-2">
-                <img src={dot} className=""></img>
-                <p className="ml-4">Lorem ipsum</p>
-              </div>
-
-              <div className="flex flex-col md:gap-1 gap-4">
-                <Points last={false} />
-                <Points last={false} />
-                <Points last={false} />
-                <Points last={false} />
-                <Points last={true} />
-              </div> */}
               <div className="flex flex-row justify-center md:gap-[150px] gap-10 place-items-start md:px-10 md:py-10">
                 <div className="flex flex-col gap-5">
-                  <a href="/product" className="">
+                  <a href="/#/product" className="">
                     Product Solutions
                   </a>
-                  <a href="/turnKeySolutions">Turnkey Solutions</a>
-                  <a href="/service">Service Solutions</a>
+                  <a href="/#/turnKeySolutions">Turnkey Solutions</a>
+                  <a href="/#/service">Service Solutions</a>
 
-                  <a href="/applications/pharmaceutical">Application</a>
-                  <a href="/about">About Us</a>
+                  <a href="/#/pharmaceutical">Application</a>
+                  <a href="/#/about">About Us</a>
                 </div>
                 <div className="flex flex-col gap-5">
-                  <a href="/articlesList">Article and Blogs</a>
-                  <a href="/contactUs">Contact Us</a>
-                  <a href="/TP">Terms & Policy</a>
+                  <a href="/#/blogs">Article and Blogs</a>
+                  <a href="/#/contact">Contact Us</a>
+                  <a href="/#/TP">Terms & Policy</a>
                 </div>
               </div>
             </div>
