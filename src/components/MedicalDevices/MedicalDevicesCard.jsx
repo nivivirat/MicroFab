@@ -90,7 +90,7 @@ export default function MedicalDevicesCard({ index, isOpen, onToggle, img, headi
     >
       <div className="md:h-[190px] w-full">
         <img
-          src={images[img]}
+          src={images[img] || img}
           alt="Medical Device"
           className="w-full h-full rounded-[16px] object-cover"
         />

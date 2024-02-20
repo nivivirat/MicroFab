@@ -23,9 +23,9 @@ export default function ProductSolutions() {
           </div>
           <a href="/#/product">
             <div className="text-white flex flex-row justify-center place-items-center gap-2 bg-primary xl:w-[35%] lg:w-[30%] md:w-[200px] w-[40%] rounded-[10px] h-[45px]">
-            <p className="">Know More</p>
-            <Icon icon="majesticons:arrow-right" className="" />
-          </div>
+              <p className="">Know More</p>
+              <Icon icon="majesticons:arrow-right" className="" />
+            </div>
           </a>
         </div>
 

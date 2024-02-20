@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import top from "../../assets/medicalDevices/top.svg";
 import Footer from "../Common/Footer/Footer";
 import MedicalDevicesCard from "./MedicalDevicesCard";
-import {db} from '../../../firebase'
+import {ref, onValue} from 'firebase/database'
+import { db } from '../../../firebase'
 
 export default function MedicalDevices() {
 
   const [openCardIndex, setOpenCardIndex] = useState(null);
+  const [medicalDevicesData, setMedicalDevicesData] = useState([]);
 
   const handleCardToggle = (index) => {
     if (openCardIndex === index) {
@@ -16,28 +18,22 @@ export default function MedicalDevices() {
     }
   };
 
-  const [medicalDevicesData, setMedicalDevicesData] = useState([]);
-
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const snapshot = await db.ref("yourDatabasePath").once("value");
-        const data = snapshot.val();
-        if (data) {
-          const dataArray = Object.entries(data).map(([key, value]) => ({
-            uid: key,
-            ...value,
-          }));
-          setMedicalDevicesData(dataArray);
-        }
-      } catch (error) {
-        console.error("Error fetching data:", error);
+    const deviceRef = ref(db, 'MedicalDevices');
+
+    const unsubscribe = onValue(deviceRef, (snapshot) => {
+      const data = snapshot.val();
+      if (data) {
+        const devicesArray = Object.values(data);
+        setMedicalDevicesData(devicesArray);
       }
+    });
+
+    return () => {
+      // Unsubscribe from the database reference when the component unmounts
+      unsubscribe();
     };
-
-    fetchData();
   }, []);
-
 
   return (
     <div>

@@ -1,7 +1,7 @@
 [
   {
-    "topic": "Why choose Microtools BFS machines?",
-    "content": "Introducing Microtools BFS Machine: A game-changer in packaging automation, our advanced BFS machine combines blow-fill-seal technology with higher output and less down time. Streamline your production line and take the packaging capabilities to the next level  with our machines, designed for ease of operation, less maintenance, and high efficiency.",
+    "topic": "Why choose BFS machines?",
+    "content": "Introducing BFS Machine: A game-changer in packaging automation, our advanced BFS machine combines blow-fill-seal technology with higher output and less down time. Streamline your production line and take the packaging capabilities to the next level  with our machines, designed for ease of operation, less maintenance, and high efficiency.",
     "sub": "Blow",
     "sub_content": "The BFS process begins with the extrusion of plastic granules into a parison, a hollow tube-like structure. This parison is then enclosed within a mold.",
     "sequence": [
@@ -23,8 +23,8 @@
     ]
   },
   {
-    "topic": "Why choose Microtools FFS machines?",
-    "content": "Introducing Microtools FFS Machine: Our advanced FFS machine combines form-fill-seal technology with unparalleled precision and speed. Streamline your production line and elevate your packaging capabilities with this innovative solution, designed to optimize efficiency and deliver consistent, high-quality results.",
+    "topic": "Why choose FFS machines?",
+    "content": "Introducing FFS Machine: Our advanced FFS machine combines form-fill-seal technology with unparalleled precision and speed. Streamline your production line and elevate your packaging capabilities with this innovative solution, designed to optimize efficiency and deliver consistent, high-quality results.",
     "sub": "Form",
     "sub_content": "The machine molds the film to form the appropriate packaging structure, such as small containers, depending on the product requirements.",
     "sequence": [
@@ -46,8 +46,8 @@
     ]
   },
   {
-    "topic": "Why choose Microtools ISBM machines?",
-    "content": "Introducing Microtools ISBM Machine: A paragon of innovation to revolutionize production in the realm of manufacturing, our machine seamlessly blends blow molding along with injection molding. The technology ensures a swift and streamlined manufacturing process for the creation of bespoke durable containers. Enhance the packaging capabilities with our machines, designed for precision with eco-friendly practices in mind.",
+    "topic": "Why choose ISBM machines?",
+    "content": "Introducing ISBM Machine: A paragon of innovation to revolutionize production in the realm of manufacturing, our machine seamlessly blends blow molding along with injection molding. The technology ensures a swift and streamlined manufacturing process for the creation of bespoke durable containers. Enhance the packaging capabilities with our machines, designed for precision with eco-friendly practices in mind.",
     "sub": "",
     "sub_content": "",
     "sequence": [
