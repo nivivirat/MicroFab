@@ -461,13 +461,12 @@ export default function Appli1() {
             </h1>
             <br></br>
             <h5 className="text-xs  leading-tight mb-4 text-white kll">
-              Regardless of which instance you’re at; a wealth of experience and a plethora of services ensures you to move ahead. Maybe so what we offer:
+              Regardless of how the operational activities are <br></br> running; our experience and expertise ensure to move <br></br>ahead. We also offer:-
             </h5>
           </center><br></br>
-            <a className="text-xs  leading-tight mb-4   text-white  tt" href="/product">Product solutions</a><br></br>
-            <a className="text-xs  leading-tight mb-4 text-white  tt" href="/TurnKeySolutions">Turnkey solutions </a><br></br>
-            <a className="text-xs  leading-tight mb-4  text-white  tt" href="/service">Service solutions </a><br></br>
-            <br></br>
+            <a className="text-xs  leading-tight mb-4   text-white  tt" href="/#/product">Product solutions</a><br></br>
+            <a className="text-xs  leading-tight mb-4 text-white  tt" href="/#/TurnKeySolutions">Turnkey solutions </a><br></br>
+            <a className="text-xs  leading-tight mb-4  text-white  tt" href="/#/service">Service solutions </a><br></br><br></br>
 
           </div>
         </center>
