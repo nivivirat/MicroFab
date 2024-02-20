@@ -65,7 +65,7 @@ export default function Media() {
             {reversedMediaData.map((item) => (
               <div
                 key={item.id}
-                className="w-[50%] md:w-full md:max-w-[24%] rounded-lg shadow-md overflow-hidden"
+                className="w-[50%] md:w-full md:max-w-[24%] rounded-lg shadow-md overflow-hidden cursor-pointer"
               > 
                 <Card
                   className="w-[100%] flex flex-col md:flex-row mr-12 animated-box animate__animated animate__fadeInLeft animate__delay-0.2s"

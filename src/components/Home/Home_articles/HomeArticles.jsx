@@ -101,9 +101,9 @@ export default function HomeArticles() {
           <div className="flex flex-row gap-3">
             {reversedMediaData.slice(0, 4).map((blog, index) => (
               <a
-                href={blog.path}
                 key={index}
-                className="w-[50%] md:w-full md:max-w-[30%] rounded-lg shadow-md overflow-hidden"
+                onClick={() => handleCardClick(blog)}
+                className="w-[50%] cursor-pointer md:w-full md:max-w-[30%] rounded-lg shadow-md overflow-hidden"
               >
                 <ArticleCard
                   content={blog.heading}
@@ -132,8 +132,8 @@ export default function HomeArticles() {
 
             <div key={index} className="relative w-full flex-shrink-0 scroll-snap-align-start rounded-lg shadow-md">
               <a
-                href={article.path}
                 key={index}
+                onClick={() => handleCardClick(article)}
                 className=""
               >
                 <div className="border-2 w-full h-[40vh] flex flex-col place-items-center rounded-lg shadow-md">
