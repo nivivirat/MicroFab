@@ -17,7 +17,6 @@ import { Icon } from "@iconify/react";
 import contents from "./content.json"; // Adjust the path accordingly
 
 export default function OptionsButtons() {
-  const images = {};
 
   const options = ["B-F-S", "F-F-S", "I-S-B-M / P-F-F-S"];
   const [currentOption, setCurrentOption] = useState("B-F-S");
@@ -118,7 +117,7 @@ export default function OptionsButtons() {
               {/* Replace sub and sub_content with currentSequenceItem */}
               <div className="font-bold">{currentSequenceItem?.sub}</div>
               <div>{currentSequenceItem?.sub_content}</div>
-              <a href="/BFS" className="hover:bg-[#8AA6AA] mt-[20px] rounded-lg md:mt-[7%] md:mb-[5%] gap-4 text-white justify-center place-items-center md:rounded-md bg-[#8AA6AA] border-[#8AA6AA] flex md:flex-row md:h-[25%] md:w-[35%] h-[50px] w-[100%]">
+              <a href={`/#/${currentOption.replace(/-/g, '').toUpperCase()}`} className="hover:bg-[#8AA6AA] mt-[20px] rounded-lg md:mt-[7%] md:mb-[5%] gap-4 text-white justify-center place-items-center md:rounded-md bg-[#8AA6AA] border-[#8AA6AA] flex md:flex-row md:h-[25%] md:w-[35%] h-[50px] w-[100%]">
                 <button className="hover:bg-[#8AA6AA]">Know More</button>
                 <img src={arrow} alt="arrow" className="md:h-[20px]"></img>
               </a>

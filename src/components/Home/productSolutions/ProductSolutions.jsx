@@ -12,7 +12,7 @@ export default function ProductSolutions() {
         <div className="md:w-[70%] flex flex-col md:gap-6 gap-4">
           <div className="bg-primary h-1 w-5"></div>
           <div>
-            <a href="/product" className="font-bold text-5xl tracking-widest">
+            <a href="/#/product" className="font-bold text-5xl tracking-widest">
               Product <br></br>Solutions
             </a>
           </div>
@@ -21,7 +21,7 @@ export default function ProductSolutions() {
               Microtools is a leading provider of comprehensive solutions, offering advanced machinery for BFS and FFS manufacturing, and medical devices. Our commitment extends to exceptional after-sales service, seamless machine upgrades, and expertise in refurbishing equipment. Microtools focuses on continuous improvement, ensuring clients stay at the forefront of technological advancements.
             </p>
           </div>
-          <a href="/product">
+          <a href="/#/product">
             <div className="text-white flex flex-row justify-center place-items-center gap-2 bg-primary xl:w-[35%] lg:w-[30%] md:w-[200px] w-[40%] rounded-[10px] h-[45px]">
             <p className="">Know More</p>
             <Icon icon="majesticons:arrow-right" className="" />

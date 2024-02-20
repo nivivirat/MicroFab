@@ -88,7 +88,7 @@ const WaterTS = () => {
       <div className="relative w-[100%] flex flex-col md:flex-row md:justify-center place-items-center">
         <div className="relative font-mono flex justify-center place-items-center md:w-[600px] w-[300px] h-[300px] md:h-[600px] rounded-full border border-solid border-[rgba(190, 190, 190, 0.20)] shadow-xl">
           <div className="flex justify-center place-items-center md:h-[450px] md:w-[450px] w-[250px] h-[250px]  rounded-full  border border-solid border-[rgba(190, 190, 190, 0.20)] shadow-xl">
-            <div className="relative border-[rgba(190, 190, 190, 0.20)] shadow-xl rounded-full w-[200px] h-[200px] md:w-[250px] md:h-[250px] flex items-center justify-center">
+            <a href="/#/turnKeySolutions" className="relative border-[rgba(190, 190, 190, 0.20)] shadow-xl rounded-full w-[200px] h-[200px] md:w-[250px] md:h-[250px] flex items-center justify-center">
               <div
                 className="absolute w-full h-full rounded-full border border-solid border-[rgba(190, 190, 190, 0.20)] transition-all duration-500"
                 style={{
@@ -99,7 +99,7 @@ const WaterTS = () => {
               <div className="absolute w-[96%] h-[96%] mb-0.5 flex justify-center place-items-center flex-col bg-white rounded-full">
                 <a
                   className="md:text-[25px] font-bold"
-                  href="/turnKeySolutions"
+                  href="/#/turnKeySolutions"
                 >
                   Turnkey-Lines
                 </a>
@@ -108,7 +108,7 @@ const WaterTS = () => {
                   A vast range of machinery that we are proud about.
                 </p>
               </div>
-            </div>
+            </a>
           </div>
         </div>
 
@@ -138,7 +138,7 @@ const WaterTS = () => {
             setBorderPercentage("5%");
             setIndex(0);
           }}
-          className="md:absolute absolute right-[47%] top-[8%] md:right-[49%] md:top-[20%] rounded-full p-0.5 bg-[#8AA6AA] h-[20px] md:h-[40px]"
+          className="cursor-pointer md:absolute absolute right-[47%] top-[8%] md:right-[49%] md:top-[20%] rounded-full p-0.5 bg-[#8AA6AA] h-[20px] md:h-[40px]"
         ></img>
 
         <img
@@ -148,7 +148,7 @@ const WaterTS = () => {
             setBorderPercentage("50%");
             setIndex(2);
           }}
-          className="md:absolute absolute right-[47%] top-[85%] md:right-[48%] md:top-[73%] rounded-full md:p-2 p-0.5 h-[20px] bg-[#8AA6AA] md:h-[40px]"
+          className="cursor-pointer md:absolute absolute right-[47%] top-[85%] md:right-[48%] md:top-[73%] rounded-full md:p-2 p-0.5 h-[20px] bg-[#8AA6AA] md:h-[40px]"
         ></img>
 
         <img
@@ -158,7 +158,7 @@ const WaterTS = () => {
             setBorderPercentage("25%");
             setIndex(1);
           }}
-          className="md:absolute absolute right-[18%] top-[45%] md:right-[37%] md:top-[49%] rounded-full md:p-2 p-0.5 h-[20px] bg-[#8AA6AA] md:h-[40px]"
+          className="cursor-pointer md:absolute absolute right-[18%] top-[45%] md:right-[37%] md:top-[49%] rounded-full md:p-2 p-0.5 h-[20px] bg-[#8AA6AA] md:h-[40px]"
         ></img>
 
         <img
@@ -168,7 +168,7 @@ const WaterTS = () => {
             setBorderPercentage("95%");
             setIndex(3);
           }}
-          className="md:absolute absolute right-[76%] top-[45%] md:right-[60%] md:top-[49%] rounded-full md:p-2 p-0.5 h-[20px] bg-[#8AA6AA] md:h-[40px]"
+          className="cursor-pointer md:absolute absolute right-[76%] top-[45%] md:right-[60%] md:top-[49%] rounded-full md:p-2 p-0.5 h-[20px] bg-[#8AA6AA] md:h-[40px]"
         ></img>
 
         <p className="md:block w-[300px] hidden md:text-[30px] font-bold text-[#3659FA] md:absolute bottom-[100px] right-[100px]">
