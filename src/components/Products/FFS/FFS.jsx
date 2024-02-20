@@ -79,7 +79,7 @@ export default function FFS() {
         <div className="relative">
           <img src={process} className="" alt="img"></img>
           <p className="absolute md:bottom-0 -bottom-0.5 md:text-[18px] text-[8px] pt-2 font-semibold md:left-[32%] left-[30%]">
-            Blow
+          Form
           </p>
           <p className="absolute md:bottom-0 -bottom-0.5 md:text-[18px] text-[8px] pt-2 font-semibold left-[58%]">
             Fill

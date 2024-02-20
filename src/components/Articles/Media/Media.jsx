@@ -61,7 +61,7 @@ export default function Media() {
           Article and Blogs
         </p>
         <div className="w-screen p-10 hidden md:block overflow-x-auto">
-          <div className="flex w-[100%] flex-row gap-3 flex-wrap">
+          <div className="flex w-[100%] flex-row gap-4 flex-wrap gap-y-10">
             {reversedMediaData.map((item) => (
               <div
                 key={item.id}

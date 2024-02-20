@@ -9,7 +9,7 @@ export default function ArticleCard({ content, sub, img, date, num }) {
       <div>
         <img src={img} alt="Article Thumbnail" className="md:w-full md:h-[200px] object-cover " />
         <div className="p-2">
-          <p className={`text-left text-black ${contentClass}`}>{content}</p>
+          <p className={`text-left text-black h-[50px] font-bold line-clamp-2 ${contentClass}`}>{content}</p>
           {date && <p className="text-left text-black">{date}</p>}
           <div className="flex flex-row place-items-center md:mt-0.5">
             <div className="md:w-[3px] md:mr-2 md:h-[18px] h-[10px] bg-[#8AA6AA] md:mt-0 md:mb-0 mt-[22px] mb-[15px]"></div>
