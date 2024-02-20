@@ -333,9 +333,9 @@ const Header = () => {
             {/* </li> */}
             <li>
               <Link
-                to="/articlesList"
+                to="/Blogs"
                 onClick={toggleMenu}
-                className={`${location.pathname === "/articlesList"
+                className={`${location.pathname === "/Blogs"
                   ? "font-extrabold border-b-2 border-black "
                   : ""
                   }`}
@@ -591,7 +591,7 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/articlesList" onClick={toggleMenu}>
+                <Link to="/Blogs" onClick={toggleMenu}>
                   Blogs
                 </Link>
               </li>

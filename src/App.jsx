@@ -28,7 +28,7 @@ import Appli3 from "./appli3";
 import Appli4 from "./appli4";
 import Appli5 from "./appli5";
 import BFS from "./components/Products/BFS/BFS";
-import FFS from "./components/Products/FFS/FFS";  
+import FFS from "./components/Products/FFS/FFS";
 import ISBM from "./components/Products/ISBM/ISBM";
 import IV from "./components/Products/IV/IV";
 import ArticlesList from './components/ArticlesList/ArticlesList'
@@ -38,6 +38,9 @@ import Article3 from "./components/ArticlesList/article3/Article3"
 import Article4 from "./components/ArticlesList/article4/Article4"
 import Article5 from "./components/ArticlesList/article5/article5"
 import Article6 from "./components/ArticlesList/article6/article6"
+import ManufacturingPage from "./components/Products/ManufacturingPage/ManufacturingPage";
+import MainBlog from './components/Articles/Blog/MainBlog'
+import Media from './components/Articles/Media/Media'
 
 export default function App() {
   return (
@@ -60,18 +63,21 @@ function AppContent() {
       <Header />
 
       <Routes>
+        <Route path="/media" element={<Media />} />
+        <Route path="/media/:id/:heading" element={<MainBlog />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/ManufacturingPage" element={<ManufacturingPage manufacturingPage={"BFS"} />} />
         {/* <Route path="/applications" element={<Applications />} /> */}
         <Route path="/tp" element={<TP />} />
         <Route path="/medicalDevices" element={<MedicalDevices />} />
         <Route path="/articles" element={<Articles />} />
-        <Route path="/Blogs" element={<Blogs />} />
+        <Route path="/Blogs" element={<Media />} />
         <Route path="/Blogs/Blog1" element={<SingleBlogPage />} />
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<Home />} /> 
+        {/* <Route path="*" element={<Home />} /> */}
         <Route path="/technology" element={<Technology />} />
-        <Route path="/turnKeySolutions" element={<TurnKeySolutions />} /> 
+        <Route path="/turnKeySolutions" element={<TurnKeySolutions />} />
         <Route path="/applications" element={<Applications />} />
         <Route path="/service" element={<Service />} />
         {/* <Route path="/services" element={<Service />} /> */}

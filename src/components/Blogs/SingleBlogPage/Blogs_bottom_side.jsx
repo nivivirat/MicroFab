@@ -2,45 +2,40 @@ import img1 from "../../../assets/Articles/Heading.svg";
 import arrow_right from "../../../assets/Home_article/ArrowRight.svg";
 import { Link } from "react-router-dom";
 import "../../../App.css";
+import { useEffect, useState } from "react";
+import {ref, get} from 'firebase/database';
+import {db} from '../../../../firebase'
 
 export default function blogs_bottom_side() {
-  const blogs = [
-    {
-      sub: "Covid - 19 Vaccine",
-      content:
-        "Latest Trends you could perceive with the BFS Technology", // Added content
-      img: img1,
-      dir: "/article1"
-    },
-    {
-      sub: "Covid - 19 Vaccine",
-      content:
-        "Where do COVID-19 vaccine players stand on pricing? So far, it's no profit, slight profit or undecided", // Added content
-      img: img1,
-      dir: "article2"
-    },
-  ];
-  const posts = [
-    {
-      sub: "Blow-Fill-Seal, Technology ",
-      content: "Investing in Form-Fill-Seal", // Added content
-      img: img1,
-      dir: "article3"
-    },
-    {
-      sub: "Blow-Fill-Seal, Technology ",
-      content: "Investing in Form-Fill-Seal", // Added content
-      img: img1,
-      dir: "article4"
-    },
-    {
-      sub: "Blow-Fill-Seal, Technology ",
-      content: "Investing in Form-Fill-Seal", // Added content
-      img: img1,
-      dir: "article5"
-    },
-  ];
 
+  const [mediaData, setMediaData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const mediaSnapshot = await get(ref(db, 'media'));
+        const mediaData = mediaSnapshot.val();
+
+        if (mediaData) {
+          const dataArray = Object.entries(mediaData).map(([uid, { img, heading, description, routerlink, date }]) => ({
+            id: uid,
+            img,
+            heading,
+            description,
+            routerlink,
+            date,
+          }));
+
+          setMediaData(dataArray);
+        }
+      } catch (error) {
+        console.error('Error fetching data from Firebase:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+  
   return (
     <div className="font-['ClashDisplay']">
       {/* You may also like section */}
@@ -52,25 +47,25 @@ export default function blogs_bottom_side() {
         </div>
         <div className="">
           <div className="m-3 flex flex-col gap-5 justify-center md:place-items-start place-items-center">
-            {blogs.map((blog, index) => (
+          {mediaData.slice(0, 4).reverse().map((blog, index) => (
               <div key={index} className="blog-card">
                 <div className="w-full rounded-lg shadow-md p-4">
                   <img
                     src={blog.img}
                     alt="Article Thumbnail"
-                    className="w-[100%] h-[40%] object-cover rounded-lg"
+                    className="w-[full] h-[200px] object-center object-cover rounded-lg"
                   />
                   <div className="p-2 flex flex-col gap-4">
                     <div className="flex flex-row place-items-center">
                       <div className="w-[3px] mr-2 h-[18px] bg-[#8AA6AA]"></div>
                       <p className="text-left text-gray-500 text-[14px]">
-                        {blog.sub}
+                        {blog.description}
                       </p>
                     </div>
                     <p className="text-left text-black text-[16px] font-black">
-                      {blog.content}
+                      {blog.heading}
                     </p>
-                    <a href={blog.dir} className="flex flex-row place-items-center gap-3">
+                    <a href={blog.description} className="flex flex-row place-items-center gap-3">
                       <p className="text-[#8AA6AA] font-extrabold">Read more</p>
                       <img
                         src={arrow_right}
@@ -95,7 +90,7 @@ export default function blogs_bottom_side() {
         </div>
         <div className="">
           <div className="m-3 flex flex-col gap-5 justify-center md:place-items-start place-items-center">
-            {posts.map((blog, index) => (
+          {mediaData.slice(0, 4).reverse().map((blog, index) => (
               <div key={index} className="blog-card">
                 <div className="w-full flex flex-row rounded-lg shadow-md p-4">
                   <img
@@ -105,12 +100,12 @@ export default function blogs_bottom_side() {
                   />
                   <div className="p-2 flex flex-col gap-4">
                     <p className="text-left text-black text-[12px] font-black">
-                      {blog.content}
+                      {blog.heading}
                     </p>
                     <div className="flex flex-row place-items-center">
                       <div className="w-[3px] mr-2 h-[18px] bg-[#8AA6AA]"></div>
                       <p className="text-left text-gray-500 text-[12px]">
-                        {blog.sub}
+                        {blog.description}
                       </p>
                     </div>
                     <a href={blog.dir} className="flex flex-row place-items-center gap-3">

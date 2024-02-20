@@ -11,8 +11,6 @@ export default function Footer() {
 
   const location = useLocation();
 
-  console.log(location.pathname === "/contact");
-
   const [socialMediaLinks, setSocialMediaLinks] = useState({});
 
   useEffect(() => {

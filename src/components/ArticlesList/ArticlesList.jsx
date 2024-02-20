@@ -1,7 +1,6 @@
 import arrow_right from "../../assets/Home_article/ArrowRight.svg";
 import ArticleCard from "../Home/Home_articles/ArticleCard";
 import Footer from "../Common/Footer/Footer";
-// import Blogs_Heading from "homeArticleData.json";
 
 export default function articlesList() {
   const Blogs_Heading = [

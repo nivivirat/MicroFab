@@ -5,9 +5,10 @@ import img3 from "../../../assets/Home_article/article3.svg";
 // import arrow_right from "../../../assets/Home_article/ArrowRight.svg";
 import homeArticles from "../../../assets/Articles/Heading.svg";
 import ArticleCard from "../../Home/Home_articles/ArticleCard";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Icon } from "@iconify/react";
-// import Blogs_Heading from "homeArticleData.json";
+import {get, ref} from 'firebase/database';
+import {db} from '../../../../firebase'
 
 export default function HomeArticles() {
 
@@ -23,14 +24,14 @@ export default function HomeArticles() {
     // Check if the container ref is available
     if (container) {
       let scrollAmount = container.clientWidth;
-      scrollAmount+=15
+      scrollAmount += 15
       console.log('scrollAmount:', scrollAmount);
 
       const newIndex = direction === 'next' ? scrollIndex + 1 : scrollIndex - 1;
       console.log('newIndex:', newIndex);
 
       // Ensure newIndex is within bounds
-      if (newIndex >= 0 && newIndex < Blogs_Heading.length) {
+      if (newIndex >= 0 && newIndex < reversedMediaData.length) {
         console.log('scrolling to:', newIndex);
 
         container.scrollTo({
@@ -43,36 +44,48 @@ export default function HomeArticles() {
     }
   };
 
-  const Blogs_Heading = [
-    {
-      content: "Latest Trends you could perceive with the BFS Technology",
-      sub: "Blow-Fill-Seal, Technology",
-      img: "https://res.cloudinary.com/dzhdarh4q/image/upload/v1700851990/articles/article1_lvcpq0.svg",
-      path: "article1",
-    },
-    {
-      content: "Factors you must consider while Purchasing an FFS Machine",
-      sub: "Blow-Fill-Seal, Technology",
-      img: "https://res.cloudinary.com/dzhdarh4q/image/upload/v1700851989/articles/article2_pqgsdx.svg",
-      date: "April 12, 2023 PAP-Q1-2023",
-      path: "article2",
-    },
-    {
-      content:
-        "Things to look for When Buying Medical Devices for your Hospital",
-      sub: "Blow-Fill-Seal, Technology",
-      img: "https://res.cloudinary.com/dzhdarh4q/image/upload/v1700851989/articles/article3_hwh8vw.svg",
-      date: "April 12, 2023 PAP-Q1-2023",
-      path: "article3",
-    },
-    {
-      content: "Benefits of Approaching a Contract Manufacturer",
-      sub: "Blow-Fill-Seal, Technology",
-      img: "https://res.cloudinary.com/dzhdarh4q/image/upload/v1700851989/articles/article4_i8chpp.svg",
-      date: false,
-      path: "article4",
-    },
-  ];
+  const [mediaData, setMediaData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const mediaSnapshot = await get(ref(db, 'media'));
+        const mediaData = mediaSnapshot.val();
+
+        if (mediaData) {
+          const dataArray = Object.entries(mediaData).map(([uid, { img, heading, description, routerlink, date }]) => ({
+            id: uid,
+            img,
+            heading,
+            description,
+            routerlink,
+            date,
+          }));
+
+          setMediaData(dataArray);
+        }
+      } catch (error) {
+        console.error('Error fetching data from Firebase:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const generateRoute = (media) => {
+    if (media.routerlink) {
+      return media.routerlink;
+    } else {
+      return `/#/media/${media.id}/${media.heading.replace(/\s+/g, '-')}`;
+    }
+  };
+
+  const handleCardClick = (item) => {
+    const route = generateRoute(item);
+    window.open(route, '_blank');
+  };
+
+  const reversedMediaData = [...mediaData].reverse();
 
   return (
     <div className="font-['ClashDisplay']">
@@ -86,15 +99,15 @@ export default function HomeArticles() {
         <div className="w-screen p-10 hidden md:block overflow-x-auto">
           {/* Cards */}
           <div className="flex flex-row gap-3">
-            {Blogs_Heading.slice(0, 4).map((blog, index) => (
+            {reversedMediaData.slice(0, 4).map((blog, index) => (
               <a
                 href={blog.path}
                 key={index}
                 className="w-[50%] md:w-full md:max-w-[30%] rounded-lg shadow-md overflow-hidden"
               >
                 <ArticleCard
-                  content={blog.content}
-                  sub={blog.sub}
+                  content={blog.heading}
+                  sub={blog.description}
                   img={blog.img}
                   date={blog.date}
                 />
@@ -115,7 +128,7 @@ export default function HomeArticles() {
           style={{ scrollSnapType: "x mandatory" }}
           ref={scrollContainerRef}
         >
-          {Blogs_Heading.map((article, index) => (
+          {reversedMediaData.slice(0, 4).map((article, index) => (
 
             <div key={index} className="relative w-full flex-shrink-0 scroll-snap-align-start rounded-lg shadow-md">
               <a
@@ -133,11 +146,11 @@ export default function HomeArticles() {
                     <div className="flex flex-row place-items-center">
                       <div className="w-[3px] mr-2 h-[18px] bg-[#8AA6AA]"></div>
                       <p className="text-left text-gray-500 text-[14px]">
-                        {article.sub}
+                        {article.description}
                       </p>
                     </div>
                     <p className="text-left text-black text-[18px] font-bold line-clamp-3">
-                      {article.content}
+                      {article.heading}
                     </p>
                     <div className="flex flex-row place-items-center gap-3">
                       <p className="text-[#8AA6AA] font-extrabold">Read more</p>
@@ -160,7 +173,7 @@ export default function HomeArticles() {
                 </button>
                 <button
                   onClick={() => handleScroll('next')}
-                  disabled={scrollIndex > Blogs_Heading.length }
+                  disabled={scrollIndex > reversedMediaData.length}
                   className="text-primary px-4 py-2 rounded-full"
                 >
                   <Icon icon="icon-park-twotone:right-c" />

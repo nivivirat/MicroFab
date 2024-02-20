@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import top from "../../assets/medicalDevices/top.svg";
 import Footer from "../Common/Footer/Footer";
 import MedicalDevicesCard from "./MedicalDevicesCard";
-import medicalDevicesData from "./MedicalDevicesData.json";
+import {db} from '../../../firebase'
 
 export default function MedicalDevices() {
 
@@ -15,6 +15,28 @@ export default function MedicalDevices() {
       setOpenCardIndex(index); // Open the clicked card
     }
   };
+
+  const [medicalDevicesData, setMedicalDevicesData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const snapshot = await db.ref("yourDatabasePath").once("value");
+        const data = snapshot.val();
+        if (data) {
+          const dataArray = Object.entries(data).map(([key, value]) => ({
+            uid: key,
+            ...value,
+          }));
+          setMedicalDevicesData(dataArray);
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
 
   return (
@@ -49,27 +71,7 @@ export default function MedicalDevices() {
             ></img>
           </div>
         </div>
-
-        {/* Medical devices we Provide */}
         <div>
-          {/* content */}
-          {/* <div className="flex flex-col md:gap-6 gap-4 md:p-10 p-4">
-            <div className="bg-primary h-1 w-5"></div>
-            <div>
-              <p className="font-semibold text-4xl tracking-widest capitalize">
-                Medical devices we Provide
-              </p>
-            </div>
-            <div className="w-full">
-              <p className="font-thin text-[#67675F] text-[18px] md:leading-7 md:tracking-wide">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum
-                dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor
-                sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit.
-              </p>
-            </div>
-          </div> */}
 
           {/* cards */}
 
