@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import top from "../../assets/medicalDevices/top.svg";
 import Footer from "../Common/Footer/Footer";
 import MedicalDevicesCard from "./MedicalDevicesCard";
-import {ref, onValue} from 'firebase/database'
+import { ref, onValue } from 'firebase/database'
 import { db } from '../../../firebase'
 
 export default function MedicalDevices() {
 
   const [openCardIndex, setOpenCardIndex] = useState(null);
-  const [medicalDevicesData, setMedicalDevicesData] = useState([]);
+  const [medicalDevicesData, setMedicalDevicesData] = useState({});
 
   const handleCardToggle = (index) => {
     if (openCardIndex === index) {
@@ -20,13 +20,9 @@ export default function MedicalDevices() {
 
   useEffect(() => {
     const deviceRef = ref(db, 'MedicalDevices');
-
     const unsubscribe = onValue(deviceRef, (snapshot) => {
-      const data = snapshot.val();
-      if (data) {
-        const devicesArray = Object.values(data);
-        setMedicalDevicesData(devicesArray);
-      }
+      const data = snapshot.val(); // Extract data from the snapshot
+      setMedicalDevicesData(data || {}); // Set data to state, use an empty object if data is null
     });
 
     return () => {
@@ -34,6 +30,8 @@ export default function MedicalDevices() {
       unsubscribe();
     };
   }, []);
+
+  console.log(medicalDevicesData);
 
   return (
     <div>
@@ -72,17 +70,22 @@ export default function MedicalDevices() {
           {/* cards */}
 
           <div className="flex flex-wrap md:gap-4 md:gap-y-8 gap-6 md:pl-10 md:p-0 p-8 md:place-items-start place-items-center md:justify-start justify-center">
-            {medicalDevicesData.map((device, index) => (
-              <MedicalDevicesCard
-                key={index}
-                index={index}
-                isOpen={openCardIndex === index}
-                onToggle={handleCardToggle}
-                heading={device.heading}
-                content={device.content}
-                img={device.img}
-              />
-            ))}
+            {Object.keys(medicalDevicesData)
+              .sort((a, b) => medicalDevicesData[a].order - medicalDevicesData[b].order)
+              .map((deviceKey, index) => {
+                const device = medicalDevicesData[deviceKey]; // Access the device using the key
+                return (
+                  <MedicalDevicesCard
+                    key={index}
+                    index={index}
+                    isOpen={openCardIndex === index}
+                    onToggle={handleCardToggle}
+                    heading={device.heading}
+                    content={device.content}
+                    img={device.img}
+                  />
+                );
+              })}
           </div>
         </div>
       </div>
