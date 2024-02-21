@@ -42,15 +42,16 @@ export default function HappyCustomers() {
 
         {/* 1 MIL + */}
         <div className="flex flex-col">
-          <div className="flex flex-col justify-center place-items-start">
-            <div>
+          <div className="relative flex flex-col justify-center place-items-start">
+            <div className='absolute -top-10 left-0'>
               <p
-                className="font-['ClashDisplayBold'] border-blue text-[50px] hidden md:block"
-                style={{ WebkitTextStroke: '2px blue' }}
+                className="font-['ClashDisplay'] text-[50px] md:block"
+                // style={{ WebkitTextStroke: '2px blue' }}
               >
-                + 1M
+                Our
               </p>
-              <img src={ONEMILL} className="md:hidden h-8"></img>
+              {/* <p>Our</p> */}
+              {/* <img src={ONEMILL} className="md:hidden h-8"></img> */}
             </div>
             <img src={arrow1} className="h-[40px] w-auto mt-2 "></img>
             <p className="text-[40px] font-black leading-10">

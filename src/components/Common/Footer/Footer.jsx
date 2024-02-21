@@ -52,7 +52,7 @@ export default function Footer() {
             <div className="md:w-[30%]">
               <img src={logo}></img>
               <div className="flex flex-row gap-4 md:mt-6 mt-6">
-                MicroFab: Dedicated to excellence in executing innovative projects for the IV industry, delivering precision and reliability every step of the way. Join us in revolutionizing IV solutions with our expertise and commitment to quality.
+                With 125+ machineries sold, MicroFab has flourished across the years exemplifying excellence. While the organization has always been on its verge with innovation, it has accomplished many milestones and has earned trust of numerous clients.
               </div>
             </div>
             {/* vertical line */}

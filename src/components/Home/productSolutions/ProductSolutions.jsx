@@ -18,7 +18,7 @@ export default function ProductSolutions() {
           </div>
           <div className="w-[90%]">
             <p className="font-thin text-[#67675F] text-[18px] md:leading-7 md:tracking-wide">
-              Microtools is a leading provider of comprehensive solutions, offering advanced machinery for BFS and FFS manufacturing, and medical devices. Our commitment extends to exceptional after-sales service, seamless machine upgrades, and expertise in refurbishing equipment. Microtools focuses on continuous improvement, ensuring clients stay at the forefront of technological advancements.
+              Microfab is a leading provider of comprehensive solutions, offering advanced machinery and medical devices. Our commitment extends to exceptional after-sales service, seamless machine upgrades, and expertise in refurbishing equipment. We focus on continuous improvement, ensuring clients stay at the forefront of technological advancements.
             </p>
           </div>
           <a href="/#/product">

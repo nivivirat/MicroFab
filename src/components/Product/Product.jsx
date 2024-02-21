@@ -134,7 +134,8 @@ export default function Product() {
             Machine
             upgradisation</h3>
           <h6 className="text-xl leading-tight text-black xd fgi" color="clack">
-            When you think about machine upgrades and modernization, we walk miles ahead to optimize the older models with significant modifications. This, eventually, enhances the overall efficiency and the quality of the products. It may sound easy to replace the existing components. But, if there are no suitable components, then our experienced engineers develop special solutions.  </h6></div>
+            When you think about machine upgrades and modernization, we walk miles ahead to optimize the older models. This, eventually, enhances the overall efficiency and the quality of the products. At MicroFab, we offer machine optimization solutions for unlocking peak performance and maximizing the output.
+          </h6></div>
       </div>
       <div className="serv1">
         <div>
@@ -211,7 +212,7 @@ export default function Product() {
                 In the healthcare sector, MicroFab understands the criticality of
                 choosing quality medical equipment. While serving patients, we
                 ensure that the device is safe to use. We also develop designs for
-                devices which are apt for using, with comfort. </h6>
+                devices which are apt for using, with comfort.</h6>
               <a
                 href="/#/medicalDevices"
                 type="submit"

@@ -45,16 +45,16 @@ export default function Service() {
           <br></br>
 
 
-          <div className="flex flex-col rounded-lg text-black md:max-w-5xl md:flex-row  animate__animated animate__fadeInLeft animate__delay-1s">
+          <div className="flex flex-col place-items-center rounded-lg w-[90vw] justify-between px-10 text-black md:flex-row  animate__animated animate__fadeInLeft animate__delay-1s">
             <img
-              className="h-64 w-full rounded-t-lg object-cover ds md:h-auto md:w-64 md:rounded-none md:rounded-l-lg order-2 mn md:order-"
+              className="h-64 w-full rounded-t-lg object-cover md:h-auto md:w-[300px] md:rounded-none md:rounded-l-lg order-2 md:order-"
               src={pro}
               alt=""
             />
-            <div className="flex flex-col justify-start order-1 md:order-1">
-              <h3 className="mb-2 pb-4 text-4xl kl leading-tight text-black">
+            <div className="flex flex-col justify-start order-1 md:order-1 md:pr-[200px]">
+              <h3 className="font-bold mb-2 pb-4 tracking-wide text-5xl leading-tight text-black">
                 Project Construction & Management </h3>
-              <h6 className="text-2xs leading-tight text-black kl" color="clack">
+              <h6 className="text-2xs text-[#67675F] leading-7 text-left" color="clack">
                 As you get in touch with us to outline more about your project, our dynamic and forward-thinking team takes charge of overseeing and guiding the project execution from its earliest stages. Ultimately, our focus remains steadfast on ensuring customer delight and fulfilling business requirements by delivering a feasible project within the allocated budget, while prioritizing its functionality.
               </h6>
 
@@ -82,16 +82,16 @@ export default function Service() {
           <br></br>
 
 
-          <div className="flex flex-col rounded-lg text-black md:max-w-5xl md:flex-row  animate__animated animate__fadeInLeft animate__delay-3s">
+          <div className="flex flex-col rounded-lg text-black md:max-w-5xl md:flex-row animate__animated animate__fadeInLeft animate__delay-3s">
             <img
-              className="h-64 w-96 rounded-t-lg object-cover  md:h-auto md:w-120 md:rounded-none md:rounded-l-lg order-2  mmn animate__animated animate__fadeInLeft animate__delay-3s  md:order-"
+              className="h-64 w-96 rounded-t-lg object-cover md:h-auto md:w-120 md:rounded-none md:rounded-l-lg order-2 mmn animate__animated animate__fadeInLeft animate__delay-3s  md:order-"
               src={pro2}
               alt=""
             />
             <div className="flex flex-col justify-start order-1 md:order-1">
-              <h3 className="mb-2 pb-4 text-4xl kl leading-tight text-black">
+              <h3 className="mb-2 pb-4 text-4xl font-bold leading-tight text-black">
                 Contract manufacturing</h3>
-              <h6 className="text-2xs leading-tight text-black xz hj" color="clack">
+              <h6 className="text-2xs xz hj text-[#67675F] leading-7" color="clack">
                 When the entire gamut of production operational activities becomes cumbersome, you can approach us at that instance. With MicroFab, you can work closely with professionals that possess specialized skills and the expertise. With advanced technologies, you can further expect higher quality products and an improvement in the production process.
               </h6>
             </div>
@@ -112,20 +112,22 @@ export default function Service() {
             />
           </div>
           <br></br><br></br><br></br><br></br>
-          <div className="serv4"></div>
+          <div className="md:pt-3"></div>
           <br></br>
 
 
-          <div className="flex flex-col rounded-lg text-black md:max-w-5xl md:flex-row">
+          <div className="flex flex-col justify-center rounded-lg w-screen text-black md:max-w-5xl md:flex-row">
             <img
-              className="h-64 w-full animate__animated animate__fadeInRight animate__delay-4s max-[580px]:ml-4 sm:ml-12 md:ml-24 rounded-t-lg object-cover bv md:h-auto md:w-72 md:rounded-none md:rounded-l-lg md:order-1"
+              className="h-64 w-full border text-center md:px-0 px-10 md:pl-0 pl-[100px] animate__animated animate__fadeInRight animate__delay-4s max-[580px]:ml-4 sm:ml-12 md:ml-[200px] rounded-t-lg object-cover bv md:h-auto md:w-72 md:rounded-none md:rounded-l-lg md:order-1"
               src={pro6}
               alt=""
             />
-            <div className="flex flex-col justify-start order-1 md:order-2 op mr-6  animate__animated animate__fadeInLeft animate__delay-4s">
-              <h3 className="mb-2 pb-4 text-4xl leading-tight kl zx text-black">
+            <div className="flex flex-col w-[50vw] justify-start order-1 md:order-2 op mr-6  animate__animated animate__fadeInLeft animate__delay-4s">
+              <div className="serv4 mb-4"></div>
+
+              <h3 className="mb-2 pb-4 text-4xl leading-tight font-bold tracking-wide text-black">
                 Advisory Services </h3>
-              <h6 className="text-2xs leading-tight text-black kl zx" color="clack">
+              <h6 className="text-2xs text-[#67675F] leading-7 md:w-[60vw]" color="clack">
                 When perplexity is still reigning while the project implementation is yet to commence, we offer advisory services with experience. While we help you with technology transfer and ensure that everything you need is incorporated on premise, we conduct market research and a diligent study about sites across different locations. For project success, we also help you sift through the technical complexities so that you can focus on what really matters.
               </h6>
             </div>
