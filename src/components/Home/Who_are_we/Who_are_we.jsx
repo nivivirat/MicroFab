@@ -138,11 +138,11 @@ export default function Who_are_we() {
         {/* desktop view */}
         <div className="md:flex hidden md:flex-col overflow-x-auto md:justify-start md:gap-20">
           {/* 21 countries */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:mt-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:mt-10">
             {sectionsData.map((section, index) => (
               <div className="flex flex-row gap-4" key={index}>
                 {/* line */}
-                <div className="block md:w-[5px] w-[10px] h-[170px] md:h-[120px] bg-[#8AA6AA] gap-4"></div>
+                <div className="block md:w-[5px] w-[10px] h-[170px] md:h-[80px] bg-[#8AA6AA] gap-4"></div>
                 <div className="md:w-[75%] md:text-[16px] w-full">
                   {section && section.title && (
                     <p className="md:text-[20px] font-semibold text-[20px]">

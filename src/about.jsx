@@ -343,7 +343,7 @@ function AboutUs() {
                 <img src={uio} className="w-[650px] md:block hidden h-full object-cover" />
               </div>
               <div className="flex-1 mb-24 sm:ml-0 bg-white p-8 flex flex-col place-items-center justify-center">
-                <h3 className="lg:ml-0 sm:ml-0 text-5xl sm:text-4xl text-[#8AA6AA] pb-5 leading-tight font-['ClashDisplay']">
+                <h3 className="lg:ml-0 sm:ml-0 md:mt-0 mt-16 text-5xl sm:text-4xl text-[#8AA6AA] pb-5 leading-tight font-['ClashDisplay']">
                   <strong>
                     {editMode ? (
                       <input type="text" value={data.title} onChange={(e) => handleInputChange(e, 0, 0, 'title')} className="border border-white bg-primary text-white px-2 py-1 rounded-md" />
@@ -449,36 +449,25 @@ function AboutUs() {
                 Project  by Region
               </p>
               <center>
-                <p className=" text-4xl text-black leading-tight pp ll font-['ClashDisplay']"><strong>
+                <p className=" text-4xl text-black leading-tight md:mt-0 mt-10 font-['ClashDisplay']"><strong>
                   Here’s a glimpse of our projects by various regions across countries</strong> </p>
               </center>
 
             </div>
-
-            <br></br>
-            <br></br>
-            <br></br>
-            {/* <br></br><br></br><br></br><br></br><br></br> */}
-
-            {/* <img src={a} alt="no" /> */}
-            {/* Your browser does not support the video tag. */}
           </div>
 
           <div className="flex justify-end mt-8 mr-8">
             <div className="w-full h-80 object-cover md:w-full md:p-4 sm:-mt-24">
-              <img className="w-full h-full object-fit ml-3 mr-3 mt-12 lg:mt-12" src={yy5} alt="" />
+              <img className="h-[500px] w-screen ml-3 mr-3 mt-12 lg:mt-12 object-cover" src={yy5} alt="" />
             </div>
           </div>
-          <div className="flex flex-col mt-24 -mb-12 p-6">
-            <p className=" text-5xl leading-tight text-[#8AA6AA] ll pp font-['ClashDisplay']">
-              Project  by Solutions
+          <div className="flex flex-col mt-[280px] -mb-12 p-6">
+            <p className=" text-3xl leading-tight text-[#8AA6AA] font-['ClashDisplay']">
+              Project by Solutions
             </p>
-            {/* <h5 className="mb-2 text-4xl leading-tight ll">
-                  Lorem ipsum
-                </h5> */}
 
-            <p className=" text-4xl text-black leading-tight pp ll font-['ClashDisplay']"><strong>
-              Here are the various packaging solutions we provide</strong> </p>
+            <p className=" text-4xl text-black leading-tight opacity-70 font-['ClashDisplay']"><strong>
+              Here are the various service solutions<br></br> we provide</strong> </p>
 
 
           </div>
