@@ -43,7 +43,7 @@ export default function MedicalDevicesCard({ index, isOpen, onToggle, img, headi
     onToggle(index);
   }
 
-  console.log(content);
+  // console.log(content);
 
   const [showContent, setShowContent] = useState(false);
 

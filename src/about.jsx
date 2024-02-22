@@ -78,6 +78,7 @@ function AboutUs() {
   useEffect(() => {
     const handleResize = () => {
       if (containerRef.current) {
+        console.log("kingn");
         setContainerWidth(containerRef.current.offsetWidth);
       }
     };
@@ -89,6 +90,11 @@ function AboutUs() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  const handleLoad = () => {
+    console.log("kinggg");
+    setContainerWidth(containerRef.current.offsetWidth);
+  };
 
   const [openCardIndex, setOpenCardIndex] = useState(null);
 
@@ -420,7 +426,7 @@ function AboutUs() {
 
             </div>
           </div>
-          <div className="overflow-x-auto min-[880px]:-mt-64 min-[280px]:-mt-12 scrollbar-bottom" ref={containerRef}>
+          <div className="overflow-x-auto min-[880px]:-mt-64 min-[280px]:-mt-12 scrollbar-bottom" onLoad={handleLoad} ref={containerRef}>
             {containerWidth <= 800 && containerWidth != 0 ? (
               <Slider images={[yy1, yy2, yy3, yy4]} autoScrollInterval={5000} />
             ) : (

@@ -31,7 +31,7 @@ export default function MedicalDevices() {
     };
   }, []);
 
-  console.log(medicalDevicesData);
+  // console.log(medicalDevicesData);
 
   return (
     <div>
