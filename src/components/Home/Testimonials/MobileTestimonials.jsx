@@ -33,7 +33,7 @@ export default function MobileTestimonials() {
 
   return (
     <div>
-      <div className="w-screen fg flex flex-col gap-10 pb-10 -mb-24 overflow-x-auto px-10">
+      <div className="w-screen fg flex flex-col gap-10 pb-10 -mb-24 overflow-x-auto pr-12">
         <Slider options={{ align: "center" }}>
         {customerData.map((customer, index) => (
             <div

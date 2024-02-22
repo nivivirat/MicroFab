@@ -219,7 +219,7 @@ const Header = () => {
             </Link>
 
             <li
-              className={`relative cursor-pointer ${location.pathname === "/Applications" ? "font-extrabold " : ""
+              className={`relative cursor-pointer ${location.pathname === "/pharmaceutical" ? "font-extrabold " : ""
                 }`}
             >
               <div
@@ -483,7 +483,7 @@ const Header = () => {
                   className={`flex items-center cursor-pointer ${isApplicationDropdownOpen ? "font-bold" : ""
                     }`}
                 >
-                  <Link to="/Applications" onClick={toggleMenu}>
+                  <Link to="/pharmaceutical" onClick={toggleMenu}>
                     Applications
                   </Link>
                   {isApplicationDropdownOpen ? (
@@ -505,7 +505,7 @@ const Header = () => {
 
                 {/* application in mobile */}
                 {isApplicationDropdownOpen && (
-                  <Link to="/applications" onClick={toggleMenu}>
+                  <Link to="/pharmaceutical" onClick={toggleMenu}>
                     <div className="lg:absolute mt-2 bg-white border border-gray-300 p-4 rounded-lg shadow-md h-[360px] w-[350px] lg:w-[739px] mx-auto lg:left-1/2 lg:transform lg:-translate-x-1/2">
                       <div className="flex flex-row gap-[16px]">
                         <Link to="/pharmaceutical">

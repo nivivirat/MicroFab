@@ -180,7 +180,7 @@ export default function Product() {
         </div>
         <br></br><br></br><br></br>
         <div className="serv1">
-          <div className="serv4"></div>
+          <div className="serv4 md:-ml-0 -ml-5"></div>
           <br></br>
 
 
@@ -205,10 +205,10 @@ export default function Product() {
               src={b4}
               alt=""
             />
-            <div className="md:ml-0 ml-24 flex flex-col w-screen justify-start order-1 md:order-1 xd xdd">
+            <div className="ml-16 md:ml-10 flex flex-col w-screen justify-start order-1 md:order-1 xd xdd">
               <h3 className="mb-2 pb-4 text-5xl leading-tight text-black hdfc fgi xd ">
                 Medical devices</h3>
-              <h6 className="text-xl leading-tight text-black hdfc fgi md:w-[50vw] w-[70vw] -mr-[500px]" color="clack">
+              <h6 className="text-xl leading-tight text-black hdfc fgi md:w-[50vw] w-[70vw] md:-mr-[500px]" color="clack">
                 In the healthcare sector, MicroFab understands the criticality of
                 choosing quality medical equipment. While serving patients, we
                 ensure that the device is safe to use. We also develop designs for
