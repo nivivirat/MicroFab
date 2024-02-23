@@ -99,7 +99,7 @@ export default function Appli4() {
             </h3>
             <span>
               <h6
-                className="lg:text-2xl md:text-2xl mt-2 sm:text-xl leading-tight text-[#8AA6AA]  sd animate__animated animate__fadeInRight animate__delay-0s"
+                className="lg:text-2xl md:text-2xl mt-2 sm:text-xl leading-tight text-[#8AA6AA] mr-6   sd animate__animated animate__fadeInRight animate__delay-0s"
                 color="blue"
               >
                 MicroFab stands at the forefront of innovation, redefining packaging solutions for the cosmetics industry. Our cutting-edge technologies ensure quality maintenance of cosmetic formulations.</h6>{" "}
