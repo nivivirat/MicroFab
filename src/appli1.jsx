@@ -100,7 +100,7 @@ export default function Appli1() {
             </h3>
             <span>
               <h6
-                className="lg:text-2xl md:text-2xl mt-2 sm:text-xl leading-tight text-[#8AA6AA]  sd animate__animated animate__fadeInRight animate__delay-0s"
+                className="lg:text-2xl md:text-2xl mt-2 sm:text-xl mr-6  leading-tight text-[#8AA6AA]  sd animate__animated animate__fadeInRight animate__delay-0s"
                 color="blue"
               >
                 MicroFab revolutionizes pharmaceutical packaging with cutting-edge solutions that prioritize precision, efficiency, and aseptic integrity. </h6>{" "}
