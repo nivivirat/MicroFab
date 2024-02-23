@@ -97,7 +97,7 @@ export default function Appli4() {
             </h3>
             <span>
               <h6
-                className="lg:text-2xl md:text-2xl mt-2 sm:text-xl leading-tight text-[#8AA6AA]  sd animate__animated animate__fadeInRight animate__delay-0s"
+                className="lg:text-2xl md:text-2xl mt-2 sm:text-xl leading-tight text-[#8AA6AA] mr-6   sd animate__animated animate__fadeInRight animate__delay-0s"
                 color="blue"
               >
                 Our packaging solutions play a pivotal role in preserving the freshness and quality of dairy products. These also extend the shelf life of dairy goods, ensuring that the consumers can enjoy the product with its nutritional benefits. </h6>{" "}
