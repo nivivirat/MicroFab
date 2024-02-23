@@ -95,20 +95,20 @@ export default function Appli1() {
           <div className="qa -mt-64">
             <h3 className="mb-6 w-full pb-8 lg:text-6xl md: text-4xl sm:text-4xl leading-tight text-[#8AA6AA]  animate__animated animate__fadeInLeft animate__delay-0s df">
               <strong>
-                Packaging Solutions for the Food Industry</strong>
+                Packaging Solutions for Cosmetic Industry</strong>
             </h3>
             <span>
               <h6
-                className="lg:text-2xl md:text-2xl mt-2 sm:text-xl leading-tight text-[#8AA6AA]  sd animate__animated animate__fadeInRight animate__delay-0s"
+                className="lg:text-2xl md:text-2xl mt-2 sm:text-xl leading-tight mr-6  text-[#8AA6AA]  sd animate__animated animate__fadeInRight animate__delay-0s"
                 color="blue"
               >
-                MicroFab transforms the realm of food packaging with its solutions designed to preserve freshness, ensure safety, and enhance convenience. Our technologies cater to the unique needs, offering precision and innovation.
+                Our technology can be considered for a user-friendly packaging solution for serums, tonics or gels. The cosmetics will stay fresh and a need to add preservatives will not arise.
               </h6>{" "}
               {/* <br></br> */}
             </span>
           </div>
 
-          <button className="bg-[#8AA6AA] md:w-48 ee mt-24 sm:ml-2 lg:ml-12 md:ml-10  text-white font-bold py-3 px-20 rounded m-2 ">
+          <button className="bg-[#8AA6AA] md:w-48 ee sm:mt-12 md:mt-12 sm:ml-2 lg:ml-12 md:ml-10  text-white font-bold py-3 px-20 rounded m-2 ">
             Explore
           </button>
 
