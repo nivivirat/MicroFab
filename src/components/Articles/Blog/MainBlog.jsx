@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, onValue } from 'firebase/database';
 import Blogs_bottom_side from '../../Blogs/SingleBlogPage/Blogs_bottom_side';
+import Footer from '../../Common/Footer/Footer';
 
 // const firebaseConfig = {
 //   apiKey: "AIzaSyAHfTtMp6QIkc8i-UlwcjjpYs6oWzH90NA",
@@ -86,33 +87,36 @@ const MainBlog = () => {
   }
 
   return (
-    <div className='flex flex-col md:flex-row'>
-      <div className='px-10 flex flex-col mt-24 md:w-9/12 w-full'>
-        <div className="flex flex-row space-x-2">
-          <p className="text-[#8AA6AA] text-[20px]">Home </p>
-          <p className="text-black text-[20px] font-bold">/</p>
-          <p className="text-[#8AA6AA] text-[20px]">Article </p>
+    <div className='flex flex-col'>
+      <div className='flex flex-col md:flex-row'>
+        <div className='px-10 flex flex-col mt-24 md:w-9/12 w-full'>
+          <div className="flex flex-row space-x-2">
+            <p className="text-[#8AA6AA] text-[20px]">Home </p>
+            <p className="text-black text-[20px] font-bold">/</p>
+            <p className="text-[#8AA6AA] text-[20px]">Article </p>
+          </div>
+          <div>
+            <p className="text-[#8AA6AA] text-[30px]">{heading}</p>
+          </div>
+          <div>
+            {/* <p className='text-[#183B56] font-semibold py-5 text-center w-screen'>{desc}</p> */}
+          </div>
+          <div>
+            {/* <p className='text-[#0078A6] w-screen text-center'>{date}</p> */}
+          </div>
+          <div className='flex flex-col justify-center'>
+            <img src={innerContent.Image} alt="Blog" className='py-5 w-full h-[500px] object-cover object-center' />
+            <div dangerouslySetInnerHTML={{ __html: innerContent.HTMLContent }} />
+          </div>
         </div>
-        <div>
-          <p className="text-[#8AA6AA] text-[30px]">{heading}</p>
-        </div>
-        <div>
-          {/* <p className='text-[#183B56] font-semibold py-5 text-center w-screen'>{desc}</p> */}
-        </div>
-        <div>
-          {/* <p className='text-[#0078A6] w-screen text-center'>{date}</p> */}
-        </div>
-        <div className='flex flex-col justify-center'>
-          <img src={innerContent.Image} alt="Blog" className='py-5 w-full h-[500px] object-cover object-center' />
-          <div dangerouslySetInnerHTML={{ __html: innerContent.HTMLContent }} />
+
+        {/* recommended articles */}
+        <div className='md:w-3/12 w-full mt-20'>
+          <Blogs_bottom_side />
         </div>
       </div>
 
-      {/* recommended articles */}
-      <div className='md:w-3/12 w-full mt-20'>
-        <Blogs_bottom_side/>
-      </div>
-
+      <Footer />
     </div>
   );
 };
