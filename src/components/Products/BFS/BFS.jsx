@@ -11,7 +11,7 @@ import Footer from "../../Common/Footer/Footer";
 import applicationContent from './Application/applicationContent.json'
 import ApplicationCard from "./Application/ApplicationCard";
 import { useEffect, useState } from "react";
-import { db } from "../../../../firebase";
+import { db } from "../../../../firebase";  
 import { onValue, ref } from "firebase/database";
 
 export default function BFS() {

@@ -100,7 +100,7 @@ export default function Appli1() {
             </h3>
             <span>
               <h6
-                className="lg:text-2xl md:text-2xl mt-2 sm:text-xl leading-tight text-[#8AA6AA]  sd animate__animated animate__fadeInRight animate__delay-0s"
+                className="lg:text-2xl md:text-2xl mt-2 sm:text-xl mr-6  leading-tight text-[#8AA6AA]  sd animate__animated animate__fadeInRight animate__delay-0s"
                 color="blue"
               >
                 MicroFab revolutionizes pharmaceutical packaging with cutting-edge solutions that prioritize precision, efficiency, and aseptic integrity. </h6>{" "}
@@ -108,7 +108,7 @@ export default function Appli1() {
             </span>
           </div>
 
-          <button className="bg-[#8AA6AA] md:w-48 ee mt-24 sm:ml-2 lg:ml-12 md:ml-10  text-white font-bold py-3 px-20 rounded m-2 ">
+          <button className="bg-[#8AA6AA] md:w-48 ee sm:mt-12 md:mt-12 sm:ml-2 lg:ml-12 md:ml-10  text-white font-bold py-3 px-20 rounded m-2 ">
             Explore
           </button>
 
@@ -459,12 +459,13 @@ export default function Appli1() {
             </h1>
             <br></br>
             <h5 className="text-xs  leading-tight mb-4 text-white kll">
-              Regardless of how the operational activities are <br></br> running; our experience and expertise ensure to move <br></br>ahead. We also offer:-
+            Regardless of how the operational activities are <br></br> running; our experience and expertise ensure to move <br></br>ahead. We also offer:-
             </h5>
           </center><br></br>
-            <a className="text-xs  leading-tight mb-4   text-white  tt" href="/#/product">Product solutions</a><br></br>
+          <a className="text-xs  leading-tight mb-4   text-white  tt" href="/#/product">Product solutions</a><br></br>
             <a className="text-xs  leading-tight mb-4 text-white  tt" href="/#/TurnKeySolutions">Turnkey solutions </a><br></br>
-            <a className="text-xs  leading-tight mb-4  text-white  tt" href="/#/service">Service solutions </a><br></br>
+            <a className="text-xs  leading-tight mb-4  text-white  tt" href="/#/service">Service solutions </a><br></br><br></br>
+
             <br></br>
 
           </div>

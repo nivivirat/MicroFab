@@ -99,7 +99,7 @@ export default function Appli3() {
             </h3>
             <span>
               <h6
-                className="lg:text-2xl md:text-2xl mt-2 sm:text-xl leading-tight text-[#8AA6AA]  sd animate__animated animate__fadeInRight animate__delay-0s"
+                className="lg:text-2xl md:text-2xl mt-2 sm:text-xl leading-tight text-[#8AA6AA] mr-6   sd animate__animated animate__fadeInRight animate__delay-0s"
                 color="blue"
               >
                 MicroFab transforms the realm of food packaging with its solutions designed to preserve freshness, ensure safety, and enhance convenience. Our technologies cater to the unique needs, offering precision and innovation.
@@ -108,7 +108,7 @@ export default function Appli3() {
             </span>
           </div>
 
-          <button className="bg-[#8AA6AA] md:w-48 ee mt-24 sm:ml-2 lg:ml-12 md:ml-10  text-white font-bold py-3 px-20 rounded m-2 ">
+          <button className="bg-[#8AA6AA] md:w-48 ee sm:mt-12 md:mt-12 sm:ml-2 lg:ml-12 md:ml-10  text-white font-bold py-3 px-20 rounded m-2 ">
             Explore
           </button>
 
