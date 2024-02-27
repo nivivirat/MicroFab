@@ -12,7 +12,7 @@ export default function ApplicationCard({ heading, content, img }) {
   };
 
   return (
-    <div className="bg-white justify-center md:w-auto w-[200%] flex flex-col gap-5 drop-shadow-lg h-full p-5 rounded-lg">
+    <div className="bg-white md:w-auto w-[200%] flex flex-col gap-5 drop-shadow-lg h-full p-5 rounded-lg">
       <div className="text-primary flex flex-row gap-2 place-items-center">
         {img && <img src={img} alt="application img" className="h-10 w-10 object-contain" />}
         <p className="text-primary text-[20px]">{heading}</p>
