@@ -421,19 +421,14 @@ export default function Appli1() {
       </div>
       <br></br>
       <div className="qwe">
-        <h3 className="mb-4 pb-4 text-4xl ml-8 leading-tight text-[#8AA6AA]  animate__animated animate__fadeInLeft animate__delay-3s">
+        <h3 className="text-4xl ml-8 leading-tight text-[#8AA6AA]  animate__animated animate__fadeInLeft animate__delay-3s">
           Advantages of Microfab machines in the Pharmaceutical Industry
         </h3>
-        <h6 className="mb-4 pb-4 text-2xl ml-8 leading-tight text-[#8AA6AA] animate__animated animate__fadeInLeft animate__delay-3s" color="blue">
-          The BFS technology offers many benefits for pharmaceutical companies.
-        </h6>
-        <br></br>
-        {/* <Card3Presentation/> */}
       </div>
       {/* className={`flex min-h-screen flex-col items-center justify-between py-24`} */}
 
       {/* 2. make sure our carousel container takes up the full screen width using w-screen */}
-      <div className="md:px-14 mt-[5%] px-4 gap-10 flex flex-col  animate__animated animate__fadeInRight animate__delay-4s">
+      <div className="md:px-14 mt-[3%] px-4 gap-10 flex flex-col  animate__animated animate__fadeInRight animate__delay-4s">
 
         <div className="w-full flex flex-row md:gap-10 gap-[200px] md:overflow-auto overflow-scroll pb-10">
           {applicationContent.map((item, index) => (
