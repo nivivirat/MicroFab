@@ -233,9 +233,10 @@ function AboutUs() {
 
               {/* </center> */}
               <br></br><br></br>
-              <div className=" flex flex-col p-6 text-white bg-[#8AA6AA] kmk lg:py-[30px] md:px-[100px] md:py-[70px] ">
+              <div className=" flex flex-col p-6 text-white bg-[#8AA6AA] kmk lg:py-[30px] md:px-[100px] md:py-[70px]">
+                <p className='capitalise'>ABOUT US</p>
                 <h5 className="mb-4 text-5xl leading-tight text-white bg-[#8AA6AA] font-['ClashDisplay']">
-                  Our Beliefs
+                  Who are we
                 </h5>
                 <p className="mb-4 text-[16px] text-white bg-[#8AA6AA] md:w-[65%] font-['ClashDisplay']">
                   {" "}
