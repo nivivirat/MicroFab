@@ -14,7 +14,7 @@ export default function ApplicationCard({ heading, content, img }) {
   return (
     <div className="bg-white md:w-auto w-[200%] flex flex-col gap-5 drop-shadow-lg h-full p-5 rounded-lg">
       <div className="text-priamry flex flex-row gap-2">
-        <img src={images[img]} alt="application img" className="" />
+        {img && <img src={img} alt="application img" className="h-10 w-10 object-contain" />}
         <p className="text-primary text-[20px]">{heading}</p>
       </div>
 

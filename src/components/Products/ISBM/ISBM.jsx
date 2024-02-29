@@ -10,8 +10,35 @@ import AdvantageCard from "./AdvantageCard";
 import Footer from "../../Common/Footer/Footer";
 import applicationContent from "./Application/applicationContent.json";
 import ApplicationCard from "./Application/ApplicationCard";
+import { useEffect, useState } from "react";
+import { db } from "../../../../firebase";  
+import { onValue, ref } from "firebase/database";
 
 export default function ISBM() {
+
+  const [advantageContent, setAdvantageContent] = useState([]);
+  const [applicationContent, setApplicationContent] = useState([]);
+
+  useEffect(() => {
+    // Fetch Advantage Content
+    const advantagesRef = ref(db, 'ManufacturingPage/ISBM/advantages');
+    onValue(advantagesRef, (snapshot) => {
+      if (snapshot.exists()) {
+        const data = snapshot.val();
+        setAdvantageContent(data);
+      }
+    });
+
+    // Fetch Application Content
+    const applicationsRef = ref(db, 'ManufacturingPage/ISBM/applications');
+    onValue(applicationsRef, (snapshot) => {
+      if (snapshot.exists()) {
+        const data = snapshot.val();
+        setApplicationContent(data);
+      }
+    });
+  }, []);
+
   return (
     <div className="flex flex-col xl:gap-[40px] md:gap-[20px] gap-[15px] font-['ClashDisplay'] md:mt-[80px] mt-[40px] md:pt-0 pt-[30px]">
       {/* banner */}
