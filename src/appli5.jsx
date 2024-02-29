@@ -36,7 +36,7 @@ export default function Appli4() {
   const [displayText, setDisplayText] = useState("");
   const showImage = (imageId) => {
 
-    setDisplayText("Our concepts with regards to packaging are unique as per your requirements. While the technology lets you move ahead with ideal primary packaging, it is safe to use and the container is shaped in a unique way. With the technology, you can always expect maximum flexibility with the container design.");
+    setDisplayText("Our packaging technologies can be incorporated in the dairy industry to meet the regulatory standards and address consumer expectations. The packaging solutions ensure that the dairy products reach consumers in optimal condition while reducing the environmental footprint. ");
 
     setSelectedImage(imageId);
   };
@@ -413,19 +413,14 @@ export default function Appli4() {
       </div>
       <br></br>
       <div className="qwe">
-        <h3 className="mb-4 pb-4 text-4xl ml-8 leading-tight text-[#8AA6AA]  animate__animated animate__fadeInLeft animate__delay-3s">
-          Advantages of Microfab machines in the Pharmaceutical Industry
+        <h3 className="text-4xl ml-8 leading-tight text-[#8AA6AA]  animate__animated animate__fadeInLeft animate__delay-3s">
+          Advantages of MicroFab machines in the Dairy industry
         </h3>
-        <h6 className="mb-4 pb-4 text-2xl ml-8 leading-tight text-[#8AA6AA]  animate__animated animate__fadeInLeft animate__delay-3s" color="blue">
-          The BFS technology offers many benefits for pharmaceutical companies.
-        </h6>
-        <br></br>
-        {/* <Card3Presentation/> */}
       </div>
       {/* className={`flex min-h-screen flex-col items-center justify-between py-24`} */}
 
       {/* 2. make sure our carousel container takes up the full screen width using w-screen */}
-      <div className="md:px-14 mt-[5%] px-4 gap-10 flex flex-col">
+      <div className="md:px-14 mt-[3%] px-4 gap-10 flex flex-col">
 
         <div className="w-full flex flex-row md:gap-10 gap-[200px] md:overflow-auto overflow-scroll pb-10  animate__animated animate__fadeInLeft animate__delay-4s">
           {dairydata.map((item, index) => (
