@@ -12,8 +12,8 @@ import MedicalDevicesCard from "../src/components/MedicalDevices/MedicalDevicesC
 import "./App.css";
 import "./Styles_abt2.css";
 import yu from "./WhatsApp Image 2023-11-16 at 18.26 1.svg";
-import yy1 from "./assets/About/Frame 21443.png";
-import yy2 from "./assets/About/Frame 21448.png";
+import yy1 from "./assets/About/people1.jpg";
+import yy2 from "./assets/About/people2.jpg";
 import yy3 from "./assets/About/Frame 21449.png";
 import yy4 from "./assets/About/Frame 21450.png";
 import yy5 from "./assets/About/Micro Map.png";
