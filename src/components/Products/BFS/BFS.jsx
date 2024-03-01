@@ -8,7 +8,7 @@ import advantageimg from "../../../assets/Products/BFS/advantage.svg";
 import advantageContent from "./advantageContent.json";
 import AdvantageCard from "./AdvantageCard";
 import Footer from "../../Common/Footer/Footer";
-import applicationContent from './Application/applicationContent.json'
+// import applicationContent from './Application/applicationContent.json'
 import ApplicationCard from "./Application/ApplicationCard";
 import { useEffect, useState } from "react";
 import { db } from "../../../../firebase";  
