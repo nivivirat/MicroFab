@@ -47,7 +47,7 @@ export default function NewProduct() {
                     {/* banner */}
                     <div className="md:mt-[2%] justify-center w-full md:h-[90%] h-[500px] flex rounded-[42px] relative md:px-4">
                         <img
-                            src={king}
+                            src={newProduct.bannerImg}
                             className="xl:h-[80vh] h-[80%] lg:mt-[10%] md:mt-[15%] sm:mt-[25%] mt-[30%] w-full xl:object-cover md:object-cover object-cover object-left-top rounded-[42px]"
                             alt="top img"
                         >
