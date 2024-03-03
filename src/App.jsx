@@ -41,6 +41,7 @@ import Article6 from "./components/ArticlesList/article6/article6"
 import ManufacturingPage from "./components/Products/ManufacturingPage/ManufacturingPage";
 import MainBlog from './components/Articles/Blog/MainBlog'
 import Media from './components/Articles/Media/Media'
+import NewProduct from "./components/NewProduct/NewProduct";
 
 export default function App() {
   return (
@@ -65,6 +66,7 @@ function AppContent() {
       <Routes>
         <Route path="/media" element={<Media />} />
         <Route path="/media/:id/:heading" element={<MainBlog />} />
+        <Route path="/product/:id/:heading" element={<NewProduct />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/ManufacturingPage" element={<ManufacturingPage manufacturingPage={"BFS"} />} />
         {/* <Route path="/applications" element={<Applications />} /> */}

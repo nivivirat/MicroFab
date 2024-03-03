@@ -70,18 +70,24 @@ export default function MedicalDevicesCard({ img, heading, content, link }) {
 
   console.log(link);
 
+  const generateRoute = (product) => {
+    if (product.routerName) {
+      const headingSlug = product.routerName ? product.routerName.replace(/\s+/g, '-') : 'no-heading';
+      return `/#/product/${product.id}/${headingSlug}`;
+    } else {
+      return `/#/${link}`;
+    }
+  };
 
   return (
 
     <div
       className={`md:m-2 lg:w-[22%] md:w-[250px] w-full flex flex-col shadow-lg rounded-[20px]`}
-    //   onClick={toggleContent}
-
     >
-      <a href={`/#/${link}`}>
+      <a href={generateRoute(link)}>
         <div className="md:h-[190px] w-full">
           <img
-            src={images[img]}
+            src={images[img] || img}
             alt="Medical Device"
             className="w-full h-full rounded-[16px] object-cover"
           />

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './prod.css';
 
 // import pro from "./images/Frame 21516.svg";
@@ -17,11 +17,36 @@ import b4 from "./images/3.svg";
 import MedicalDevicesCard from "./ProductCard";
 import Footer from "../Common/Footer/Footer";
 import TurnKeySolutionsData from "./prodt.json";
+import { db } from '../../../firebase'
+import { onValue, ref } from 'firebase/database';
 
 import { Icon } from "@iconify/react";
 export default function Product() {
 
   const [openCardIndex, setOpenCardIndex] = useState(null);
+  const [newProduct, setNewProduct] = useState({});
+
+  useEffect(() => {
+    console.log("get data from db");
+
+    const productref = ref(db, 'Product');
+
+    const unsubscribe = onValue(productref, (snapshot) => {
+      const data = snapshot.val(); // Extract data from the snapshot
+      console.log(data);
+      setNewProduct(data || {}); // Set data to state, use an empty object if data is null
+    });
+
+    return () => {
+      // Unsubscribe from the database reference when the component unmounts
+      unsubscribe();
+    };
+
+  }, [])
+
+  console.log(newProduct);
+
+  const newProductArray = Object.entries(newProduct || {}).map(([key, value]) => ({ id: key, ...value }));
 
   const handleCardToggle = (index) => {
     if (openCardIndex === index) {
@@ -73,6 +98,20 @@ export default function Product() {
             link={device.link}
           />
         ))}
+
+        {newProductArray.reverse().map((product, index) => (
+          <MedicalDevicesCard
+            key={index}
+            index={index}
+            isOpen={openCardIndex === index}
+            onToggle={handleCardToggle}
+            heading={product.routerName} // Assuming 'routerName' is the heading property
+            content={product.timestamp} // Assuming 'timestamp' is the content property
+            img={product.bannerimg} // Assuming 'bannerimg' is the img property
+            link={product} // Assuming 'link' is the link property, update accordingly
+          />
+        ))}
+
       </div>
       <br></br>
 
