@@ -54,7 +54,7 @@ export default function NewProduct() {
                         </img>
                         <img
                             src={bannercover}
-                            className='absolute top-0 left-0 -m-3 lg:mt-[9.5%] md:mt-[14%] sm:mt-[24%] mt-[29%]'
+                            className='absolute pl-5 top-0 left-0 -m-3 lg:mt-[9.5%] md:mt-[14%] sm:mt-[24%] mt-[29%]'
                         >
                         </img>
                         <div className="absolute text-primary top-[2%] left-[2%] flex flex-col w-full">
