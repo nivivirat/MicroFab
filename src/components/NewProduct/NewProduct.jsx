@@ -110,7 +110,7 @@ export default function NewProduct() {
 
                         {/* img */}
                         <div className="relative">
-                            <img src={process} className="" alt="img"></img>
+                            <img src={newProduct.processimg} className="h-[300px] w-[70vw] object-contain" alt="img"></img>
                             {/* <p className="absolute md:bottom-0 -bottom-0.5 md:text-[18px] text-[8px] pt-2 font-semibold md:left-[32%] left-[30%]">
                                 Blow
                             </p>
@@ -172,12 +172,12 @@ export default function NewProduct() {
                             </p>
                         </div>
                         <div className="w-full flex flex-row md:gap-10 gap-[200px] md:overflow-auto overflow-scroll pb-10">
-                            {newProduct.advantages.map((item, index) => (
+                            {newProduct.applications.map((item, index) => (
                                 <div
                                     key={index}
                                     className="md:w-[25%] w-[100%]"
                                 >
-                                    <ApplicationCard heading={item.heading} content={item.content} img={item.img} />
+                                    <ApplicationCard heading={item.heading} content={item.content} img={item.imageFile} />
                                 </div>
                             ))}
                         </div>
