@@ -347,7 +347,7 @@ function AboutUs() {
 
             <div className="flex mt-12 h-[600px] animate__animated animate__fadeInLeft animate__delay-2s">
               <div className="bg-white md:mb-32 mb-44">
-                <img src={uio} className="w-[650px] md:block hidden h-full object-cover" />
+                <img src={data.img} className="w-[650px] md:block hidden h-full object-cover" />
               </div>
               <div className="flex-1 mb-24 sm:ml-0 bg-white p-8 flex flex-col place-items-center justify-center">
                 <h3 className="lg:ml-0 sm:ml-0 md:mt-0 mt-16 text-5xl sm:text-4xl text-[#8AA6AA] pb-5 leading-tight font-['ClashDisplay']">
