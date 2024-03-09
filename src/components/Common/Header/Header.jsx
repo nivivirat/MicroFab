@@ -483,7 +483,7 @@ const Header = () => {
                   className={`flex items-center cursor-pointer ${isApplicationDropdownOpen ? "font-bold" : ""
                     }`}
                 >
-                  <Link to="/" onClick={toggleMenu}>
+                  <Link to="/" onClick={toggleApplicationDropdown} onMouseEnter={toggleApplicationDropdown}>
                     Applications
                   </Link>
                   {isApplicationDropdownOpen ? (

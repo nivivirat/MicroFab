@@ -120,7 +120,8 @@ export default function Contact() {
               {/* call */}
               <div className="flex flex-row justify-start place-items-center gap-2">
                 <img src={call} alt="location"></img>
-                <p> +91 98201 47512</p>
+                <p> +91 9323012344</p>
+                {/* <p> +91 98201 47512</p> */}
               </div>
 
               {/* location */}
