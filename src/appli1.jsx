@@ -36,10 +36,23 @@ import { Icon } from "@iconify/react";
 
 export default function Appli1() {
   const [selectedImage, setSelectedImage] = useState('image1');
-  const [displayText, setDisplayText] = useState("");
-  const showImage = (imageId) => {
+  const [displayText, setDisplayText] = useState("Our packaging technologies play a crucial role in ensuring the efficacy and safety of eye-drop products. We offer specialized packaging to maintain their integrity and prevent contamination.");
 
-    setDisplayText("Leveraging our packaging technologies helps to aseptically fill a wide range of substances right from liquids and ointments to temperature sensitive products. The technology is far more capable of producing sterile single or multi-dose containers. ");
+  const showImage = (imageId) => {
+    console.log(imageId);
+
+    if (imageId === "image1") {
+      setDisplayText("Our packaging technologies play a crucial role in ensuring the efficacy and safety of eye-drop products. We offer specialized packaging to maintain their integrity and prevent contamination.")
+    }
+    else if (imageId === "image2") {
+      setDisplayText("The packaging technologies of MicroFab ensure the safety, sterility, and effectiveness of injections. Various aseptic packaging techniques contribute to maintaining the sterility of the injectable product, reducing the risk of contamination during production.")
+    }
+    else if (imageId === "image3") {
+      setDisplayText("With our packaging technologies, the inhalants don’t lose their strength. The stability is also preserved because the innovations protect the contents from environmental factors such as moisture, and light.")
+    }
+    else if (imageId === "image4") {
+      setDisplayText("MicroFab’s packaging technologies ensure the efficacy and safety of infusions, offering a delicate balance between protecting the contents and facilitating a seamless administration process.")
+    }
 
     setSelectedImage(imageId);
   };
@@ -454,10 +467,10 @@ export default function Appli1() {
             </h1>
             <br></br>
             <h5 className="text-xs  leading-tight mb-4 text-white kll">
-            Regardless of how the operational activities are <br></br> running; our experience and expertise ensure to move <br></br>ahead. We also offer:-
+              Regardless of how the operational activities are <br></br> running; our experience and expertise ensure to move <br></br>ahead. We also offer:-
             </h5>
           </center><br></br>
-          <a className="text-xs  leading-tight mb-4   text-white  tt" href="/#/product">Product solutions</a><br></br>
+            <a className="text-xs  leading-tight mb-4   text-white  tt" href="/#/product">Product solutions</a><br></br>
             <a className="text-xs  leading-tight mb-4 text-white  tt" href="/#/TurnKeySolutions">Turnkey solutions </a><br></br>
             <a className="text-xs  leading-tight mb-4  text-white  tt" href="/#/service">Service solutions </a><br></br><br></br>
 

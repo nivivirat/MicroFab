@@ -34,10 +34,21 @@ import { Icon } from "@iconify/react";
 
 export default function Appli3() {
   const [selectedImage, setSelectedImage] = useState('image1');
-  const [displayText, setDisplayText] = useState("");
+  const [displayText, setDisplayText] = useState("MicroFab’s technologies ensure aseptic and sterile packaging, minimizing the risk of contamination. This is crucial for preserving the freshness and quality of flavored milk, preventing spoilage, and extending shelf life.");
   const showImage = (imageId) => {
 
-    setDisplayText("Our packaging technologies are instrumental in transforming the packaging of food products. While these technologies ensure seamless creation of packaging, they safeguard the freshness and quality of perishable food items.");
+    if (imageId === "image1") {
+      setDisplayText("MicroFab’s technologies ensure aseptic and sterile packaging, minimizing the risk of contamination. This is crucial for preserving the freshness and quality of flavored milk, preventing spoilage, and extending shelf life.")
+    }
+    else if (imageId === "image2") {
+      setDisplayText("The packaging technologies of MicroFab enhance the safety, efficiency, and visual appeal of packaging for sauces, contributing to the overall quality and marketability of these products. These can be packed for one time use as well.")
+    }
+    else if (imageId === "image3") {
+      setDisplayText("During the entire packaging process, the technologies ensure to preserve the freshness and quality of fruit juices. The seamless and automated nature of machines also reduces the risk of contamination.")
+    }
+    else if (imageId === "image4") {
+      setDisplayText("Our machines based on packaging technologies offer benefits in terms of aseptic packaging, production efficiency, versatility, and sustainability. These  advantages contribute to the overall quality and market success of flavored syrups.")
+    }
 
     setSelectedImage(imageId);
   };

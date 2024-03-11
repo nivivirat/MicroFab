@@ -33,10 +33,21 @@ import { Icon } from "@iconify/react";
 
 export default function Appli4() {
   const [selectedImage, setSelectedImage] = useState('image1');
-  const [displayText, setDisplayText] = useState("");
+  const [displayText, setDisplayText] = useState("The packaging solutions of MicroFab help to shield milk from external factors like bacteria, air and light. This aspect extends the shelf life of milk, and helps in the preservation of nutrients.");
   const showImage = (imageId) => {
 
-    setDisplayText("Our packaging technologies can be incorporated in the dairy industry to meet the regulatory standards and address consumer expectations. The packaging solutions ensure that the dairy products reach consumers in optimal condition while reducing the environmental footprint. ");
+    if (imageId === "image1") {
+      setDisplayText("The packaging solutions of MicroFab help to shield milk from external factors like bacteria, air and light. This aspect extends the shelf life of milk, and helps in the preservation of nutrients.")
+    }
+    else if (imageId === "image2") {
+      setDisplayText("Packaging technologies play a crucial role in packing liquid cheese, offering benefits such as the preservation of freshness, extended shelf life, protection from contamination, and a variety of packaging formats.")
+    }
+    else if (imageId === "image3") {
+      setDisplayText("Through our packaging technologies, buttermilk can be protected from contaminants. The aseptic packaging also helps in maintaining the integrity of the buttermilk.")
+    }
+    else if (imageId === "image4") {
+      setDisplayText("MicroFab’s packaging solutions help to preserve the freshness and prevent spoilage. Technologies supporting recyclability help to mitigate the environmental impact.")
+    }
 
     setSelectedImage(imageId);
   };

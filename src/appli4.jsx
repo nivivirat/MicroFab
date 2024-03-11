@@ -34,10 +34,21 @@ import { Icon } from "@iconify/react";
 export default function Appli4() {
 
   const [selectedImage, setSelectedImage] = useState('image1');
-  const [displayText, setDisplayText] = useState("");
+  const [displayText, setDisplayText] = useState("MicroFab’s technologies can be employed for packaging additives which are used in different industrial processes. The aseptic packaging ensures the purity of these chemicals, especially in applications where precise dosage and quality control are essential.");
   const showImage = (imageId) => {
 
-    setDisplayText("Our concepts with regards to packaging are unique as per your requirements. While the technology lets you move ahead with ideal primary packaging, it is safe to use and the container is shaped in a unique way. With the technology, you can always expect maximum flexibility with the container design.");
+    if (imageId === "image1") {
+      setDisplayText("MicroFab’s technologies can be employed for packaging additives which are used in different industrial processes. The aseptic packaging ensures the purity of these chemicals, especially in applications where precise dosage and quality control are essential.")
+    }
+    else if (imageId === "image2") {
+      setDisplayText("By embracing our technologies, MicroFab delivers packaging solutions that go beyond containment, addressing the unique requirements of liquid adhesives. These technologies showcase our commitment to precision, ensuring that liquid adhesives are delivered to end-users with uncompromised quality.")
+    }
+    else if (imageId === "image3") {
+      setDisplayText("MicroFab's implementation of packaging technologies prevents contamination, safeguards the potency of insecticides, and enhances shelf life. These technologies contribute to a seamless user experience, showcasing our dedication in chemical packaging.")
+    }
+    else if (imageId === "image4") {
+      setDisplayText("MicroFab's cutting-edge technologies redefine chemical packaging, ensuring optimal safety, efficiency, and product preservation. The lightweight design of containers also align with sustainability goals, mitigating the impact on the environment.")
+    }
 
     setSelectedImage(imageId);
   };

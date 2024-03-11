@@ -34,10 +34,21 @@ import ApplicationCard from "./components/Products/BFS/Application/ApplicationCa
 import { Icon } from "@iconify/react";
 export default function Appli1() {
   const [selectedImage, setSelectedImage] = useState('image1');
-  const [displayText, setDisplayText] = useState("");
+  const [displayText, setDisplayText] = useState("MicroFab’s packaging technologies ensure optimal product preservation and user convenience. These facilitate the prevention of contamination and extend the shelf life of creams.");
   const showImage = (imageId) => {
 
-    setDisplayText("Our Blow-Fill-Seal technology enables you to shape ampoules as per your preferences. While the technology fills the products aseptically, the sealing phase forms a twist-off cap at the end.");
+    if (imageId === "image1") {
+      setDisplayText("MicroFab’s packaging technologies ensure optimal product preservation and user convenience. These facilitate the prevention of contamination and extend the shelf life of creams.")
+    }
+    else if (imageId === "image2") {
+      setDisplayText("MicroFab’s machines based on packaging technologies enable the packaging of serums. The packaging solutions allow for the creation of customized and sleek packaging that preserves the efficacy of serums. They can be packed for one time use.      ")
+    }
+    else if (imageId === "image3") {
+      setDisplayText("In the realm of cosmetics, MicroFab’s packaging technologies stand as key enablers for achieving optimal quality and user satisfaction in gel products.")
+    }
+    else if (imageId === "image4") {
+      setDisplayText("The FFS, BFS and ISBM/PFFS technologies of MicroFab offer invaluable solutions for the meticulous packaging of tonics. The packaging processes ensure that tonics remain uncontaminated, preserving their therapeutic properties. ")
+    }
 
     setSelectedImage(imageId);
   };
@@ -424,7 +435,7 @@ export default function Appli1() {
       <br></br>
       <div className="qwe">
         <h3 className="text-4xl ml-8 leading-tight text-[#8AA6AA]  animate__animated animate__fadeInLeft animate__delay-4s">
-        Advantages of Microfab machines in the cosmetics industry
+          Advantages of Microfab machines in the cosmetics industry
         </h3>
       </div>
       {/* className={`flex min-h-screen flex-col items-center justify-between py-24`} */}
