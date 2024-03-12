@@ -591,13 +591,13 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/Blogs" onClick={toggleMenu}>
-                  Blogs
+                <Link to="/service" onClick={toggleMenu}>
+                  Services
                 </Link>
               </li>
               <li>
-                <Link to="/service" onClick={toggleMenu}>
-                  Services
+                <Link to="/Blogs" onClick={toggleMenu}>
+                  Blogs
                 </Link>
               </li>
               <li>

@@ -203,7 +203,7 @@ export default function Product() {
           <br></br>
 
 
-          <div className="flex flex-col  rounded-lg gghh text-black md:max-w-5xl md:flex-row  animated-box animate__animated animate__fadeInLeft animate__delay-5s">
+          <div className="md:flex hidden flex-col rounded-lg gghh text-black md:max-w-5xl md:flex-row md:overflow-visible overflow-scroll-x-axis animated-box animate__animated animate__fadeInLeft animate__delay-5s">
             <img
               className="h-96 w-full  rounded-t-lg gghh cvf  object-cover  md:h-auto md:w-96 md:rounded-none md:rounded-l-lg order-2  animated-box animate__animated animate__fadeInLeft animate__delay-5s md:order-"
               src={pro4}
@@ -214,6 +214,12 @@ export default function Product() {
               src={pro3}
               alt=""
             />
+          </div>
+
+          <div className="md:hidden w-[90vw] flex overflow-x-scroll">
+            <img src={pro2}></img>
+            <img src={pro3}></img>
+            <img src={pro4}></img>
           </div>
           <br></br><br></br>
         </div>
@@ -252,7 +258,7 @@ export default function Product() {
                 choosing quality medical equipment. While serving patients, we
                 ensure that the device is safe to use. We also develop designs for
                 devices which are apt for using, with comfort.</h6>
-              <a
+              <a 
                 href="/#/medicalDevices"
                 type="submit"
                 className="bg-[#8AA6AA] mt-4 md:mt-4 text-white px-4 py-2 hdfc w-[200px] rounded-md"
@@ -263,8 +269,12 @@ export default function Product() {
                 </div>
               </a>
             </div>
+
           </div>
 
+          {/* <div className="md:hidden flex m-3">
+            <img src={b2} className="w-[200px] h-[100px] object-cover border border-black"></img>
+          </div> */}
         </div>
       </div>
 
