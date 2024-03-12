@@ -53,7 +53,7 @@ export default function MouldSlide() {
   return (
     <div className="font-['ClashDisplay'] w-[90%] h-[94%] flex flex-col justify-between rounded-[20px] overflow-hidden bg-[#E9E9E9] md:mr-2 mr-14 mt-[8px]">
       {/* top */}
-      <div className="flex flex-row h-[40%] w-[100%] justify-between">
+      <div className="flex flex-row h-[30%] w-[100%] justify-between">
         <div className="overflow-x-scroll rotate-180 text-center flex place-items-center justify-center w-full" ref={topScrollRef} style={{ overflowX: 'hidden', scrollBehavior: 'smooth' }}>
           <Sliderop options={{ align: "center" }}>
             {topData.map((item, index) => (
@@ -70,7 +70,7 @@ export default function MouldSlide() {
       </div>
 
       {/* middle */}
-      <div className="flex flex-row h-[40%] w-[100%] justify-between">
+      <div className="flex flex-row md:h-[40%] w-[100%] justify-between">
         <div className="overflow-x-scroll text-center flex place-items-center justify-center w-full" ref={middleScrollRef} style={{ overflowX: 'hidden', scrollBehavior: 'smooth' }}>
           <Slider options={{ align: "center" }}>
           {middleData.map((item, index) => (
@@ -91,7 +91,7 @@ export default function MouldSlide() {
       </div>
 
       {/* bottom */}
-      <div className="flex flex-row h-[40%] w-[100%] justify-between">
+      <div className="flex flex-row h-[30%] w-[100%] justify-between">
         <div className="overflow-x-scroll rotate-180 text-center flex place-items-center justify-center w-full" ref={bottomScrollRef} style={{ overflowX: 'hidden', scrollBehavior: 'smooth' }}>
           <Sliderop options={{ align: "center" }}>
             {bottomData.map((item, index) => (
