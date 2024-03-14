@@ -4,6 +4,7 @@ import logos from "./logos.svg";
 import drop from "./aqws.png";
 import drop1 from "./drop1.svg";
 import hand from "./hand.png";
+import imgggg from './imggg.png';
 import "./Styles12.css";
 import aq from "./tyfg.png";
 import dropu from "./vbnm.svg";
@@ -424,7 +425,7 @@ export default function Appli3() {
                           <li className=" w-full text-2xl leading-tight text-[#8AA6AA]">biotechnological products</li>  */}
         </div> <br></br><br></br><br></br>
         {/* <br></br><br></br><br></br><br></br><br></br> */}
-        <img className="h-80 w-48 rounded-lg rounded-md uuu  animate__animated animate__fadeInRight animate__delay-2s" src={im1} alt="NO image">
+        <img className="h-[350px] w-[300px] rounded-lg rounded-md object-cover object-top uuu  animate__animated animate__fadeInRight animate__delay-2s" src={imgggg} alt="NO image">
 
 
         </img>
