@@ -106,7 +106,18 @@ export default function ISBM() {
         {/* img */}
         <div className="relative">
           <img src={process} className="" alt="img"></img>
-          <p className="absolute bottom-0 text-[18px] font-semibold left-[30%]">
+          <p className="absolute md:bottom-0 -bottom-0.5 md:text-[18px] text-[8px] pt-2 font-semibold md:left-[25%] left-[30%]">
+          Injection
+          </p>
+          <p className="absolute md:bottom-0 -bottom-0.5 md:text-[18px] text-[8px] pt-2 font-semibold left-[48%]">
+          Stretching & Blowing
+
+          </p>
+          <p className="absolute md:bottom-0 -bottom-0.5 md:text-[18px] text-[8px] pt-2 font-semibold left-[80%]">
+          Filling & Capping
+
+          </p>
+          {/* <p className="absolute bottom-0 text-[18px] font-semibold left-[30%]">
             Injection
           </p>
           <p className="absolute bottom-0 text-[18px] font-semibold left-[48%]">
@@ -114,7 +125,7 @@ export default function ISBM() {
           </p>
           <p className="absolute bottom-0 text-[18px] font-semibold left-[78%]">
             Filling & Capping
-          </p>
+          </p> */}
         </div>
 
         {/* process content */}
