@@ -136,7 +136,7 @@ export default function HomeArticles() {
                 onClick={() => handleCardClick(article)}
                 className=""
               >
-                <div className="border-2 w-full h-[40vh] flex flex-col place-items-center rounded-lg shadow-md">
+                <div className="border-2 w-full flex flex-col place-items-center rounded-lg shadow-md">
                   <img
                     src={article.img}
                     alt="Blog Thumbnail"

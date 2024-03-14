@@ -90,7 +90,7 @@ export default function Media() {
           Article and Blogs
         </p>
         <div
-          className="w-full h-[43vh] flex overflow-x-scroll gap-4"
+          className="w-full flex overflow-x-scroll gap-4"
           style={{ scrollSnapType: "x mandatory" }}
         >
           {reversedMediaData.map((item) => (
