@@ -11,12 +11,12 @@ export default function BFS({ content }) {
 
   return (
     <a href={"/#/" + content} className="transition-all duration-300 ease-in-out hover:shadow-md hover:bg-[#a0b4b7] font-['ClashDisplay'] w-[100%] h-[45%] md:w-[100%] md:h-[46%] md:mr-2 mr-10 bg-[#cdd7d8] rounded-[16px] mt-[8px] flex flex-col overflow-hidden">
-      <div className="h-[100%] flex flex-row items-center place-items-center justify-between">
-        <div className="h-[35px] w-[35px] bg-[#8aa6aa] rounded-full flex justify-center">
+      <div className="h-[100%] flex flex-row items-center place-items-center justify-between pl-3">
+        {/* <div className="h-[35px] w-[35px] bg-[#8aa6aa] rounded-full flex justify-center">
           <img src={imageToShow} alt="" className="w-[20px]" />
-        </div>
+        </div> */}
         <div>
-          <p className="text-[16px] text-center">{c}</p>
+          <p className="text-[16px]">{c}</p>
           <p className="text-[16px] text-center">{d}</p>
         </div>
         <div className="h-[35px] w-[35px] bg-[#8aa6aa] rounded-full flex justify-center place-items-center">

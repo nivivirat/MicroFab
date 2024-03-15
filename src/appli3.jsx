@@ -25,7 +25,7 @@ import im1 from "./image 54-PhotoRoom 1.svg";
 import rt from "./image 8.svg";
 import fooddata from './fooddata.json'
 import ApplicationCard from "./components/Products/BFS/Application/ApplicationCard";
-
+import foodimga from './foodimga.jpg'
 import logos56 from "./Rectangle 6224-PhotoRoom 1.svg";
 import pic11 from "./pic11.svg";
 import pic12 from "./pic12.svg";
@@ -425,7 +425,7 @@ export default function Appli3() {
                           <li className=" w-full text-2xl leading-tight text-[#8AA6AA]">biotechnological products</li>  */}
         </div> <br></br><br></br><br></br>
         {/* <br></br><br></br><br></br><br></br><br></br> */}
-        <img className="h-[350px] w-[300px] rounded-lg rounded-md object-cover object-top uuu  animate__animated animate__fadeInRight animate__delay-2s" src={imgggg} alt="NO image">
+        <img className="h-[350px] w-[300px] rounded-lg rounded-md object-cover object-top uuu  animate__animated animate__fadeInRight animate__delay-2s" src={foodimga} alt="NO image">
 
 
         </img>
