@@ -51,10 +51,10 @@ export default function MouldSlide() {
   bottomData = [...bottomData, ...bottomData, ...bottomData];
 
   return (
-    <div className="font-['ClashDisplay'] w-[90%] h-[94%] flex flex-col justify-between rounded-[20px] overflow-hidden bg-[#E9E9E9] md:mr-2 mr-14 mt-[8px]">
+    <div className="cursor-default font-['ClashDisplay'] w-[90%] h-[94%] flex flex-col justify-between rounded-[20px] overflow-hidden bg-[#E9E9E9] md:mr-2 mr-14 mt-[8px]">
       {/* top */}
       <div className="flex flex-row md:h-[40%] h-[35%] w-[100%] justify-between overflow-y-hidden">
-        <div className="overflow-x-scroll rotate-180 text-center flex place-items-center justify-center w-full" ref={topScrollRef} style={{ overflowX: 'hidden', scrollBehavior: 'smooth' }}>
+        <div className="overflow-x-scroll rotate-180 text-center flex place-items-center justify-center w-full pointer-events-none" ref={topScrollRef} style={{ overflowX: 'hidden', scrollBehavior: 'smooth' }}>
           <Sliderop options={{ align: "center" }}>
             {topData.map((item, index) => (
               <div key={item.order} className={`rotate-180 leading-5 md:h-[90px] h-[60px] w-[250px] px-5 rounded-[20px] flex flex-col justify-center place-items-center font-bold ${index % 2 !== 0 ? 'bg-[#b9c7c9]' : 'bg-primary'}`}>
@@ -71,7 +71,7 @@ export default function MouldSlide() {
 
       {/* middle */}
       <div className="flex flex-row h-[80px] w-[100%] justify-between overflow-hidden">
-        <div className="overflow-x-scroll text-center flex place-items-center justify-center w-full" ref={middleScrollRef} style={{ overflowX: 'hidden', scrollBehavior: 'smooth' }}>
+        <div className="overflow-x-scroll text-center flex place-items-center justify-center w-full pointer-events-none" ref={middleScrollRef} style={{ overflowX: 'hidden', scrollBehavior: 'smooth' }}>
           <Slider options={{ align: "center" }}>
             {middleData.map((item, index) => (
               <div key={item.order} className={`leading-5 h-[80px] w-[200px] px-5 rounded-[20px] flex flex-col justify-center place-items-center font-bold ${index % 2 === 0 ? 'bg-white' : 'bg-primary'}`}>
@@ -92,7 +92,7 @@ export default function MouldSlide() {
 
       {/* bottom */}
       <div className="flex flex-row md:h-[40%] h-[35%] w-[100%] justify-between overflow-hidden">
-        <div className="overflow-x-scroll rotate-180 text-center flex place-items-center justify-center w-full" ref={bottomScrollRef} style={{ overflowX: 'hidden', scrollBehavior: 'smooth' }}>
+        <div className="overflow-x-scroll rotate-180 text-center flex place-items-center justify-center w-full pointer-events-none" ref={bottomScrollRef} style={{ overflowX: 'hidden', scrollBehavior: 'smooth' }}>
           <Sliderop options={{ align: "center" }}>
             {bottomData.map((item, index) => (
               // <div key={item.order} className={`rotate-180 leading-5 h-[90px] w-[230px] px-5 rounded-[20px] flex flex-col justify-center place-items-center font-bold ${index % 2 !== 0 ? 'bg-[#b9c7c9]' : 'bg-primary'}`}>
